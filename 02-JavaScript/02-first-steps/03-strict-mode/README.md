@@ -27,12 +27,12 @@ We will learn functions (a way to group commands) soon. Looking ahead, let's not
 
 > Strict mode isn't enabled here:
 
->```js
+> ```
 alert("some code");
 // "use strict" below is ignored--it must be at the top
 "use strict";
-// strict mode is not activated
-```
+// strict mode is not activated```
+
 > Only comments may appear above `"use strict"`.
 
 ##

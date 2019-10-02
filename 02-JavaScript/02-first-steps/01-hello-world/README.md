@@ -93,7 +93,7 @@ To attach several scripts, use multiple tags:
 
 > That reduces traffic and makes pages faster.
 
-## 
+##
 > ### If `src` is set, the script content is ignored.
 > A single `<script>` tag can't have both the `src` attribute and code inside.
 
@@ -109,11 +109,11 @@ To attach several scripts, use multiple tags:
 > The example above can be split into two scripts to work:
 
 > ```html
-<script src="file.js"></script>
-<script>
-  alert(1);
-</script>
-```
+> <script src="file.js"></script>
+> <script>
+>   alert(1);
+> </script>
+> ```
 
 
 ## Summary

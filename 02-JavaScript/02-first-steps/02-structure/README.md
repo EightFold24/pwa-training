@@ -12,24 +12,24 @@ We can have as many statements in our code as we want. Statements can be separat
 
 For example, here we split "Hello World" into two alerts:
 
-```js run no-beautify
+```js
 alert('Hello'); alert('World');
 ```
 
 Usually, statements are written on separate lines to make the code more readable:
 
-```js run no-beautify
+```js
 alert('Hello');
 alert('World');
 ```
 
-## Semicolons [#semicolon]
+## Semicolons ;
 
 A semicolon may be omitted in most cases when a line break exists.
 
 This would also work:
 
-```js run no-beautify
+```js
 alert('Hello')
 alert('World')
 ```
@@ -40,7 +40,7 @@ Here, JavaScript interprets the line break as an "implicit" semicolon. This is c
 
 There are cases when a newline does not mean a semicolon. For example:
 
-```js run no-beautify
+```js
 alert(3 +
 1
 + 2);
@@ -52,7 +52,7 @@ The code outputs `6` because JavaScript does not insert semicolons here. It is i
 
 Errors which occur in such cases are quite hard to find and fix.
 
-````smart header="An example of an error"
+### An example of an error
 If you're curious to see a concrete example of such an error, check this code out:
 
 ```js run
@@ -63,7 +63,7 @@ No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll
 
 Now, let's add an `alert` before the code and *not* finish it with a semicolon:
 
-```js run no-beautify
+```js
 alert("There will be an error")
 
 [1, 2].forEach(alert)
@@ -85,14 +85,13 @@ The error in the no-semicolon variant occurs because JavaScript does not assume 
 
 So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. Here's how the engine sees it:
 
-```js run no-beautify
+```js
 alert("There will be an error")[1, 2].forEach(alert)
 ```
 
 But it should be two separate statements, not one. Such a merging in this case is just wrong, hence the error. This can happen in other situations.
-````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer to use them.
 
 ## Comments
 
@@ -135,25 +134,20 @@ alert('Hello');
 alert('World');
 ```
 
-```smart header="Use hotkeys!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
-```
+> ### Use hotkeys!
+> In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
 
-````warn header="Nested comments are not supported!"
+
+> ### Nested comments are not supported!
 There may not be `/*...*/` inside another `/*...*/`.
 
-Such code will die with an error:
+> Such code will die with an error:
 
-```js run no-beautify
+>```js
 /*
   /* nested comment ?!? */
 */
 alert( 'World' );
 ```
-````
 
-Please, don't hesitate to comment your code.
-
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
-
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+Try only to use comments when necessary. Variable and function names should be named in a way in which comments are rarely needed.

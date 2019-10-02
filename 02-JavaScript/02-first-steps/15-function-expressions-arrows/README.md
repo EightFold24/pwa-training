@@ -46,7 +46,7 @@ But it's still a value. So we can work with it like with other kinds of values.
 
 We can copy a function to another variable:
 
-```js run no-beautify
+```js
 function sayHi() {   // (1) create
   alert( "Hello" );
 }
@@ -140,7 +140,7 @@ The idea is that we pass a function and expect it to be "called back" later if n
 
 We can use Function Expressions to write the same function much shorter:
 
-```js run no-beautify
+```js
 function ask(question, yes, no) {
   if (confirm(question)) yes()
   else no();

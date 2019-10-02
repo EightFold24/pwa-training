@@ -200,7 +200,7 @@ For example: `let`, `class`, `return`, and `function` are reserved.
 
 The code below gives a syntax error:
 
-```js run no-beautify
+```js
 let let = 5; // can't name a variable "let", error!
 let return = 5; // also can't name it "return", error!
 ```

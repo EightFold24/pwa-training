@@ -109,7 +109,7 @@ Sometimes, we need to assign a variable depending on a condition.
 
 For instance:
 
-```js run no-beautify
+```js
 let accessAllowed;
 let age = prompt('How old are you?', '');
 
@@ -203,7 +203,7 @@ if (age < 3) {
 
 Sometimes the question mark `?` is used as a replacement for `if`:
 
-```js run no-beautify
+```js
 let company = prompt('Which company created JavaScript?', '');
 
 *!*
@@ -222,7 +222,7 @@ The notation is shorter than the equivalent `if` statement, which appeals to som
 
 Here is the same code using `if` for comparison:
 
-```js run no-beautify
+```js
 let company = prompt('Which company created JavaScript?', '');
 
 *!*

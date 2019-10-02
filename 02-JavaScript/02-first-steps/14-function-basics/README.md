@@ -73,7 +73,7 @@ alert( message ); // <-- Error! The variable is local to the function
 
 A function can access an outer variable as well, for example:
 
-```js run no-beautify
+```js
 let *!*userName*/!* = 'John';
 
 function showMessage() {
@@ -251,7 +251,7 @@ A function can return a value back into the calling code as the result.
 
 The simplest example would be a function that sums two values:
 
-```js run no-beautify
+```js
 function sum(a, b) {
   *!*return*/!* a + b;
 }

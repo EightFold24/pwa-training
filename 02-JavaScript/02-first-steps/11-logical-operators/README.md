@@ -125,7 +125,7 @@ This leads to some interesting usage compared to a "pure, classical, boolean-onl
 
     In the example below, `x` does not get assigned:
 
-    ```js run no-beautify
+    ```js
     let x;
 
     *!*true*/!* || (x = 1);
@@ -135,7 +135,7 @@ This leads to some interesting usage compared to a "pure, classical, boolean-onl
 
     If, instead, the first argument is `false`, `||` evaluates the second one, thus running the assignment:
 
-    ```js run no-beautify
+    ```js
     let x;
 
     *!*false*/!* || (x = 1);

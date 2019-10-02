@@ -6,13 +6,13 @@ This chapter briefly recaps the features of JavaScript that we've learned by now
 
 Statements are delimited with a semicolon:
 
-```js run no-beautify
+```js
 alert('Hello'); alert('World');
 ```
 
 Usually, a line-break is also treated as a delimiter, so that would also work:
 
-```js run no-beautify
+```js
 alert('Hello')
 alert('World')
 ```

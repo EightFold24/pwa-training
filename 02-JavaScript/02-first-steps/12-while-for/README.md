@@ -241,7 +241,7 @@ We can use it if we're done with the current iteration and would like to move on
 
 The loop below uses `continue` to output only odd values:
 
-```js run no-beautify
+```js
 for (let i = 0; i < 10; i++) {
 
   // if true, skip the remaining part of the body
@@ -302,7 +302,7 @@ Sometimes we need to break out from multiple nested loops at once.
 
 For example, in the code below we loop over `i` and `j`, prompting for the coordinates `(i, j)` from `(0,0)` to `(2,2)`:
 
-```js run no-beautify
+```js
 for (let i = 0; i < 3; i++) {
 
   for (let j = 0; j < 3; j++) {
@@ -329,7 +329,7 @@ labelName: for (...) {
 
 The `break <labelName>` statement in the loop below breaks out to the label:
 
-```js run no-beautify
+```js
 *!*outer:*/!* for (let i = 0; i < 3; i++) {
 
   for (let j = 0; j < 3; j++) {

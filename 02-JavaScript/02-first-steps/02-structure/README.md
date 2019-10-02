@@ -134,10 +134,11 @@ alert('Hello');
 alert('World');
 ```
 
+##
 > ### Use hotkeys!
 > In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
 
-
+## 
 > ### Nested comments are not supported!
 There may not be `/*...*/` inside another `/*...*/`.
 

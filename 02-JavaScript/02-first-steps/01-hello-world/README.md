@@ -13,7 +13,7 @@ JavaScript programs can be inserted into any part of an HTML document with the h
 
 For instance:
 
-```html run height=100
+```html
 <!DOCTYPE HTML>
 <html>
 

@@ -2,7 +2,7 @@ To precisely match the functionality of `switch`, the `if` must use a strict com
 
 For given strings though, a simple `'=='` works too.
 
-```js no-beautify
+```js
 if(browser == 'Edge') {
   alert("You've got the Edge!");
 } else if (browser == 'Chrome'

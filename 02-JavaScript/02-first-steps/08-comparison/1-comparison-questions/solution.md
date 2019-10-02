@@ -1,6 +1,6 @@
 
 
-```js no-beautify
+```js
 5 > 4 → true
 "apple" > "pineapple" → false
 "2" > "12" → true

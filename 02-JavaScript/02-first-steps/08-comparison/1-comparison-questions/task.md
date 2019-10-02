@@ -6,7 +6,7 @@ importance: 5
 
 What will be the result for these expressions?
 
-```js no-beautify
+```js
 5 > 4
 "apple" > "pineapple"
 "2" > "12"

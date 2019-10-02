@@ -1,7 +1,7 @@
 
 Backticks embed the expression inside `${...}` into the string.
 
-```js run
+```js
 let name = "Ilya";
 
 // the expression is a number 1

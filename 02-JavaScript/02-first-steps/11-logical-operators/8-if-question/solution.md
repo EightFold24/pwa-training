@@ -2,7 +2,7 @@ The answer: the first and the third will execute.
 
 Details:
 
-```js run
+```js
 // Runs.
 // The result of -1 || 0 = -1, truthy
 if (-1 || 0) alert( 'first' );

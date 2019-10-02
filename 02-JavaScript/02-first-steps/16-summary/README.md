@@ -19,7 +19,7 @@ alert('World')
 
 That's called "automatic semicolon insertion". Sometimes it doesn't work, for instance:
 
-```js run
+```js
 alert("There will be an error after this message")
 
 [1, 2].forEach(alert)
@@ -115,7 +115,7 @@ All these functions are *modal*, they pause the code execution and prevent the v
 
 For instance:
 
-```js run
+```js
 let userName = prompt("Your name?", "Alice");
 let isTeaWanted = confirm("Do you want some tea?");
 
@@ -134,7 +134,7 @@ Arithmetical
 
     The binary plus `+` concatenates strings. And if any of the operands is a string, the other one is converted to string too:
 
-    ```js run
+    ```js
     alert( '1' + 2 ); // '12', string
     alert( 1 + '2' ); // '12', string
     ```
@@ -154,7 +154,7 @@ Logical operators
 Comparisons
 : Equality check `==` for values of different types converts them to a number (except `null` and `undefined` that equal each other and nothing else), so these are equal:
 
-    ```js run
+    ```js
     alert( 0 == false ); // true
     alert( 0 == '' ); // true
     ```
@@ -206,7 +206,7 @@ The "switch" construct can replace multiple `if` checks. It uses `===` (strict e
 
 For instance:
 
-```js run
+```js
 let age = prompt('Your age?', 18);
 
 switch (age) {

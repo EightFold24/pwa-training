@@ -250,7 +250,7 @@ Transactions can guarantee that.
 
 To start a transaction:
 
-```js run
+```js
 db.transaction(store[, type]);
 ```
 

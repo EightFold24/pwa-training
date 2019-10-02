@@ -21,7 +21,7 @@ While the `condition` is truthy, the `code` from the loop body is executed.
 
 For instance, the loop below outputs `i` while `i < 3`:
 
-```js run
+```js
 let i = 0;
 while (i < 3) { // shows 0, then 1, then 2
   alert( i );
@@ -37,7 +37,7 @@ Any expression or variable can be a loop condition, not just comparisons: the co
 
 For instance, a shorter way to write `while (i != 0)` is `while (i)`:
 
-```js run
+```js
 let i = 3;
 *!*
 while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
@@ -50,7 +50,7 @@ while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
 ````smart header="Curly braces are not required for a single-line body"
 If the loop body has a single statement, we can omit the curly braces `{…}`:
 
-```js run
+```js
 let i = 3;
 *!*
 while (i) alert(i--);
@@ -72,7 +72,7 @@ The loop will first execute the body, then check the condition, and, while it's 
 
 For example:
 
-```js run
+```js
 let i = 0;
 do {
   alert( i );
@@ -96,7 +96,7 @@ for (begin; condition; step) {
 
 Let's learn the meaning of these parts by example. The loop below runs `alert(i)` for `i` from `0` up to (but not including) `3`:
 
-```js run
+```js
 for (let i = 0; i < 3; i++) { // shows 0, then 1, then 2
   alert(i);
 }
@@ -144,7 +144,7 @@ if (i < 3) { alert(i); i++ }
 ````smart header="Inline variable declaration"
 Here, the "counter" variable `i` is declared right in the loop. This is called an "inline" variable declaration. Such variables are visible only inside the loop.
 
-```js run
+```js
 for (*!*let*/!* i = 0; i < 3; i++) {
   alert(i); // 0, 1, 2
 }
@@ -153,7 +153,7 @@ alert(i); // error, no such variable
 
 Instead of defining a variable, we could use an existing one:
 
-```js run
+```js
 let i = 0;
 
 for (i = 0; i < 3; i++) { // use an existing variable
@@ -174,7 +174,7 @@ For example, we can omit `begin` if we don't need to do anything at the loop sta
 
 Like here:
 
-```js run
+```js
 let i = 0; // we have i already declared and assigned
 
 for (; i < 3; i++) { // no need for "begin"
@@ -184,7 +184,7 @@ for (; i < 3; i++) { // no need for "begin"
 
 We can also remove the `step` part:
 
-```js run
+```js
 let i = 0;
 
 for (; i < 3;) {
@@ -287,7 +287,7 @@ if (i > 5) {
 ...and rewrite it using a question mark:
 
 
-```js no-beautify
+```js
 (i > 5) ? alert(i) : *!*continue*/!*; // continue isn't allowed here
 ```
 
@@ -351,7 +351,7 @@ So the control goes straight from `(*)` to `alert('Done!')`.
 
 We can also move the label onto a separate line:
 
-```js no-beautify
+```js
 outer:
 for (let i = 0; i < 3; i++) { ... }
 ```

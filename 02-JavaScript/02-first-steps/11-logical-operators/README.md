@@ -20,7 +20,7 @@ In JavaScript, the operator is a little bit trickier and more powerful. But firs
 
 There are four possible logical combinations:
 
-```js run
+```js
 alert( true || true );   // true
 alert( false || true );  // true
 alert( true || false );  // true
@@ -33,7 +33,7 @@ If an operand is not a boolean, it's converted to a boolean for the evaluation.
 
 For instance, the number `1` is treated as `true`, the number `0` as `false`:
 
-```js run
+```js
 if (1 || 0) { // works just like if( true || false )
   alert( 'truthy!' );
 }
@@ -43,7 +43,7 @@ Most of the time, OR `||` is used in an `if` statement to test if *any* of the g
 
 For example:
 
-```js run
+```js
 let hour = 9;
 
 *!*
@@ -55,7 +55,7 @@ if (hour < 10 || hour > 18) {
 
 We can pass more conditions:
 
-```js run
+```js
 let hour = 12;
 let isWeekend = true;
 
@@ -88,7 +88,7 @@ In other words, a chain of OR `"||"` returns the first truthy value or the last 
 
 For instance:
 
-```js run
+```js
 alert( 1 || 0 ); // 1 (1 is truthy)
 alert( true || 'no matter what' ); // (true is truthy)
 
@@ -105,7 +105,7 @@ This leads to some interesting usage compared to a "pure, classical, boolean-onl
 
     We can use OR `||`:
 
-    ```js run
+    ```js
     let currentUser = null;
     let defaultUser = "John";
 
@@ -159,7 +159,7 @@ result = a && b;
 
 In classical programming, AND returns `true` if both operands are truthy and `false` otherwise:
 
-```js run
+```js
 alert( true && true );   // true
 alert( false && true );  // false
 alert( true && false );  // false
@@ -168,7 +168,7 @@ alert( false && false ); // false
 
 An example with `if`:
 
-```js run
+```js
 let hour = 12;
 let minute = 30;
 
@@ -179,7 +179,7 @@ if (hour == 12 && minute == 30) {
 
 Just as with OR, any value is allowed as an operand of AND:
 
-```js run
+```js
 if (1 && 0) { // evaluated as true && false
   alert( "won't work, because the result is falsy" );
 }
@@ -206,7 +206,7 @@ The rules above are similar to OR. The difference is that AND returns the first 
 
 Examples:
 
-```js run
+```js
 // if the first operand is truthy,
 // AND returns the second operand:
 alert( 1 && 0 ); // 0
@@ -220,13 +220,13 @@ alert( 0 && "no matter what" ); // 0
 
 We can also pass several values in a row. See how the first falsy one is returned:
 
-```js run
+```js
 alert( 1 && 2 && null && 3 ); // null
 ```
 
 When all values are truthy, the last value is returned:
 
-```js run
+```js
 alert( 1 && 2 && 3 ); // 3, the last one
 ```
 
@@ -240,7 +240,7 @@ Just like OR, the AND `&&` operator can sometimes replace `if`.
 
 For instance:
 
-```js run
+```js
 let x = 1;
 
 (x > 0) && alert( 'Greater than zero!' );
@@ -250,7 +250,7 @@ The action in the right part of `&&` would execute only if the evaluation reache
 
 So we basically have an analogue for:
 
-```js run
+```js
 let x = 1;
 
 if (x > 0) {
@@ -279,14 +279,14 @@ The operator accepts a single argument and does the following:
 
 For instance:
 
-```js run
+```js
 alert( !true ); // false
 alert( !0 ); // true
 ```
 
 A double NOT `!!` is sometimes used for converting a value to boolean type:
 
-```js run
+```js
 alert( !!"non-empty string" ); // true
 alert( !!null ); // false
 ```
@@ -295,7 +295,7 @@ That is, the first NOT converts the value to boolean and returns the inverse, an
 
 There's a little more verbose way to do the same thing -- a built-in `Boolean` function:
 
-```js run
+```js
 alert( Boolean("non-empty string") ); // true
 alert( Boolean(null) ); // false
 ```

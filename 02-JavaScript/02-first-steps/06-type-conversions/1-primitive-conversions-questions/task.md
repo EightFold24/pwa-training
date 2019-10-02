@@ -6,7 +6,7 @@ importance: 5
 
 What are results of these expressions?
 
-```js no-beautify
+```js
 "" + 1 + 0
 "" - 1 + 0
 true + false

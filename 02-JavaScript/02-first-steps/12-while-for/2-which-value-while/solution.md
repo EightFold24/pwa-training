@@ -2,7 +2,7 @@ The task demonstrates how postfix/prefix forms can lead to different results whe
 
 1. **From 1 to 4**
 
-    ```js run
+    ```js
     let i = 0;
     while (++i < 5) alert( i );
     ```
@@ -14,7 +14,7 @@ The task demonstrates how postfix/prefix forms can lead to different results whe
     Finally, `i = 4` is incremented to `5`, the comparison `while(5 < 5)` fails, and the loop stops. So `5` is not shown.
 2. **From 1 to 5**
 
-    ```js run
+    ```js
     let i = 0;
     while (i++ < 5) alert( i );
     ```

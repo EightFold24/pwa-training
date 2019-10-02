@@ -1,5 +1,5 @@
 
-```js run demo
+```js
 let num;
 
 do {

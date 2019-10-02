@@ -3,7 +3,7 @@
 
 Replace Function Expressions with arrow functions in the code:
 
-```js run
+```js
 function ask(question, yes, no) {
   if (confirm(question)) yes()
   else no();

@@ -1,6 +1,6 @@
 
 
-```js run demo
+```js
 let userName = prompt("Who's there?", '');
 
 if (userName == 'Admin') {

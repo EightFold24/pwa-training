@@ -29,24 +29,24 @@ Besides regular numbers, there are so-called "special numeric values" which also
 
     We can get it as a result of division by zero:
 
-    ```js run
+    ```js
     alert( 1 / 0 ); // Infinity
     ```
 
     Or just reference it directly:
 
-    ```js run
+    ```js
     alert( Infinity ); // Infinity
     ```
 - `NaN` represents a computational error. It is a result of an incorrect or an undefined mathematical operation, for instance:
 
-    ```js run
+    ```js
     alert( "not a number" / 2 ); // NaN, such division is erroneous
     ```
 
     `NaN` is sticky. Any further operation on `NaN` returns `NaN`:
 
-    ```js run
+    ```js
     alert( "not a number" / 2 + 5 ); // NaN
     ```
 
@@ -82,7 +82,7 @@ Double and single quotes are "simple" quotes. There's no difference between them
 
 Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
 
-```js run
+```js
 let name = "John";
 
 // embed a variable
@@ -95,7 +95,7 @@ alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
 The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
 
 Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
-```js run
+```js
 alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
 ```
 
@@ -122,7 +122,7 @@ let ageFieldChecked = false; // no, age field is not checked
 
 Boolean values also come as a result of comparisons:
 
-```js run
+```js
 let isGreater = 4 > 1;
 
 alert( isGreater ); // true (the comparison result is "yes")
@@ -154,7 +154,7 @@ The meaning of `undefined` is "value is not assigned".
 
 If a variable is declared, but not assigned, then its value is `undefined`:
 
-```js run
+```js
 let x;
 
 alert(x); // shows "undefined"
@@ -162,7 +162,7 @@ alert(x); // shows "undefined"
 
 Technically, it is possible to assign `undefined` to any variable:
 
-```js run
+```js
 let x = 123;
 
 x = undefined;

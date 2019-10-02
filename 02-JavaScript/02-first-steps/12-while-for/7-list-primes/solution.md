@@ -12,7 +12,7 @@ For each i in the interval {
 
 The code using a label:
 
-```js run
+```js
 let n = 10;
 
 nextPrime:

@@ -6,7 +6,7 @@ importance: 5
 
 Rewrite the code changing the `for` loop to `while` without altering its behavior (the output should stay same).
 
-```js run
+```js
 for (let i = 0; i < 3; i++) {
   alert( `number ${i}!` );
 }

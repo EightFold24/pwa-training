@@ -24,7 +24,7 @@ Does your browser store any cookies from this site? Let's see:
 Assuming you're on a website, it's possible to see the cookies from it, like this:
 ```
 
-```js run
+```js
 // At javascript.info, we use Google Analytics for statistics,
 // so there should be some cookies
 alert( document.cookie ); // cookie1=value1; cookie2=value2;...
@@ -45,7 +45,7 @@ We can write to `document.cookie`. But it's not a data property, it's an accesso
 
 For instance, this call sets a cookie with the name `user` and value `John`:
 
-```js run
+```js
 document.cookie = "user=John"; // update only cookie named 'user'
 alert(document.cookie); // show all cookies
 ```
@@ -54,7 +54,7 @@ If you run it, then probably you'll see multiple cookies. That's because `docume
 
 Technically, name and value can have any characters, to keep the valid formatting they should be escaped using a built-in `encodeURIComponent` function:
 
-```js run
+```js
 // special characters (spaces), need encoding
 let name = "my name";
 let value = "John Smith"
@@ -76,7 +76,7 @@ Cookies have several options, many of them are important and should be set.
 
 The options are listed after `key=value`, delimited by `;`, like this:
 
-```js run
+```js
 document.cookie = "user=John; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT"
 ```
 
@@ -301,7 +301,7 @@ Please note that a cookie value is encoded, so `getCookie` uses a built-in `deco
 
 Sets the cookie `name` to the given `value` with `path=/` by default (can be modified to add other defaults):
 
-```js run
+```js
 function setCookie(name, value, options = {}) {
 
   options = {

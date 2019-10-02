@@ -156,7 +156,7 @@ To output something to console from our code, there's `console.log` function.
 
 For instance, this outputs values from `0` to `4` to console:
 
-```js run
+```js
 // open console to see
 for (let i = 0; i < 5; i++) {
   console.log("value,", i);

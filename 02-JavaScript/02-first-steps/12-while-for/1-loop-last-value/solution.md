@@ -1,6 +1,6 @@
 The answer: `1`.
 
-```js run
+```js
 let i = 3;
 
 while (i) {

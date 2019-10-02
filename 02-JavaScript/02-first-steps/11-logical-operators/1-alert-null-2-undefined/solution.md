@@ -1,6 +1,6 @@
 The answer is `2`, that's the first truthy value.
 
-```js run
+```js
 alert( null || 2 || undefined );
 ```
 

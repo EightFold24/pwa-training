@@ -18,7 +18,7 @@ For example, `alert(value)` does it to show the value.
 
 We can also call the `String(value)` function to convert a value to a string:
 
-```js run
+```js
 let value = true;
 alert(typeof value); // boolean
 
@@ -36,13 +36,13 @@ Numeric conversion happens in mathematical functions and expressions automatical
 
 For example, when division `/` is applied to non-numbers:
 
-```js run
+```js
 alert( "6" / "2" ); // 3, strings are converted to numbers
 ```
 
 We can use the `Number(value)` function to explicitly convert a `value` to a number:
 
-```js run
+```js
 let str = "123";
 alert(typeof str); // string
 
@@ -55,7 +55,7 @@ Explicit conversion is usually required when we read a value from a string-based
 
 If the string is not a valid number, the result of such a conversion is `NaN`. For instance:
 
-```js run
+```js
 let age = Number("an arbitrary string instead of a number");
 
 alert(age); // NaN, conversion failed
@@ -72,7 +72,7 @@ Numeric conversion rules:
 
 Examples:
 
-```js run
+```js
 alert( Number("   123   ") ); // 123
 alert( Number("123z") );      // NaN (error reading a number at "z")
 alert( Number(true) );        // 1
@@ -86,7 +86,7 @@ Almost all mathematical operations convert values to numbers. A notable exceptio
 
 Then, it concatenates (joins) them:
 
-```js run
+```js
 alert( 1 + '2' ); // '12' (string to the right)
 alert( '1' + 2 ); // '12' (string to the left)
 ```
@@ -107,7 +107,7 @@ The conversion rule:
 
 For instance:
 
-```js run
+```js
 alert( Boolean(1) ); // true
 alert( Boolean(0) ); // false
 
@@ -118,7 +118,7 @@ alert( Boolean("") ); // false
 ````warn header="Please note: the string with zero `\"0\"` is `true`"
 Some languages (namely PHP) treat `"0"` as `false`. But in JavaScript, a non-empty string is always `true`.
 
-```js run
+```js
 alert( Boolean("0") ); // true
 alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
 ```

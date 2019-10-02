@@ -10,7 +10,7 @@ The `switch` has one or more `case` blocks and an optional default.
 
 It looks like this:
 
-```js no-beautify
+```js
 switch(x) {
   case 'value1':  // if (x === 'value1')
     ...
@@ -34,7 +34,7 @@ switch(x) {
 
 An example of `switch` (the executed code is highlighted):
 
-```js run
+```js
 let a = 2 + 2;
 
 switch (a) {
@@ -62,7 +62,7 @@ Then `4`. That's a match, so the execution starts from `case 4` until the neares
 
 An example without `break`:
 
-```js run
+```js
 let a = 2 + 2;
 
 switch (a) {
@@ -92,7 +92,7 @@ Both `switch` and `case` allow arbitrary expressions.
 
 For example:
 
-```js run
+```js
 let a = "1";
 let b = 0;
 
@@ -147,7 +147,7 @@ Let's emphasize that the equality check is always strict. The values must be of 
 
 For example, let's consider the code:
 
-```js run
+```js
 let arg = prompt("Enter a value?");
 switch (arg) {
   case '0':

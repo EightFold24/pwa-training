@@ -1,6 +1,6 @@
 The answer: first `1`, then `2`.
 
-```js run
+```js
 alert( alert(1) || 2 || alert(3) );
 ```
 

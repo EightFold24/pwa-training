@@ -32,7 +32,7 @@ Our new function can be called by its name: `showMessage()`.
 
 For instance:
 
-```js run
+```js
 function showMessage() {
   alert( 'Hello everyone!' );
 }
@@ -55,7 +55,7 @@ A variable declared inside a function is only visible inside that function.
 
 For example:
 
-```js run
+```js
 function showMessage() {
 *!*
   let message = "Hello, I'm JavaScript!"; // local variable
@@ -88,7 +88,7 @@ The function has full access to the outer variable. It can modify it as well.
 
 For instance:
 
-```js run
+```js
 let *!*userName*/!* = 'John';
 
 function showMessage() {
@@ -109,7 +109,7 @@ The outer variable is only used if there's no local one.
 
 If a same-named variable is declared inside the function then it *shadows* the outer one. For instance, in the code below the function uses the local `userName`. The outer one is ignored:
 
-```js run
+```js
 let userName = 'John';
 
 function showMessage() {
@@ -141,7 +141,7 @@ We can pass arbitrary data to functions using parameters (also called *function 
 
 In the example below, the function has two parameters: `from` and `text`.
 
-```js run
+```js
 function showMessage(*!*from, text*/!*) { // arguments: from, text
   alert(from + ': ' + text);
 }
@@ -157,7 +157,7 @@ When the function is called in lines `(*)` and `(**)`, the given values are copi
 Here's one more example: we have a variable `from` and pass it to the function. Please note: the function changes `from`, but the change is not seen outside, because a function always gets a copy of the value:
 
 
-```js run
+```js
 function showMessage(from, text) {
 
 *!*
@@ -189,7 +189,7 @@ That's not an error. Such a call would output `"Ann: undefined"`. There's no `te
 
 If we want to use a "default" `text` in this case, then we can specify it after `=`:
 
-```js run
+```js
 function showMessage(from, *!*text = "no text given"*/!*) {
   alert( from + ": " + text );
 }
@@ -201,7 +201,7 @@ Now if the `text` parameter is not passed, it will get the value `"no text given
 
 Here `"no text given"` is a string, but it can be a more complex expression, which is only evaluated and assigned if the parameter is missing. So, this is also possible:
 
-```js run
+```js
 function showMessage(from, text = anotherFunction()) {
   // anotherFunction() only executed if no text given
   // its result becomes the value of text
@@ -264,7 +264,7 @@ The directive `return` can be in any place of the function. When the execution r
 
 There may be many occurrences of `return` in a single function. For instance:
 
-```js run
+```js
 function checkAge(age) {
   if (age > 18) {
 *!*
@@ -308,7 +308,7 @@ In the code above, if `checkAge(age)` returns `false`, then `showMovie` won't pr
 ````smart header="A function with an empty `return` or without it returns `undefined`"
 If a function does not return a value, it is the same as if it returns `undefined`:
 
-```js run
+```js
 function doNothing() { /* empty */ }
 
 alert( doNothing() === undefined ); // true
@@ -316,7 +316,7 @@ alert( doNothing() === undefined ); // true
 
 An empty `return` is also the same as `return undefined`:
 
-```js run
+```js
 function doNothing() {
   return;
 }
@@ -370,7 +370,7 @@ Function starting with...
 
 Examples of such names:
 
-```js no-beautify
+```js
 showMessage(..)     // shows a message
 getAge(..)          // returns the age (gets it somehow)
 calcSum(..)         // calculates a sum and returns the result

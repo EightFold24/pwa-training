@@ -266,7 +266,7 @@ We can setup `before/after` functions that execute before/after running tests, a
 
 For instance:
 
-```js no-beautify
+```js
 describe("test", function() {
 
   before(() => alert("Testing started – before all tests"));

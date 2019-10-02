@@ -1,6 +1,6 @@
 The answer: `3`.
 
-```js run
+```js
 alert( null || 2 && 3 || 4 );
 ```
 

@@ -26,7 +26,7 @@ The meaning of these code samples is the same: "create a function and put it int
 
 We can even print out that value using `alert`:
 
-```js run
+```js
 function sayHi() {
   alert( "Hello" );
 }
@@ -112,7 +112,7 @@ We'll write a function `ask(question, yes, no)` with three parameters:
 
 The function should ask the `question` and, depending on the user's answer, call `yes()` or `no()`:
 
-```js run
+```js
 *!*
 function ask(question, yes, no) {
   if (confirm(question)) yes()
@@ -209,7 +209,7 @@ And after all Function Declarations are processed, the code is executed. So it h
 
 For example, this works:
 
-```js run refresh untrusted
+```js
 *!*
 sayHi("John"); // Hello, John
 */!*
@@ -223,7 +223,7 @@ The Function Declaration `sayHi` is created when JavaScript is preparing to star
 
 ...If it were a Function Expression, then it wouldn't work:
 
-```js run refresh untrusted
+```js
 *!*
 sayHi("John"); // error!
 */!*
@@ -243,7 +243,7 @@ For instance, let's imagine that we need to declare a function `welcome()` depen
 
 If we use Function Declaration, it won't work as intended:
 
-```js run
+```js
 let age = prompt("What is your age?", 18);
 
 // conditionally declare a function
@@ -271,7 +271,7 @@ That's because a Function Declaration is only visible inside the code block in w
 
 Here's another example:
 
-```js run
+```js
 let age = 16; // take 16 as an example
 
 if (age < 18) {
@@ -308,7 +308,7 @@ The correct approach would be to use a Function Expression and assign `welcome` 
 
 This code works as intended:
 
-```js run
+```js
 let age = prompt("What is your age?", 18);
 
 let welcome;
@@ -334,7 +334,7 @@ welcome(); // ok now
 
 Or we could simplify it even further using a question mark operator `?`:
 
-```js run
+```js
 let age = prompt("What is your age?", 18);
 
 let welcome = (age < 18) ?
@@ -379,7 +379,7 @@ let func = function(arg1, arg2, ...argN) {
 
 Let's see an example:
 
-```js run
+```js
 let sum = (a, b) => a + b;
 
 /* The arrow function is a shorter form of:
@@ -395,7 +395,7 @@ alert( sum(1, 2) ); // 3
 
 If we have only one argument, then parentheses around parameters can be omitted, making that even shorter:
 
-```js run
+```js
 // same as
 // let double = function(n) { return n * 2 }
 *!*
@@ -407,7 +407,7 @@ alert( double(3) ); // 6
 
 If there are no arguments, parentheses should be empty (but they should be present):
 
-```js run
+```js
 let sayHi = () => alert("Hello!");
 
 sayHi();
@@ -417,7 +417,7 @@ Arrow functions can be used in the same way as Function Expressions.
 
 For instance, here's the rewritten example with `welcome()`:
 
-```js run
+```js
 let age = prompt("What is your age?", 18);
 
 let welcome = (age < 18) ?
@@ -439,7 +439,7 @@ Sometimes we need something a little bit more complex, like multiple expressions
 
 Like this:
 
-```js run
+```js
 let sum = (a, b) => {  // the curly brace opens a multiline function
   let result = a + b;
 *!*

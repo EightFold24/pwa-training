@@ -10,7 +10,7 @@ The `if(...)` statement evaluates a condition in parentheses and, if the result 
 
 For example:
 
-```js run
+```js
 let year = prompt('In which year was ECMAScript-2015 specification published?', '');
 
 *!*
@@ -71,7 +71,7 @@ if (cond) {
 The `if` statement may contain an optional "else" block. It executes when the condition is false.
 
 For example:
-```js run
+```js
 let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
 
 if (year == 2015) {
@@ -87,7 +87,7 @@ Sometimes, we'd like to test several variants of a condition. The `else if` clau
 
 For example:
 
-```js run
+```js
 let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
 
 if (year < 2015) {
@@ -167,7 +167,7 @@ let accessAllowed = age > 18;
 A sequence of question mark operators `?` can return a value that depends on more than one condition.
 
 For instance:
-```js run
+```js
 let age = prompt('age?', 18);
 
 let message = (age < 3) ? 'Hi, baby!' :

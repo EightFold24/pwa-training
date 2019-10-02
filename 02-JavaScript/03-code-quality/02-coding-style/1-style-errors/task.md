@@ -6,7 +6,7 @@ importance: 4
 
 What's wrong with the code style below?
 
-```js no-beautify
+```js
 function pow(x,n)
 {
   let result=1;

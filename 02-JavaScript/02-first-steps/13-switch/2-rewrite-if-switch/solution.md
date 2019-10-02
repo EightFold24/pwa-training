@@ -1,6 +1,6 @@
 The first two checks turn into two `case`. The third check is split into two cases:
 
-```js run
+```js
 let a = +prompt('a?', '');
 
 switch (a) {

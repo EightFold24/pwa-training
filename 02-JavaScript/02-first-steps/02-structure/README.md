@@ -55,7 +55,7 @@ Errors which occur in such cases are quite hard to find and fix.
 ### An example of an error
 If you're curious to see a concrete example of such an error, check this code out:
 
-```js run
+```js
 [1, 2].forEach(alert)
 ```
 
@@ -72,7 +72,7 @@ alert("There will be an error")
 Now if we run the code, only the first `alert` is shown and then we have an error!
 
 But everything is fine again if we add a semicolon after `alert`:
-```js run
+```js
 alert("All fine now");
 
 [1, 2].forEach(alert)  
@@ -104,7 +104,7 @@ Comments can be put into any place of a script. They don't affect its execution 
 The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
 
 Like here:
-```js run
+```js
 // This comment occupies a line of its own
 alert('Hello');
 
@@ -115,7 +115,7 @@ alert('World'); // This comment follows the statement
 
 Like this:
 
-```js run
+```js
 /* An example with two messages.
 This is a multiline comment.
 */
@@ -127,7 +127,7 @@ The content of comments is ignored, so if we put code inside <code>/&#42; ... &#
 
 Sometimes it can be handy to temporarily disable a part of code:
 
-```js run
+```js
 /* Commenting out the code
 alert('Hello');
 */

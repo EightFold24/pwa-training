@@ -30,7 +30,7 @@ message = 'Hello'; // store the string
 
 The string is now saved into the memory area associated with the variable. We can access it using the variable name:
 
-```js run
+```js
 let message;
 message = 'Hello!';
 
@@ -41,7 +41,7 @@ alert(message); // shows the variable content
 
 To be concise, we can combine the variable declaration and assignment into a single line:
 
-```js run
+```js
 let message = 'Hello!'; // define the variable and assign the value
 
 alert(message); // Hello!
@@ -49,7 +49,7 @@ alert(message); // Hello!
 
 We can also declare multiple variables in one line:
 
-```js no-beautify
+```js
 let user = 'John', age = 25, message = 'Hello';
 ```
 
@@ -64,7 +64,7 @@ let message = 'Hello';
 ```
 
 Some people also define multiple variables in this multiline style:
-```js no-beautify
+```js
 let user = 'John',
   age = 25,
   message = 'Hello';
@@ -72,7 +72,7 @@ let user = 'John',
 
 ...Or even in the "comma-first" style:
 
-```js no-beautify
+```js
 let user = 'John'
   , age = 25
   , message = 'Hello';
@@ -104,7 +104,7 @@ For instance, the variable `message` can be imagined as a box labeled `"message"
 We can put any value in the box.
 
 We can also change it as many times as we want:
-```js run
+```js
 let message;
 
 message = 'Hello!';
@@ -120,7 +120,7 @@ When the value is changed, the old data is removed from the variable:
 
 We can also declare two variables and copy data from one into the other.
 
-```js run
+```js
 let hello = 'Hello world!';
 
 let message;
@@ -163,7 +163,7 @@ What's interesting -- the dollar sign `'$'` and the underscore `'_'` can also be
 
 These names are valid:
 
-```js run untrusted
+```js
 let $ = 1; // declared a variable with the name "$"
 let _ = 2; // and now a variable with the name "_"
 
@@ -172,7 +172,7 @@ alert($ + _); // 3
 
 Examples of incorrect variable names:
 
-```js no-beautify
+```js
 let 1a; // cannot start with a digit
 
 let my-name; // hyphens '-' aren't allowed in the name
@@ -210,7 +210,7 @@ let return = 5; // also can't name it "return", error!
 
 Normally, we need to define a variable before using it. But in the old times, it was technically possible to create a variable by a mere assignment of the value without using `let`. This still works now if we don't put `use strict` in our scripts to maintain compatibility with old scripts.
 
-```js run no-strict
+```js
 // note: no "use strict" in this example
 
 num = 5; // the variable "num" is created if it didn't exist
@@ -239,7 +239,7 @@ const myBirthday = '18.04.1982';
 
 Variables declared using `const` are called "constants". They cannot be reassigned. An attempt to do so would cause an error:
 
-```js run
+```js
 const myBirthday = '18.04.1982';
 
 myBirthday = '01.01.2001'; // error, can't reassign the constant!
@@ -256,7 +256,7 @@ Such constants are named using capital letters and underscores.
 
 For instance, let's make constants for colors in so-called "web" (hexadecimal) format:
 
-```js run
+```js
 const COLOR_RED = "#F00";
 const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";

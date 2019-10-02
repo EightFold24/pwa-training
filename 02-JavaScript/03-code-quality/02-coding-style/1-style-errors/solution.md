@@ -1,7 +1,7 @@
 
 You could note the following:
 
-```js no-beautify
+```js
 function pow(x,n)  // <- no space between arguments
 {  // <- figure bracket on a separate line
   let result=1;   // <- no spaces before or after =

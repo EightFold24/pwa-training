@@ -27,7 +27,7 @@ Please make sure that `"use strict"` is at the top of your scripts, otherwise st
 
 Strict mode isn't enabled here:
 
-```js no-strict
+```js
 alert("some code");
 // "use strict" below is ignored--it must be at the top
 

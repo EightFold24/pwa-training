@@ -6,7 +6,7 @@ importance: 4
 
 Rewrite the code below using a single `switch` statement:
 
-```js run
+```js
 let a = +prompt('a?', '');
 
 if (a == 0) {

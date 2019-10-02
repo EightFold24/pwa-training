@@ -1,0 +1,90 @@
+<!-- This is a comment, it does nothing :) -->
+
+<!-- This is not an HTML tag but a special line that tells the browser what version of HTML the file represents.  It must always be the first line in the file. -->
+<!DOCTYPE html>
+
+<!-- Then we have the HTML openning tag.  You can see its respective closing tag at the bottom of the file.  Most tags are in the form <tagname>...</tagname> -->
+<html>
+
+  <!-- The HTML tag contains two things.  A head and a body.
+  <!-- The head contains metadata about the page -->
+  <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML -->
+  <head>
+
+    <!-- This is an example of a tag that doesn't need closed -->
+    <!-- This metadata tag specifies the character set contained in the file -->
+    <meta charset="UTF-8">
+
+    <!-- Other metadata tags may include... -->
+    <meta name="description" content="This is usually the text that is displayed in search results below the website name/url">
+    <meta name="keywords" content="HTML, tutorial, example">
+    <meta name="author" content="John Smith">
+
+    <!-- This links a style sheet to this HTML document -->
+    <!-- View this file before and after you comment the following line in -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Page Title</title>
+
+  <!-- Remember to close the  -->
+  </head>
+
+  <!-- The body contains the content that will be displayed on screen -->
+  <body>
+
+    <div id=container>
+
+      <!-- View this HTML file in a browser to see how these items appear -->
+      <h1>This is a header 1 text</h1>
+      <h2>This is a header 2 text</h2>
+      <h3>This is a header 3 text</h3>
+
+      <!-- This is a paragraph -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <a href="google.com">This is a link to somewhere</a>
+
+      <!-- A link element can be nested inside a paragraph tag (or any other tag for that matter) -->
+      <p>Lorem ipsum dolor sit amet, <a href="google.com">it can be nested inside a paragraph</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- Text goes across the page unless it is broken up using breaks -->
+      <p>Lorem ipsum dolor sit amet, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <!-- These are lists, unordered list (ul) & ordered list (ol), and they contain list items (li) -->
+      <ul>
+        <li>This is the first item</li>
+        <li>This is the first item</li>
+        <li>This is the first item</li>
+      </ul>
+
+      <ol>
+        <li>This is the first item</li>
+        <li>This is the first item</li>
+        <li>This is the first item</li>
+      </ol>
+
+      <!-- This is an image tag. The src attribute is for pointing to the image file. It can either be a path to a file in your current directory, or it can be a URL. -->
+      <!-- It has a number of optional attributes including height and width. -->
+      <img src="https://hostingreviewbox.com/wp-content/uploads/2016/02/html5-cheat-sheet-1.png" width="100%">
+
+      <!-- A div is simply a container. It is useful because it can be targetted by CSS for styling. -->
+      <!-- When we apply styles to this page, we will be able to target this div by its unique id -->
+      <div id="mydiv">
+        <p>Some text in a div</p>
+      </div>
+
+      <!-- We will also be able to set some styling to multiple elements using classes -->
+      <div>
+        <div class="green">Some text in a nested div and not wrapped in a 'p' tag</div>
+        <div class="green">Some text in a nested div and not wrapped in a 'p' tag</div>
+        <div class="red">Some text in a nested div and not wrapped in a 'p' tag</div>
+        <div class="red">Some text in a nested div and not wrapped in a 'p' tag</div>
+      </div>
+
+      <!-- Refer to other tags using docs like Developer Mozilla -->
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element -->
+
+    <!-- Close the container div -->
+    </div>
+
+  </body>
+</html>

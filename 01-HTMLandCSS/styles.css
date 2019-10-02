@@ -1,0 +1,49 @@
+/* This is a comment. It does nothing :) */
+
+/* All styles must follow the following format...
+
+style_target {
+  style_attribute: value;
+}
+
+DON'T FORGET THE ; AT THE END!
+*/
+
+/* This is a style that is applied to any body tags (there is only one) */
+body {
+
+  /* We can list our styles here. We will only set one.
+  The background option can take a hex value / colour name / RGB value */
+  background: #1a2a66;
+}
+
+/* We can list all the tag types we want to attach the same styles to */
+h1, h2, h3, p, li {
+  color: white;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-family */
+  font-family: Sans-serif, Verdana, serif;
+}
+
+a {
+  color: yellow;
+}
+
+/* To attach style to a tag with a particular id, we prepend a # symbol */
+#container {
+
+  /* To horizontally center a block element (like <div>), use margin: auto;
+  The element will then take up the specified width,
+  and the remaining space will be split equally between the two margins */
+  width: 600px;
+  margin: auto;
+}
+
+/* To attch style to any tag with the class name, prepend the style name with a . */
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}

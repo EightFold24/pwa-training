@@ -83,7 +83,7 @@ To attach several scripts, use multiple tags:
 …
 ```
 
-<div>&nbsp;</div>
+
 
 > ### Please note:
 > As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
@@ -94,7 +94,7 @@ To attach several scripts, use multiple tags:
 
 > That reduces traffic and makes pages faster.
 
-<div>&nbsp;</div>
+
 
 > ### If `src` is set, the script content is ignored.
 > A single `<script>` tag can't have both the `src` attribute and code inside.

@@ -39,13 +39,13 @@ The `<script>` tag contains JavaScript code which is automatically executed when
 
 The `<script>` tag has a few attributes that are rarely used nowadays but can still be found in old code:
 
-### The `type` attribute: `&lt;script <u>type</u>=...&gt;`
+**The `type` attribute: `&lt;script <u>type</u>=...&gt;`**
 The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic; we'll talk about modules in another part of the tutorial.
 
-### The `language` attribute: `&lt;script <u>language</u>=...&gt;`
+**The `language` attribute: `&lt;script <u>language</u>=...&gt;`**
 This attribute was meant to show the language of the script. This attribute no longer makes sense because JavaScript is the default language. There is no need to use it.
 
-### Comments before and after scripts.
+**Comments before and after scripts.**
 In really ancient books and guides, you may find comments inside `<script>` tags, like this:
 
 ```html
@@ -83,6 +83,7 @@ To attach several scripts, use multiple tags:
 …
 ```
 
+<br>
 > ### Please note:
 > As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
 
@@ -92,6 +93,7 @@ To attach several scripts, use multiple tags:
 
 > That reduces traffic and makes pages faster.
 
+<br>
 > ### If `src` is set, the script content is ignored.
 > A single `<script>` tag can't have both the `src` attribute and code inside.
 

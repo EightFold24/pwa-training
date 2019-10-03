@@ -52,11 +52,10 @@ Besides regular numbers, there are so-called "special numeric values" which also
 
     So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result.
 
-```smart header="Mathematical operations are safe"
-Doing maths is "safe" in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
-
-The script will never stop with a fatal error ("die"). At worst, we'll get `NaN` as the result.
-```
+> ### Mathematical operations are safe
+> Doing maths is "safe" in JavaScript. We can do anything: divide by zero, treat non-numeric strings as numbers, etc.
+> 
+> The script will never stop with a fatal error ("die"). At worst, we'll get `NaN` as the result.
 
 Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
 
@@ -86,10 +85,10 @@ Backticks are "extended functionality" quotes. They allow us to embed variables 
 let name = "John";
 
 // embed a variable
-alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
+alert( `Hello, ${name}!` ); // Hello, John!
 
 // embed an expression
-alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+alert( `the result is ${1 + 2}` ); // the result is 3
 ```
 
 The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
@@ -101,11 +100,10 @@ alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do n
 
 We'll cover strings more thoroughly in the chapter <info:string>.
 
-```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is `char`.
-
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
-```
+> ### There is no *character* type.
+> In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is `char`.
+> 
+> In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
 
 ## A boolean (logical type)
 
@@ -180,7 +178,7 @@ All other types are called "primitive" because their values can contain only a s
 
 The `symbol` type is used to create unique identifiers for objects. We mention it here for completeness, but we'll study it after objects.
 
-## The typeof operator [#type-typeof]
+## The typeof operator
 
 The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently or just want to do a quick check.
 
@@ -204,17 +202,11 @@ typeof "foo" // "string"
 
 typeof Symbol("id") // "symbol"
 
-*!*
 typeof Math // "object"  (1)
-*/!*
 
-*!*
 typeof null // "object"  (2)
-*/!*
 
-*!*
 typeof alert // "function"  (3)
-*/!*
 ```
 
 The last three lines may need additional explanation:

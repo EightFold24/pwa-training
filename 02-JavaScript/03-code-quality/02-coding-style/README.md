@@ -58,7 +58,7 @@ Here are the annotated variants so you can judge their readability for yourself:
 
 1. 😠 Beginners sometimes do that. Bad! Curly braces are not needed:
     ```js
-    if (n < 0) *!*{*/!*alert(`Power ${n} is not supported`);*!*}*/!*
+    if (n < 0) {alert(`Power ${n} is not supported`);}
     ```
 2. 😠 Split to a separate line without braces. Never do that, easy to make an error when adding new lines:
     ```js
@@ -175,7 +175,7 @@ We can write:
 
 ```js
 for (let i = 0; i < 10; i++) {
-  if (!cond) *!*continue*/!*;
+  if (!cond) continue;
   ...  // <- no extra nesting level
 }
 ```
@@ -230,7 +230,7 @@ If you are writing several "helper" functions and the code that uses them, there
 1. Declare the functions *above* the code that uses them:
 
     ```js
-    // *!*function declarations*/!*
+    // function declarations
     function createElement() {
       ...
     }
@@ -243,7 +243,7 @@ If you are writing several "helper" functions and the code that uses them, there
       ...
     }
 
-    // *!*the code which uses them*/!*
+    // the code which uses them
     let elem = createElement();
     setHandler(elem);
     walkAround();
@@ -251,12 +251,12 @@ If you are writing several "helper" functions and the code that uses them, there
 2. Code first, then functions
 
     ```js
-    // *!*the code which uses the functions*/!*
+    // the code which uses the functions
     let elem = createElement();
     setHandler(elem);
     walkAround();
 
-    // --- *!*helper functions*/!* ---
+    // --- helper functions ---
     function createElement() {
       ...
     }

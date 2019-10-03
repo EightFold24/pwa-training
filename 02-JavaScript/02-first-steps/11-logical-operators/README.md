@@ -46,9 +46,9 @@ For example:
 ```js
 let hour = 9;
 
-*!*
+
 if (hour < 10 || hour > 18) {
-*/!*
+
   alert( 'The office is closed.' );
 }
 ```
@@ -109,9 +109,9 @@ This leads to some interesting usage compared to a "pure, classical, boolean-onl
     let currentUser = null;
     let defaultUser = "John";
 
-    *!*
+    
     let name = currentUser || defaultUser || "unnamed";
-    */!*
+    
 
     alert( name ); // selects "John" – the first truthy value
     ```
@@ -128,7 +128,7 @@ This leads to some interesting usage compared to a "pure, classical, boolean-onl
     ```js
     let x;
 
-    *!*true*/!* || (x = 1);
+    true || (x = 1);
 
     alert(x); // undefined, because (x = 1) not evaluated
     ```
@@ -138,7 +138,7 @@ This leads to some interesting usage compared to a "pure, classical, boolean-onl
     ```js
     let x;
 
-    *!*false*/!* || (x = 1);
+    false || (x = 1);
 
     alert(x); // 1
     ```
@@ -230,11 +230,11 @@ When all values are truthy, the last value is returned:
 alert( 1 && 2 && 3 ); // 3, the last one
 ```
 
-````smart header="Precedence of AND `&&` is higher than OR `||`"
-The precedence of AND `&&` operator is higher than OR `||`.
-
-So the code `a && b || c && d` is essentially the same as if the `&&` expressions were in parentheses: `(a && b) || (c && d)`.
-````
+## 
+> ### Precedence of AND `&&` is higher than OR `||`
+> The precedence of AND `&&` operator is higher than OR `||`.
+> 
+> So the code `a && b || c && d` is essentially the same as if the `&&` expressions were in parentheses: `(a && b) || (c && d)`.
 
 Just like OR, the AND `&&` operator can sometimes replace `if`.
 

@@ -57,11 +57,10 @@ In the examples above, the comparison `'Z' > 'A'` gets to a result at the first 
 2. `l` is the same as `l`.
 3. `o` is greater than `e`. Stop here. The first string is greater.
 
-```smart header="Not a real dictionary, but Unicode order"
-The comparison algorithm given above is roughly equivalent to the one used in dictionaries or phone books, but it's not exactly the same.
-
-For instance, case matters. A capital letter `"A"` is not equal to the lowercase `"a"`. Which one is greater? The lowercase `"a"`. Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode). We'll get back to specific details and consequences of this in the chapter <info:string>.
-```
+> ### Not a real dictionary, but Unicode order
+> The comparison algorithm given above is roughly equivalent to the one used in dictionaries or phone books, but it's not exactly the same.
+> 
+> For instance, case matters. A capital letter `"A"` is not equal to the lowercase `"a"`. Which one is greater? The lowercase `"a"`. Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode). We'll get back to specific details and consequences of this in the chapter <info:string>.
 
 ## Comparison of different types
 
@@ -83,26 +82,24 @@ alert( true == 1 ); // true
 alert( false == 0 ); // true
 ```
 
-````smart header="A funny consequence"
-It is possible that at the same time:
-
-- Two values are equal.
-- One of them is `true` as a boolean and the other one is `false` as a boolean.
-
-For example:
-
-```js
-let a = 0;
-alert( Boolean(a) ); // false
-
-let b = "0";
-alert( Boolean(b) ); // true
-
-alert(a == b); // true!
-```
-
-From JavaScript's standpoint, this result is quite normal. An equality check converts values using the numeric conversion (hence `"0"` becomes `0`), while the explicit `Boolean` conversion uses another set of rules.
-````
+> ### A funny consequence
+> It is possible that at the same time:
+> 
+> - Two values are equal.
+> - One of them is `true` as a boolean and the other one is `false` as a boolean.
+> 
+> For example:
+> ```js
+> let a = 0;
+> alert( Boolean(a) ); // false
+> 
+> let b = "0";
+> alert( Boolean(b) ); // true
+> 
+> alert(a == b); // true!
+> ```
+> 
+> From JavaScript's standpoint, this result is quite normal. An equality check converts values using the numeric conversion (hence `"0"` becomes `0`), while the explicit `Boolean` conversion uses another set of rules.
 
 ## Strict equality
 
@@ -143,16 +140,16 @@ There's a non-intuitive behavior when `null` or `undefined` are compared to othe
 For a strict equality check `===`
 : These values are different, because each of them is a different type.
 
-    ```js
-    alert( null === undefined ); // false
-    ```
+```js
+alert( null === undefined ); // false
+```
 
 For a non-strict check `==`
 : There's a special rule. These two are a "sweet couple": they equal each other (in the sense of `==`), but not any other value.
 
-    ```js
-    alert( null == undefined ); // true
-    ```
+```js
+alert( null == undefined ); // true
+```
 
 For maths and other comparisons `< > <= >=`
 : `null/undefined` are converted to numbers: `null` becomes `0`, while `undefined` becomes `NaN`.
@@ -166,7 +163,7 @@ Let's compare `null` with a zero:
 ```js
 alert( null > 0 );  // (1) false
 alert( null == 0 ); // (2) false
-alert( null >= 0 ); // (3) *!*true*/!*
+alert( null >= 0 ); // (3) true
 ```
 
 Mathematically, that's strange. The last result states that "`null` is greater than or equal to zero", so in one of the comparisons above it must be `true`, but they are both false.

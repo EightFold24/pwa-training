@@ -13,9 +13,7 @@ For example:
 ```js
 let year = prompt('In which year was ECMAScript-2015 specification published?', '');
 
-*!*
 if (year == 2015) alert( 'You are right!' );
-*/!*
 ```
 
 In the example above, the condition is a simple equality check (`year == 2015`), but it can be much more complex.
@@ -113,13 +111,11 @@ For instance:
 let accessAllowed;
 let age = prompt('How old are you?', '');
 
-*!*
 if (age > 18) {
   accessAllowed = true;
 } else {
   accessAllowed = false;
 }
-*/!*
 
 alert(accessAllowed);
 ```
@@ -153,14 +149,13 @@ let accessAllowed = age > 18 ? true : false;
 
 But parentheses make the code more readable, so we recommend using them.
 
-````smart
-In the example above, you can avoid using the question mark operator because the comparison itself returns `true/false`:
-
-```js
-// the same
-let accessAllowed = age > 18;
-```
-````
+## 
+> ### Please note:
+> In the example above, you can avoid using the question mark operator because the comparison itself returns `true/false`:
+> ```js
+> // the same
+> let accessAllowed = age > 18;
+> ```
 
 ## Multiple '?'
 
@@ -206,10 +201,8 @@ Sometimes the question mark `?` is used as a replacement for `if`:
 ```js
 let company = prompt('Which company created JavaScript?', '');
 
-*!*
 (company == 'Netscape') ?
    alert('Right!') : alert('Wrong.');
-*/!*
 ```
 
 Depending on the condition `company == 'Netscape'`, either the first or the second expression after the `?` gets executed and shows an alert.
@@ -225,13 +218,11 @@ Here is the same code using `if` for comparison:
 ```js
 let company = prompt('Which company created JavaScript?', '');
 
-*!*
 if (company == 'Netscape') {
   alert('Right!');
 } else {
   alert('Wrong.');
 }
-*/!*
 ```
 
 Our eyes scan the code vertically. Code blocks which span several lines are easier to understand than a long, horizontal instruction set.

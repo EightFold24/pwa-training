@@ -37,10 +37,8 @@ function showMessage() {
   alert( 'Hello everyone!' );
 }
 
-*!*
 showMessage();
 showMessage();
-*/!*
 ```
 
 The call `showMessage()` executes the code of the function. Here we will see the message two times.
@@ -57,10 +55,7 @@ For example:
 
 ```js
 function showMessage() {
-*!*
   let message = "Hello, I'm JavaScript!"; // local variable
-*/!*
-
   alert( message );
 }
 
@@ -74,10 +69,10 @@ alert( message ); // <-- Error! The variable is local to the function
 A function can access an outer variable as well, for example:
 
 ```js
-let *!*userName*/!* = 'John';
+let userName = 'John';
 
 function showMessage() {
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hello, ' + userName;
   alert(message);
 }
 
@@ -89,20 +84,20 @@ The function has full access to the outer variable. It can modify it as well.
 For instance:
 
 ```js
-let *!*userName*/!* = 'John';
+let userName = 'John';
 
 function showMessage() {
-  *!*userName*/!* = "Bob"; // (1) changed the outer variable
+  userName = "Bob"; // (1) changed the outer variable
 
-  let message = 'Hello, ' + *!*userName*/!*;
+  let message = 'Hello, ' + userName;
   alert(message);
 }
 
-alert( userName ); // *!*John*/!* before the function call
+alert( userName ); // John before the function call
 
 showMessage();
 
-alert( userName ); // *!*Bob*/!*, the value was modified by the function
+alert( userName ); // Bob, the value was modified by the function
 ```
 
 The outer variable is only used if there's no local one.
@@ -113,27 +108,27 @@ If a same-named variable is declared inside the function then it *shadows* the o
 let userName = 'John';
 
 function showMessage() {
-*!*
-  let userName = "Bob"; // declare a local variable
-*/!*
 
-  let message = 'Hello, ' + userName; // *!*Bob*/!*
+  let userName = "Bob"; // declare a local variable
+
+
+  let message = 'Hello, ' + userName; // Bob
   alert(message);
 }
 
 // the function will create and use its own userName
 showMessage();
 
-alert( userName ); // *!*John*/!*, unchanged, the function did not access the outer variable
+alert( userName ); // John, unchanged, the function did not access the outer variable
 ```
 
-```smart header="Global variables"
-Variables declared outside of any function, such as the outer `userName` in the code above, are called *global*.
-
-Global variables are visible from any function (unless shadowed by locals).
-
-It's a good practice to minimize the use of global variables. Modern code has few or no globals. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.
-```
+## 
+> ### Global variables
+> Variables declared outside of any function, such as the outer `userName` in the code above, are called *global*.
+> 
+> Global variables are visible from any function (unless shadowed by locals).
+> 
+> It's a good practice to minimize the use of global variables. Modern code has few or no globals. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.
 
 ## Parameters
 
@@ -142,14 +137,12 @@ We can pass arbitrary data to functions using parameters (also called *function 
 In the example below, the function has two parameters: `from` and `text`.
 
 ```js
-function showMessage(*!*from, text*/!*) { // arguments: from, text
+function showMessage(from, text) { // arguments: from, text
   alert(from + ': ' + text);
 }
 
-*!*
 showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
 showMessage('Ann', "What's up?"); // Ann: What's up? (**)
-*/!*
 ```
 
 When the function is called in lines `(*)` and `(**)`, the given values are copied to local variables `from` and `text`. Then the function uses them.
@@ -159,11 +152,7 @@ Here's one more example: we have a variable `from` and pass it to the function. 
 
 ```js
 function showMessage(from, text) {
-
-*!*
   from = '*' + from + '*'; // make "from" look nicer
-*/!*
-
   alert( from + ': ' + text );
 }
 
@@ -190,7 +179,7 @@ That's not an error. Such a call would output `"Ann: undefined"`. There's no `te
 If we want to use a "default" `text` in this case, then we can specify it after `=`:
 
 ```js
-function showMessage(from, *!*text = "no text given"*/!*) {
+function showMessage(from, text = "no text given") {
   alert( from + ": " + text );
 }
 
@@ -208,41 +197,35 @@ function showMessage(from, text = anotherFunction()) {
 }
 ```
 
-```smart header="Evaluation of default parameters"
-In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
+## 
+> ### Evaluation of default parameters
+> In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
+> 
+> In the example above, `anotherFunction()` is called every time `showMessage()` is called without the `text` parameter.
 
-In the example above, `anotherFunction()` is called every time `showMessage()` is called without the `text` parameter.
-```
-
-````smart header="Default parameters old-style"
-Old editions of JavaScript did not support default parameters. So there are alternative ways to support them, that you can find mostly in the old scripts.
-
-For instance, an explicit check for being `undefined`:
-
-```js
-function showMessage(from, text) {
-*!*
-  if (text === undefined) {
-    text = 'no text given';
-  }
-*/!*
-
-  alert( from + ": " + text );
-}
-```
-
-...Or the `||` operator:
-
-```js
-function showMessage(from, text) {
-  // if text is falsy then text gets the "default" value
-  text = text || 'no text given';
-  ...
-}
-```
-
-
-````
+## 
+> ### Default parameters old-style
+> Old editions of JavaScript did not support default parameters. So there are alternative ways to support them, that you can find mostly in the old scripts.
+> 
+> For instance, an explicit check for being `undefined`:
+> ```js
+> function showMessage(from, text) {
+> 
+>   if (text === undefined) {
+>     text = 'no text given';
+>   }
+> 
+>   alert( from + ": " + text );
+> }
+> ```
+> ...Or the `||` operator:
+> ```js
+> function showMessage(from, text) {
+>   // if text is falsy then text gets the "default" value
+>   text = text || 'no text given';
+>   ...
+> }
+> ```
 
 
 ## Returning a value
@@ -253,7 +236,7 @@ The simplest example would be a function that sums two values:
 
 ```js
 function sum(a, b) {
-  *!*return*/!* a + b;
+  return a + b;
 }
 
 let result = sum(1, 2);
@@ -267,13 +250,9 @@ There may be many occurrences of `return` in a single function. For instance:
 ```js
 function checkAge(age) {
   if (age > 18) {
-*!*
     return true;
-*/!*
   } else {
-*!*
     return confirm('Do you have permission from your parents?');
-*/!*
   }
 }
 
@@ -293,9 +272,9 @@ For example:
 ```js
 function showMovie(age) {
   if ( !checkAge(age) ) {
-*!*
+
     return;
-*/!*
+
   }
 
   alert( "Showing you the movie" ); // (*)
@@ -323,37 +302,32 @@ function doNothing() {
 
 alert( doNothing() === undefined ); // true
 ```
-````
 
-````warn header="Never add a newline between `return` and the value"
-For a long expression in `return`, it might be tempting to put it on a separate line, like this:
+## 
+> ### Never add a newline between `return` and the value
+> For a long expression in `return`, it might be tempting to put it on a separate line, like this:
+> ```js 
+> return
+>  (some + long + expression + or + whatever * f(a) + f(b))
+> ```
+> That doesn't work, because JavaScript assumes a semicolon after `return`. That'll work the same as:
+> ```js
+> return;
+>  (some + long + expression + or + whatever * f(a) + f(b))
+> ```
+> So, it effectively becomes an empty return.
+> 
+> If we want the returned expression to wrap across multiple lines, we should start it at the same line as `return`. Or at least put the opening parentheses there as follows:
+> ```js
+> return (
+>   some + long + expression
+>   + or +
+>   whatever * f(a) + f(b)
+>   )
+> ```
+> And it will work just as we expect it to.
 
-```js
-return
- (some + long + expression + or + whatever * f(a) + f(b))
-```
-That doesn't work, because JavaScript assumes a semicolon after `return`. That'll work the same as:
-
-```js
-return*!*;*/!*
- (some + long + expression + or + whatever * f(a) + f(b))
-```
-
-So, it effectively becomes an empty return.
-
-If we want the returned expression to wrap across multiple lines, we should start it at the same line as `return`. Or at least put the opening parentheses there as follows:
-
-```js
-return (
-  some + long + expression
-  + or +
-  whatever * f(a) + f(b)
-  )
-```
-And it will work just as we expect it to.
-````
-
-## Naming a function [#function-naming]
+## Naming a function
 
 Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
 
@@ -380,27 +354,27 @@ checkPermission(..) // checks a permission, returns true/false
 
 With prefixes in place, a glance at a function name gives an understanding what kind of work it does and what kind of value it returns.
 
-```smart header="One function -- one action"
-A function should do exactly what is suggested by its name, no more.
+## 
+> ### One function -- one action
+> A function should do exactly what is suggested by its name, no more.
+> 
+> Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
+> 
+> A few examples of breaking this rule:
+> 
+> - `getAge` -- would be bad if it shows an `alert` with the age (should only get).
+> - `createForm` -- would be bad if it modifies the document, adding a form to it (should only create it and return).
+> - `checkPermission` -- would be bad if it displays the `access granted/denied` message (should only perform the check and return the result).
+> 
+> These examples assume common meanings of prefixes. You and your team are free to agree on other meanings, but usually they're not much different. In any case, you should have a firm understanding of what a prefix means, what a prefixed function can and cannot do. All same-prefixed functions should obey the rules. And the team should share the knowledge.
 
-Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
-
-A few examples of breaking this rule:
-
-- `getAge` -- would be bad if it shows an `alert` with the age (should only get).
-- `createForm` -- would be bad if it modifies the document, adding a form to it (should only create it and return).
-- `checkPermission` -- would be bad if it displays the `access granted/denied` message (should only perform the check and return the result).
-
-These examples assume common meanings of prefixes. You and your team are free to agree on other meanings, but usually they're not much different. In any case, you should have a firm understanding of what a prefix means, what a prefixed function can and cannot do. All same-prefixed functions should obey the rules. And the team should share the knowledge.
-```
-
-```smart header="Ultrashort function names"
-Functions that are used *very often* sometimes have ultrashort names.
-
-For example, the [jQuery](http://jquery.com) framework defines a function with `$`. The [Lodash](http://lodash.com/) library has its core function named `_`.
-
-These are exceptions. Generally functions names should be concise and descriptive.
-```
+## 
+> ###Ultrashort function names
+> Functions that are used *very often* sometimes have ultrashort names.
+> 
+> For example, the [jQuery](http://jquery.com) framework defines a function with `$`. The [Lodash](http://lodash.com/) library has its core function named `_`.
+> 
+> These are exceptions. Generally functions names should be concise and descriptive.
 
 ## Functions == Comments
 
@@ -431,7 +405,7 @@ The second variant uses an additional function `isPrime(n)` to test for primalit
 function showPrimes(n) {
 
   for (let i = 2; i < n; i++) {
-    *!*if (!isPrime(i)) continue;*/!*
+    if (!isPrime(i)) continue;
 
     alert(i);  // a prime
   }

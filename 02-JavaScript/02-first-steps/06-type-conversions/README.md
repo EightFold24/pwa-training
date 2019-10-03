@@ -6,9 +6,8 @@ For example, `alert` automatically converts any value to a string to show it. Ma
 
 There are also cases when we need to explicitly convert a value to the expected type.
 
-```smart header="Not talking about objects yet"
-In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects, we'll see how object conversion works in the chapter <info:object-toprimitive>.
-```
+> ### Not talking about objects yet
+> In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects, we'll see how object conversion works in the chapter <info:object-toprimitive>.
 
 ## String Conversion
 
@@ -22,10 +21,8 @@ We can also call the `String(value)` function to convert a value to a string:
 let value = true;
 alert(typeof value); // boolean
 
-*!*
 value = String(value); // now value is a string "true"
 alert(typeof value); // string
-*/!*
 ```
 
 String conversion is mostly obvious. A `false` becomes `"false"`, `null` becomes `"null"`, etc.
@@ -81,18 +78,16 @@ alert( Number(false) );       // 0
 
 Please note that `null` and `undefined` behave differently here: `null` becomes zero while `undefined` becomes `NaN`.
 
-````smart header="Addition '+' concatenates strings"
-Almost all mathematical operations convert values to numbers. A notable exception is addition `+`. If one of the added values is a string, the other one is also converted to a string.
-
-Then, it concatenates (joins) them:
-
-```js
-alert( 1 + '2' ); // '12' (string to the right)
-alert( '1' + 2 ); // '12' (string to the left)
-```
-
-This only happens when at least one of the arguments is a string. Otherwise, values are converted to numbers.
-````
+> ### Addition '+' concatenates strings
+> Almost all mathematical operations convert values to numbers. A notable exception is addition `+`. If one of the added values is a string, the other one is also converted to a string.
+> 
+> Then, it concatenates (joins) them:
+> ```js
+> alert( 1 + '2' ); // '12' (string to the right)
+> alert( '1' + 2 ); // '12' (string to the left)
+> ```
+> 
+> This only happens when at least one of the arguments is a string. Otherwise, values are converted to numbers.
 
 ## Boolean Conversion
 
@@ -115,14 +110,13 @@ alert( Boolean("hello") ); // true
 alert( Boolean("") ); // false
 ```
 
-````warn header="Please note: the string with zero `\"0\"` is `true`"
-Some languages (namely PHP) treat `"0"` as `false`. But in JavaScript, a non-empty string is always `true`.
-
-```js
-alert( Boolean("0") ); // true
-alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
-```
-````
+## 
+> ### Please note: the string with zero `\"0\"` is `true`
+> Some languages (namely PHP) treat `"0"` as `false`. But in JavaScript, a non-empty string is always `true`.
+> ```js
+> alert( Boolean("0") ); // true
+> alert( Boolean(" ") ); // spaces, also true (any non-empty string is true)
+> ```
 
 ## Summary
 

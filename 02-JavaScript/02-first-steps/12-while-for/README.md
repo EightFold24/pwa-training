@@ -39,24 +39,22 @@ For instance, a shorter way to write `while (i != 0)` is `while (i)`:
 
 ```js
 let i = 3;
-*!*
+
 while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
-*/!*
+
   alert( i );
   i--;
 }
 ```
 
-````smart header="Curly braces are not required for a single-line body"
-If the loop body has a single statement, we can omit the curly braces `{…}`:
-
-```js
-let i = 3;
-*!*
-while (i) alert(i--);
-*/!*
-```
-````
+## 
+> ### Curly braces are not required for a single-line body
+> If the loop body has a single statement, we can omit the curly braces `{…}`:
+> ```js
+> let i = 3;
+> 
+> while (i) alert(i--);
+> ```
 
 ## The "do..while" loop
 
@@ -141,30 +139,25 @@ if (i < 3) { alert(i); i++ }
 // ...finish, because now i == 3
 ```
 
-````smart header="Inline variable declaration"
-Here, the "counter" variable `i` is declared right in the loop. This is called an "inline" variable declaration. Such variables are visible only inside the loop.
-
-```js
-for (*!*let*/!* i = 0; i < 3; i++) {
-  alert(i); // 0, 1, 2
-}
-alert(i); // error, no such variable
-```
-
-Instead of defining a variable, we could use an existing one:
-
-```js
-let i = 0;
-
-for (i = 0; i < 3; i++) { // use an existing variable
-  alert(i); // 0, 1, 2
-}
-
-alert(i); // 3, visible, because declared outside of the loop
-```
-
-````
-
+## 
+> ### Inline variable declaration
+> Here, the "counter" variable `i` is declared right in the loop. This is called an "inline" variable declaration. Such variables are visible only inside the loop.
+> ```js
+> for (let i = 0; i < 3; i++) {
+>   alert(i); // 0, 1, 2
+> }
+> alert(i); // error, no such variable
+> ```
+> Instead of defining a variable, we could use an existing one:
+> ```js
+> let i = 0;
+> 
+> for (i = 0; i < 3; i++) { // use an existing variable
+>   alert(i); // 0, 1, 2
+> }
+> 
+> alert(i); // 3, visible, because declared outside of the loop
+> ```
 
 ### Skipping parts
 
@@ -219,9 +212,9 @@ while (true) {
 
   let value = +prompt("Enter a number", '');
 
-*!*
+
   if (!value) break; // (*)
-*/!*
+
 
   sum += value;
 
@@ -233,7 +226,7 @@ The `break` directive is activated at the line `(*)` if the user enters an empty
 
 The combination "infinite loop + `break` as needed" is great for situations when a loop's condition must be checked not in the beginning or end of the loop, but in the middle or even in several places of its body.
 
-## Continue to the next iteration [#continue]
+## Continue to the next iteration
 
 The `continue` directive is a "lighter version" of `break`. It doesn't stop the whole loop. Instead, it stops the current iteration and forces the loop to start a new one (if the condition allows).
 
@@ -245,7 +238,7 @@ The loop below uses `continue` to output only odd values:
 for (let i = 0; i < 10; i++) {
 
   // if true, skip the remaining part of the body
-  *!*if (i % 2 == 0) continue;*/!*
+  if (i % 2 == 0) continue;
 
   alert(i); // 1, then 3, 5, 7, 9
 }
@@ -253,48 +246,41 @@ for (let i = 0; i < 10; i++) {
 
 For even values of `i`, the `continue` directive stops executing the body and passes control to the next iteration of `for` (with the next number). So the `alert` is only called for odd values.
 
-````smart header="The `continue` directive helps decrease nesting"
-A loop that shows odd values could look like this:
+## 
+> ### The `continue` directive helps decrease nesting
+> A loop that shows odd values could look like this:
+> ```js
+> for (let i = 0; i < 10; i++) {
+> 
+>   if (i % 2) {
+>     alert( i );
+>   }
+> 
+> }
+> ```
+> From a technical point of view, this is identical to the example above. Surely, we can just wrap the code in an `if` block instead of using `continue`.
+> 
+> But as a side-effect, this created one more level of nesting (the `alert` call inside the curly braces). If the code inside of`if` is longer than a few lines, that may decrease the overall readability.
 
-```js
-for (let i = 0; i < 10; i++) {
-
-  if (i % 2) {
-    alert( i );
-  }
-
-}
-```
-
-From a technical point of view, this is identical to the example above. Surely, we can just wrap the code in an `if` block instead of using `continue`.
-
-But as a side-effect, this created one more level of nesting (the `alert` call inside the curly braces). If the code inside of`if` is longer than a few lines, that may decrease the overall readability.
-````
-
-````warn header="No `break/continue` to the right side of '?'"
-Please note that syntax constructs that are not expressions cannot be used with the ternary operator `?`. In particular, directives such as `break/continue` aren't allowed there.
-
-For example, if we take this code:
-
-```js
-if (i > 5) {
-  alert(i);
-} else {
-  continue;
-}
-```
-
-...and rewrite it using a question mark:
-
-
-```js
-(i > 5) ? alert(i) : *!*continue*/!*; // continue isn't allowed here
-```
-
-...it stops working: there's a syntax error.
-
-This is just another reason not to use the question mark operator `?` instead of `if`.
-````
+## 
+> ### No `break/continue` to the right side of '?'
+> Please note that syntax constructs that are not expressions cannot be used with the ternary operator `?`. In particular, directives such as `break/continue` aren't allowed there.
+> 
+> For example, if we take this code:
+> ```js
+> if (i > 5) {
+>   alert(i);
+> } else {
+>   continue;
+> }
+> ```
+> ...and rewrite it using a question mark:
+> ```js
+> (i > 5) ? alert(i) : continue; // continue isn't allowed here
+> ```
+> ...it stops working: there's a syntax error.
+> 
+> This is just another reason not to use the question mark operator `?` instead of `if`.
 
 ## Labels for break/continue
 
@@ -330,14 +316,14 @@ labelName: for (...) {
 The `break <labelName>` statement in the loop below breaks out to the label:
 
 ```js
-*!*outer:*/!* for (let i = 0; i < 3; i++) {
+outer: for (let i = 0; i < 3; i++) {
 
   for (let j = 0; j < 3; j++) {
 
     let input = prompt(`Value at coords (${i},${j})`, '');
 
     // if an empty string or canceled, then break out of both loops
-    if (!input) *!*break outer*/!*; // (*)
+    if (!input) break outer; // (*)
 
     // do something with the value...
   }
@@ -358,18 +344,17 @@ for (let i = 0; i < 3; i++) { ... }
 
 The `continue` directive can also be used with a label. In this case, code execution jumps to the next iteration of the labeled loop.
 
-````warn header="Labels do not allow to \"jump\" anywhere"
-Labels do not allow us to jump into an arbitrary place in the code.
-
-For example, it is impossible to do this:
-```js
-break label; // doesn't jumps to the label below
-
-label: for (...)
-```
-
-A call to `break/continue` is only possible from inside a loop and the label must be somewhere above the directive.
-````
+## 
+> ### Labels do not allow to \"jump\" anywhere
+> Labels do not allow us to jump into an arbitrary place in the code.
+> 
+> For example, it is impossible to do this:
+> ```js
+> break label; // doesn't jumps to the label below
+> 
+> label: for (...)
+> ```
+> A call to `break/continue` is only possible from inside a loop and the label must be somewhere above the directive.
 
 ## Summary
 

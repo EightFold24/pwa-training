@@ -31,12 +31,12 @@ function showPrimes(n) {
   nextPrime:
   for (let i = 2; i < n; i++) {
 
-*!*
+
     // check if i is a prime number
     for (let j = 2; j < i; j++) {
       if (i % j == 0) continue nextPrime;
     }
-*/!*
+
 
     alert(i);
   }
@@ -50,7 +50,7 @@ The better variant, with a factored out function `isPrime`:
 function showPrimes(n) {
 
   for (let i = 2; i < n; i++) {
-    *!*if (!isPrime(i)) continue;*/!*
+    if (!isPrime(i)) continue;
 
     alert(i);  
   }

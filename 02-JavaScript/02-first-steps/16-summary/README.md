@@ -41,8 +41,6 @@ for(;;) {
 
 ...But even if we can put an "extra" semicolon somewhere, that's not an error. It will be ignored.
 
-More in: <info:structure>.
-
 ## Strict mode
 
 To fully enable all features of modern JavaScript, we should start scripts with `"use strict"`.
@@ -58,8 +56,6 @@ The directive must be at the top of a script or at the beginning of a function b
 Without `"use strict"`, everything still works, but some features behave in the old-fashion, "compatible" way. We'd generally prefer the modern behavior.
 
 Some modern features of the language (like classes that we'll study in the future) enable strict mode implicitly.
-
-More in: <info:strict-mode>.
 
 ## Variables
 
@@ -96,8 +92,6 @@ typeof null == "object" // error in the language
 typeof function(){} == "function" // functions are treated specially
 ```
 
-More in: <info:variables> and <info:types>.
-
 ## Interaction
 
 We're using a browser as a working environment, so basic UI functions will be:
@@ -123,8 +117,6 @@ alert( "Visitor: " + userName ); // Alice
 alert( "Tea wanted: " + isTeaWanted ); // true
 ```
 
-More in: <info:alert-prompt-confirm>.
-
 ## Operators
 
 JavaScript supports the following operators:
@@ -132,12 +124,12 @@ JavaScript supports the following operators:
 Arithmetical
 : Regular: `* + - /`, also `%` for the remainder and `**` for power of a number.
 
-    The binary plus `+` concatenates strings. And if any of the operands is a string, the other one is converted to string too:
+The binary plus `+` concatenates strings. And if any of the operands is a string, the other one is converted to string too:
 
-    ```js
-    alert( '1' + 2 ); // '12', string
-    alert( 1 + '2' ); // '12', string
-    ```
+```js
+alert( '1' + 2 ); // '12', string
+alert( 1 + '2' ); // '12', string
+```
 
 Assignments
 : There is a simple assignment: `a = b` and combined ones like `a *= 2`.
@@ -154,23 +146,21 @@ Logical operators
 Comparisons
 : Equality check `==` for values of different types converts them to a number (except `null` and `undefined` that equal each other and nothing else), so these are equal:
 
-    ```js
-    alert( 0 == false ); // true
-    alert( 0 == '' ); // true
-    ```
+```js
+alert( 0 == false ); // true
+alert( 0 == '' ); // true
+```
 
-    Other comparisons convert to a number as well.
+Other comparisons convert to a number as well.
 
-    The strict equality operator `===` doesn't do the conversion: different types always mean different values for it.
+The strict equality operator `===` doesn't do the conversion: different types always mean different values for it.
 
-    Values `null` and `undefined` are special: they equal `==` each other and don't equal anything else.
+Values `null` and `undefined` are special: they equal `==` each other and don't equal anything else.
 
-    Greater/less comparisons compare strings character-by-character, other types are converted to a number.
+Greater/less comparisons compare strings character-by-character, other types are converted to a number.
 
 Other operators
 : There are few others, like a comma operator.
-
-More in: <info:operators>, <info:comparison>, <info:logical-operators>.
 
 ## Loops
 
@@ -196,8 +186,6 @@ More in: <info:operators>, <info:comparison>, <info:logical-operators>.
 - The variable declared in `for(let...)` loop is visible only inside the loop. But we can also omit `let` and reuse an existing variable.
 - Directives `break/continue` allow to exit the whole loop/current iteration. Use labels to break nested loops.
 
-Details in: <info:while-for>.
-
 Later we'll study more types of loops to deal with objects.
 
 ## The "switch" construct
@@ -221,8 +209,6 @@ switch (age) {
     alert("Any value not equal to one above");
 }
 ```
-
-Details in: <info:switch>.
 
 ## Functions
 
@@ -271,8 +257,6 @@ We covered three ways to create a function in JavaScript:
 - Functions may have local variables: those declared inside its body. Such variables are only visible inside the function.
 - Parameters can have default values: `function sum(a = 1, b = 2) {...}`.
 - Functions always return something. If there's no `return` statement, then the result is `undefined`.
-
-Details: see <info:function-basics>, <info:function-expressions-arrows>.
 
 ## More to come
 

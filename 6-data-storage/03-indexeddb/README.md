@@ -49,7 +49,7 @@ The event also triggers when the database did not exist yet, so we can perform i
 When we first publish our app, we open it with version `1` and perform the initialization in `upgradeneeded` handler:
 
 ```js
-let openRequest = indexedDB.open("store", *!*1*/!*);
+let openRequest = indexedDB.open("store", 1);
 
 openRequest.onupgradeneeded = function() {
   // triggers if the client had no database
@@ -69,7 +69,7 @@ openRequest.onsuccess = function() {
 When we publish the 2nd version:
 
 ```js
-let openRequest = indexedDB.open("store", *!*2*/!*);
+let openRequest = indexedDB.open("store", 2);
 
 openRequest.onupgradeneeded = function() {
   // the existing database version is less than 2 (or it doesn't exist)
@@ -129,22 +129,22 @@ openRequest.onerror = ...;
 openRequest.onsuccess = function() {
   let db = openRequest.result;
 
-  *!*
+  
   db.onversionchange = function() {
     db.close();
     alert("Database is outdated, please reload the page.")
   };
-  */!*
+  
 
   // ...the db is ready, use it...
 };
 
-*!*
+
 openRequest.onblocked = function() {
   // there's another open connection to same database
   // and it wasn't closed after db.onversionchange triggered for them
 };
-*/!*
+
 ```
 
 Here we do two things:
@@ -273,9 +273,9 @@ After the transaction is created, we can add an item to the store, like this:
 let transaction = db.transaction("books", "readwrite"); // (1)
 
 // get an object store to operate on it
-*!*
+
 let books = transaction.objectStore("books"); // (2)
-*/!*
+
 
 let book = {
   id: 'js',
@@ -283,9 +283,9 @@ let book = {
   created: new Date()
 };
 
-*!*
+
 let request = books.add(book); // (3)
-*/!*
+
 
 request.onsuccess = function() { // (4)
   console.log("Book added to the store", request.result);
@@ -339,9 +339,9 @@ let request1 = books.add(book);
 
 request1.onsuccess = function() {
   fetch('/').then(response => {
-*!*
+
     let request2 = books.add(anotherBook); // (*)
-*/!*
+
     request2.onerror = function() {
       console.log(request2.error.name); // TransactionInactiveError
     };
@@ -539,9 +539,9 @@ First, we need to create an index. It must be done in `upgradeneeded`, just like
 openRequest.onupgradeneeded = function() {
   // we must create the index here, in versionchange transaction
   let books = db.createObjectStore('books', {keyPath: 'id'});
-*!*
+
   let index = inventory.createIndex('price_idx', 'price');
-*/!*
+
 };
 ```
 
@@ -564,9 +564,9 @@ let transaction = db.transaction("books"); // readonly
 let books = transaction.objectStore("books");
 let priceIndex = books.index("price_idx");
 
-*!*
+
 let request = priceIndex.getAll(10);
-*/!*
+
 
 request.onsuccess = function() {
   if (request.result !== undefined) {

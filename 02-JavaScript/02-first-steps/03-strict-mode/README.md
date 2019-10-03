@@ -24,22 +24,23 @@ We will learn functions (a way to group commands) soon. Looking ahead, let's not
 ##
 > ### Ensure that "use strict" is at the top
 > Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
-
+> 
 > Strict mode isn't enabled here:
-
+> 
+> ```js
+> alert("some code");
+> // "use strict" below is ignored--it must be at the top
+> "use strict";
+> // strict mode is not activated
 > ```
-alert("some code");
-// "use strict" below is ignored--it must be at the top
-"use strict";
-// strict mode is not activated```
-
+> 
 > Only comments may appear above `"use strict"`.
 
 ##
 > ### There's no way to cancel `use strict`
 > There is no directive like `"no use strict"` that reverts the engine to old behavior.
-
->Once we enter strict mode, there's no return.
+> 
+> Once we enter strict mode, there's no return.
 
 
 ## Browser console

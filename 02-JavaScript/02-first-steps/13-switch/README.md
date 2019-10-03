@@ -41,11 +41,11 @@ switch (a) {
   case 3:
     alert( 'Too small' );
     break;
-*!*
+
   case 4:
     alert( 'Exactly!' );
     break;
-*/!*
+
   case 5:
     alert( 'Too large' );
     break;
@@ -68,14 +68,14 @@ let a = 2 + 2;
 switch (a) {
   case 3:
     alert( 'Too small' );
-*!*
+
   case 4:
     alert( 'Exactly!' );
   case 5:
     alert( 'Too big' );
   default:
     alert( "I don't know such values" );
-*/!*
+
 }
 ```
 
@@ -87,28 +87,25 @@ alert( 'Too big' );
 alert( "I don't know such values" );
 ```
 
-````smart header="Any expression can be a `switch/case` argument"
-Both `switch` and `case` allow arbitrary expressions.
-
-For example:
-
-```js
-let a = "1";
-let b = 0;
-
-switch (+a) {
-*!*
-  case b + 1:
-    alert("this runs, because +a is 1, exactly equals b+1");
-    break;
-*/!*
-
-  default:
-    alert("this doesn't run");
-}
-```
-Here `+a` gives `1`, that's compared with `b + 1` in `case`, and the corresponding code is executed.
-````
+> ### Any expression can be a `switch/case` argument
+> Both `switch` and `case` allow arbitrary expressions.
+> 
+> For example:
+> ```js
+> let a = "1";
+> let b = 0;
+> 
+> switch (+a) {
+> 
+>   case b + 1:
+>     alert("this runs, because +a is 1, exactly equals b+1");
+>     break;
+> 
+>   default:
+>     alert("this doesn't run");
+> }
+> ```
+> Here `+a` gives `1`, that's compared with `b + 1` in `case`, and the corresponding code is executed.
 
 ## Grouping of "case"
 
@@ -124,13 +121,13 @@ switch (a) {
     alert('Right!');
     break;
 
-*!*
+
   case 3: // (*) grouped two cases
   case 5:
     alert('Wrong!');
     alert("Why don't you take a math class?");
     break;
-*/!*
+
 
   default:
     alert('The result is strange. Really.');

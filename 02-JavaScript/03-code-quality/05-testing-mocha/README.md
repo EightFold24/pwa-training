@@ -143,9 +143,9 @@ We can select one of two ways to organize the test here:
 
       it("raises to n-th power", function() {
         assert.equal(pow(2, 3), 8);
-    *!*
+    
         assert.equal(pow(3, 4), 81);
-    */!*
+    
       });
 
     });
@@ -232,9 +232,9 @@ Grouping is done with a nested `describe`:
 ```js
 describe("pow", function() {
 
-*!*
+
   describe("raises x to power 3", function() {
-*/!*
+
 
     function makeTest(x) {
       let expected = x * x * x;
@@ -247,9 +247,9 @@ describe("pow", function() {
       makeTest(x);
     }
 
-*!*
+
   });
-*/!*
+
 
   // ... more tests to follow here, both describe and it can be added
 });
@@ -315,15 +315,15 @@ describe("pow", function() {
   // ...
 
   it("for negative n the result is NaN", function() {
-*!*
+
     assert.isNaN(pow(2, -1));
-*/!*
+
   });
 
   it("for non-integer n the result is NaN", function() {
-*!*
+
     assert.isNaN(pow(2, 1.5));    
-*/!*
+
   });
 
 });
@@ -352,10 +352,10 @@ So we should add a couple of lines to `pow`:
 
 ```js
 function pow(x, n) {
-*!*
+
   if (n < 0) return NaN;
   if (Math.round(n) != n) return NaN;
-*/!*
+
 
   let result = 1;
 

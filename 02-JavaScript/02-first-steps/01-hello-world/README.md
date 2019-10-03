@@ -109,10 +109,10 @@ To attach several scripts, use multiple tags:
 > The example above can be split into two scripts to work:
 
 > ```html
-<script src="file.js"></script>
-<script>
-  alert(1);
-</script>
+<script src="file.js"></script> ```
+>
+> ```html
+<script> alert(1); </script>
 ```
 
 

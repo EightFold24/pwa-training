@@ -110,7 +110,6 @@ To attach several scripts, use multiple tags:
 
 > ```html
 <script src="file.js"></script> ```
->
 > ```html
 <script> alert(1); </script>
 ```

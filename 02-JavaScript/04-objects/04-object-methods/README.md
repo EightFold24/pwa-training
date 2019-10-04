@@ -17,17 +17,15 @@ Actions are represented in JavaScript by functions in properties.
 
 For a start, let's teach the `user` to say hello:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30
 };
 
-*!*
 user.sayHi = function() {
   alert("Hello!");
 };
-*/!*
 
 user.sayHi(); // Hello!
 ```
@@ -42,12 +40,11 @@ So, here we've got a method `sayHi` of the object `user`.
 
 Of course, we could use a pre-declared function as a method, like this:
 
-```js run
+```js
 let user = {
   // ...
 };
 
-*!*
 // first, declare
 function sayHi() {
   alert("Hello!");
@@ -55,16 +52,16 @@ function sayHi() {
 
 // then add as a method
 user.sayHi = sayHi;
-*/!*
 
 user.sayHi(); // Hello!
 ```
 
-```smart header="Object-oriented programming"
-When we write our code using objects to represent entities, that's called [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), in short: "OOP".
+## 
+> ### Object-oriented programming
+> When we write our code using objects to represent entities, that's called [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), in short: "OOP".
+>
+>OOP is a big thing, an interesting science of its own. How to choose the right entities? How to organize the interaction between them? That's architecture, and there are great books on that topic, like "Design Patterns: Elements of Reusable Object-Oriented Software" by E.Gamma, R.Helm, R.Johnson, J.Vissides or "Object-Oriented Analysis and Design with Applications" by G.Booch, and more.
 
-OOP is a big thing, an interesting science of its own. How to choose the right entities? How to organize the interaction between them? That's architecture, and there are great books on that topic, like "Design Patterns: Elements of Reusable Object-Oriented Software" by E.Gamma, R.Helm, R.Johnson, J.Vissides or "Object-Oriented Analysis and Design with Applications" by G.Booch, and more.
-```
 ### Method shorthand
 
 There exists a shorter syntax for methods in an object literal:
@@ -80,9 +77,7 @@ user = {
 
 // method shorthand looks better, right?
 user = {
-*!*
   sayHi() { // same as "sayHi: function()"
-*/!*
     alert("Hello");
   }
 };
@@ -104,18 +99,15 @@ The value of `this` is the object "before dot", the one used to call the method.
 
 For instance:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30,
 
   sayHi() {
-*!*
     // "this" is the "current object"
     alert(this.name);
-*/!*
   }
-
 };
 
 user.sayHi(); // John
@@ -131,11 +123,8 @@ let user = {
   age: 30,
 
   sayHi() {
-*!*
     alert(user.name); // "user" instead of "this"
-*/!*
   }
-
 };
 ```
 
@@ -143,19 +132,15 @@ let user = {
 
 That's demonstrated below:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30,
 
   sayHi() {
-*!*
     alert( user.name ); // leads to an error
-*/!*
   }
-
 };
-
 
 let admin = user;
 user = null; // overwrite to make things obvious
@@ -173,7 +158,7 @@ There's no syntax error in the following example:
 
 ```js
 function sayHi() {
-  alert( *!*this*/!*.name );
+  alert( this.name );
 }
 ```
 
@@ -181,7 +166,7 @@ The value of `this` is evaluated during the run-time, depending on the context.
 
 For instance, here the same function is assigned to two different objects and has different "this" in the calls:
 
-```js run
+```js
 let user = { name: "John" };
 let admin = { name: "Admin" };
 
@@ -189,11 +174,9 @@ function sayHi() {
   alert( this.name );
 }
 
-*!*
 // use the same function in two objects
 user.f = sayHi;
 admin.f = sayHi;
-*/!*
 
 // these calls have different this
 // "this" inside the function is the object "before the dot"
@@ -205,45 +188,42 @@ admin['f'](); // Admin (dot or square brackets access the method – doesn't mat
 
 The rule is simple: if `obj.f()` is called, then `this` is `obj` during the call of `f`. So it's either `user` or `admin` in the example above.
 
-````smart header="Calling without an object: `this == undefined`"
-We can even call the function without an object at all:
+## 
+> ### Calling without an object: `this == undefined`
+> We can even call the function without an object at all:
+> ```js
+> function sayHi() {
+>   alert(this);
+> }
+> 
+> sayHi(); // undefined
+> ```
+> In this case `this` is `undefined` in strict mode. If we try to access `this.name`, there will be an error.
+> 
+> In non-strict mode the value of `this` in such case will be the *global object* (`window` in a browser, we'll get to it later in the chapter [](info:global-object)). This is a historical behavior that `"use strict"` fixes.
+> 
+> Usually such call is a programming error. If there's `this` inside a function, it expects to be called in an object context.
 
-```js run
-function sayHi() {
-  alert(this);
-}
-
-sayHi(); // undefined
-```
-
-In this case `this` is `undefined` in strict mode. If we try to access `this.name`, there will be an error.
-
-In non-strict mode the value of `this` in such case will be the *global object* (`window` in a browser, we'll get to it later in the chapter [](info:global-object)). This is a historical behavior that `"use strict"` fixes.
-
-Usually such call is a programming error. If there's `this` inside a function, it expects to be called in an object context.
-````
-
-```smart header="The consequences of unbound `this`"
-If you come from another programming language, then you are probably used to the idea of a "bound `this`", where methods defined in an object always have `this` referencing that object.
-
-In JavaScript `this` is "free", its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is "before the dot".
-
-The concept of run-time evaluated `this` has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
-
-Here our position is not to judge whether this language design decision is good or bad. We'll understand how to work with it, how to get benefits and avoid problems.
-```
+## 
+> ### The consequences of unbound `this`
+> If you come from another programming language, then you are probably used to the idea of a "bound `this`", where methods defined in an object always have `this` referencing that object.
+> 
+> In JavaScript `this` is "free", its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is "before the dot".
+> 
+> The concept of run-time evaluated `this` has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
+> 
+> Here our position is not to judge whether this language design decision is good or bad. We'll understand how to work with it, how to get benefits and avoid problems.
 
 ## Internals: Reference Type
 
-```warn header="In-depth language feature"
-This section covers an advanced topic, to understand certain edge-cases better.
-
-If you want to go on faster, it can be skipped or postponed.
-```
+> ### In-depth language feature
+> This section covers an advanced topic, to understand certain edge-cases better.
+> 
+> If you want to go on faster, it can be skipped or postponed.
 
 An intricate method call can lose `this`, for instance:
 
-```js run
+```js
 let user = {
   name: "John",
   hi() { alert(this.name); },
@@ -252,10 +232,8 @@ let user = {
 
 user.hi(); // John (the simple call works)
 
-*!*
 // now let's call user.hi or user.bye depending on the name
 (user.name == "John" ? user.hi : user.bye)(); // Error!
-*/!*
 ```
 
 On the last line there is a conditional operator that chooses either `user.hi` or `user.bye`. In this case the result is `user.hi`.
@@ -285,17 +263,15 @@ So, how does the information about `this` get passed from the first part to the 
 
 If we put these operations on separate lines, then `this` will be lost for sure:
 
-```js run
+```js
 let user = {
   name: "John",
   hi() { alert(this.name); }
 }
 
-*!*
 // split getting and calling the method in two lines
 let hi = user.hi;
 hi(); // Error, because this is undefined
-*/!*
 ```
 
 Here `hi = user.hi` puts the function into the variable, and then on the last line it is completely standalone, and so there's no `this`.
@@ -331,7 +307,7 @@ Arrow functions are special: they don't have their "own" `this`. If we reference
 
 For instance, here `arrow()` uses `this` from the outer `user.sayHi()` method:
 
-```js run
+```js
 let user = {
   firstName: "Ilya",
   sayHi() {

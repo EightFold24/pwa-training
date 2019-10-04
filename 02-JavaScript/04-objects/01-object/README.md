@@ -87,7 +87,7 @@ The last property in the list may end with a comma:
 ```js
 let user = {
   name: "John",
-  age: 30*!*,*/!*
+  age: 30,
 }
 ```
 That is called a "trailing" or "hanging" comma. Makes it easier to add/remove/move around properties, because all lines become alike.
@@ -96,7 +96,7 @@ That is called a "trailing" or "hanging" comma. Makes it easier to add/remove/mo
 
 For multiword properties, the dot access doesn't work:
 
-```js run
+```js
 // this would give a syntax error
 user.likes birds = true
 ```
@@ -105,7 +105,7 @@ That's because the dot requires the key to be a valid variable identifier. That 
 
 There's an alternative "square bracket notation" that works with any string:
 
-```js run
+```js
 let user = {};
 
 // set
@@ -133,7 +133,7 @@ Here, the variable `key` may be calculated at run-time or depend on the user inp
 
 For instance:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30
@@ -147,7 +147,7 @@ alert( user[key] ); // John (if enter "name")
 
 The dot notation cannot be used in a similar way:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30
@@ -163,13 +163,13 @@ We can use square brackets in an object literal. That's called *computed propert
 
 For instance:
 
-```js run
+```js
 let fruit = prompt("Which fruit to buy?", "apple");
 
 let bag = {
-*!*
+
   [fruit]: 5, // the name of the property is taken from the variable fruit
-*/!*
+
 };
 
 alert( bag.apple ); // 5 if fruit="apple"
@@ -180,7 +180,7 @@ The meaning of a computed property is simple: `[fruit]` means that the property 
 So, if a visitor enters `"apple"`, `bag` will become `{apple: 5}`.
 
 Essentially, that works the same as:
-```js run
+```js
 let fruit = prompt("Which fruit to buy?", "apple");
 let bag = {};
 
@@ -210,7 +210,7 @@ A variable cannot have a name equal to one of language-reserved words like "for"
 
 But for an object property, there's no such restriction. Any name is fine:
 
-```js run
+```js
 let obj = {
   for: 1,
   let: 2,
@@ -222,7 +222,7 @@ alert( obj.for + obj.let + obj.return );  // 6
 
 Basically, any name is allowed, but there's a special one: `"__proto__"` that gets special treatment for historical reasons. For instance, we can't set it to a non-object value:
 
-```js run
+```js
 let obj = {};
 obj.__proto__ = 5;
 alert(obj.__proto__); // [object Object], didn't work as intended
@@ -246,7 +246,7 @@ In real code we often use existing variables as values for property names.
 
 For instance:
 
-```js run
+```js
 function makeUser(name, age) {
   return {
     name: name,
@@ -265,13 +265,13 @@ Instead of `name:name` we can just write `name`, like this:
 
 ```js
 function makeUser(name, age) {
-*!*
+
   return {
     name, // same as name: name
     age   // same as age: age
     // ...
   };
-*/!*
+
 }
 ```
 
@@ -288,7 +288,7 @@ let user = {
 
 A notable objects feature is that it's possible to access any property. There will be no error if the property doesn't exist! Accessing a non-existing property just returns `undefined`. It provides a very common way to test whether the property exists -- to get it and compare vs undefined:
 
-```js run
+```js
 let user = {};
 
 alert( user.noSuchProperty === undefined ); // true means "no such property"
@@ -303,7 +303,7 @@ The syntax is:
 
 For instance:
 
-```js run
+```js
 let user = { name: "John", age: 30 };
 
 alert( "age" in user ); // true, user.age exists
@@ -314,11 +314,11 @@ Please note that on the left side of `in` there must be a *property name*. That'
 
 If we omit quotes, that would mean a variable containing the actual name will be tested. For instance:
 
-```js run
+```js
 let user = { age: 30 };
 
 let key = "age";
-alert( *!*key*/!* in user ); // true, takes the name from key and checks for such property
+alert( key in user ); // true, takes the name from key and checks for such property
 ```
 
 ````smart header="Using \"in\" for properties that store `undefined`"
@@ -326,7 +326,7 @@ Usually, the strict comparison `"=== undefined"` check the property existance ju
 
 It's when an object property exists, but stores `undefined`:
 
-```js run
+```js
 let obj = {
   test: undefined
 };
@@ -356,7 +356,7 @@ for (key in object) {
 
 For instance, let's output all properties of `user`:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30,
@@ -384,7 +384,7 @@ The short answer is: "ordered in a special fashion": integer properties are sort
 
 As an example, let's consider an object with the phone codes:
 
-```js run
+```js
 let codes = {
   "49": "Germany",
   "41": "Switzerland",
@@ -393,11 +393,11 @@ let codes = {
   "1": "USA"
 };
 
-*!*
+
 for (let code in codes) {
   alert(code); // 1, 41, 44, 49
 }
-*/!*
+
 ```
 
 The object may be used to suggest a list of options to the user. If we're making a site mainly for German audience then we probably want `49` to be the first.
@@ -414,7 +414,7 @@ The "integer property" term here means a string that can be converted to-and-fro
 
 So, "49" is an integer property name, because when it's transformed to an integer number and back, it's still the same. But "+49" and "1.2" are not:
 
-```js run
+```js
 // Math.trunc is a built-in function that removes the decimal part
 alert( String(Math.trunc(Number("49"))) ); // "49", same, integer property
 alert( String(Math.trunc(Number("+49"))) ); // "49", not same "+49" ⇒ not integer property
@@ -424,16 +424,16 @@ alert( String(Math.trunc(Number("1.2"))) ); // "1", not same "1.2" ⇒ not integ
 
 ...On the other hand, if the keys are non-integer, then they are listed in the creation order, for instance:
 
-```js run
+```js
 let user = {
   name: "John",
   surname: "Smith"
 };
 user.age = 25; // add one more
 
-*!*
+
 // non-integer properties are listed in the creation order
-*/!*
+
 for (let prop in user) {
   alert( prop ); // name, surname, age
 }
@@ -443,7 +443,7 @@ So, to fix the issue with the phone codes, we can "cheat" by making the codes no
 
 Like this:
 
-```js run
+```js
 let codes = {
   "+49": "Germany",
   "+41": "Switzerland",
@@ -498,7 +498,7 @@ If we imagine an object as a cabinet, then a variable is a key to it. Copying a 
 
 For instance:
 
-```js no-beautify
+```js
 let user = { name: "John" };
 
 let admin = user; // copy the reference
@@ -510,16 +510,13 @@ Now we have two variables, each one with the reference to the same object:
 
 We can use any variable to access the cabinet and modify its contents:
 
-```js run
+```js
 let user = { name: 'John' };
-
 let admin = user;
 
-*!*
 admin.name = 'Pete'; // changed by the "admin" reference
-*/!*
 
-alert(*!*user.name*/!*); // 'Pete', changes are seen from the "user" reference
+alert(user.name); // 'Pete', changes are seen from the "user" reference
 ```
 
 The example above demonstrates that there is only one object. As if we had a cabinet with two keys and used one of them (`admin`) to get into it. Then, if we later use the other key (`user`) we would see changes.
@@ -532,7 +529,7 @@ The equality `==` and strict equality `===` operators for objects work exactly t
 
 For instance, if two variables reference the same object, they are equal:
 
-```js run
+```js
 let a = {};
 let b = a; // copy the reference
 
@@ -542,7 +539,7 @@ alert( a === b ); // true
 
 And here two independent objects are not equal, even though both are empty:
 
-```js run
+```js
 let a = {};
 let b = {}; // two independent objects
 
@@ -557,14 +554,12 @@ An object declared as `const` *can* be changed.
 
 For instance:
 
-```js run
+```js
 const user = {
   name: "John"
 };
 
-*!*
 user.age = 25; // (*)
-*/!*
 
 alert(user.age); // 25
 ```
@@ -573,14 +568,13 @@ It might seem that the line `(*)` would cause an error, but no, there's totally 
 
 The `const` would give an error if we try to set `user` to something else, for instance:
 
-```js run
+```js
 const user = {
   name: "John"
 };
 
-*!*
 // Error (can't reassign user)
-*/!*
+
 user = {
   name: "Pete"
 };
@@ -600,20 +594,18 @@ But if we really want that, then we need to create a new object and replicate th
 
 Like this:
 
-```js run
+```js
 let user = {
   name: "John",
   age: 30
 };
 
-*!*
 let clone = {}; // the new empty object
 
 // let's copy all user properties into it
 for (let key in user) {
   clone[key] = user[key];
 }
-*/!*
 
 // now clone is a fully independent clone
 clone.name = "Pete"; // changed the data in it
@@ -639,10 +631,8 @@ let user = { name: "John" };
 let permissions1 = { canView: true };
 let permissions2 = { canEdit: true };
 
-*!*
 // copies all properties from permissions1 and permissions2 into user
 Object.assign(user, permissions1, permissions2);
-*/!*
 
 // now user = { name: "John", canView: true, canEdit: true }
 ```
@@ -666,9 +656,7 @@ let user = {
   age: 30
 };
 
-*!*
 let clone = Object.assign({}, user);
-*/!*
 ```
 
 It copies all properties of `user` into the empty object and returns it. Actually, the same as the loop, but shorter.
@@ -676,7 +664,7 @@ It copies all properties of `user` into the empty object and returns it. Actuall
 Until now we assumed that all properties of `user` are primitive. But properties can be references to other objects. What to do with them?
 
 Like this:
-```js run
+```js
 let user = {
   name: "John",
   sizes: {
@@ -691,7 +679,7 @@ alert( user.sizes.height ); // 182
 Now it's not enough to copy `clone.sizes = user.sizes`, because the `user.sizes` is an object, it will be copied by reference. So `clone` and `user` will share the same sizes:
 
 Like this:
-```js run
+```js
 let user = {
   name: "John",
   sizes: {

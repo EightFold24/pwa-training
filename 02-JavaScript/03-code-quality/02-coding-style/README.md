@@ -9,36 +9,13 @@ That is actually the art of programming -- to take a complex task and code it in
 Here is a cheat sheet with some suggested rules (see below for more details):
 
 ![](code-style.svg)
-<!--
-```js
-function pow(x, n) {
-  let result = 1;
 
-  for (let i = 0; i < n; i++) {
-    result *= x;
-  }
-
-  return result;
-}
-
-let x = prompt("x?", "");
-let n = prompt("n?", "");
-
-if (n < 0) {
-  alert(`Power ${n} is not supported,
-    please enter a non-negative integer number`);
-} else {
-  alert( pow(x, n) );
-}
-```
-
--->
 
 Now let's discuss the rules and reasons for them in detail.
 
-```warn header="There are no \"you must\" rules"
-Nothing is set in stone here. These are style preferences, not religious dogmas.
-```
+## 
+> ### There are no \"you must\" rules
+> Nothing is set in stone here. These are style preferences, not religious dogmas.
 
 ### Curly Braces
 

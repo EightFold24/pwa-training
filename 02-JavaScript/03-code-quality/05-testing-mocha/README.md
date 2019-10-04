@@ -93,7 +93,46 @@ These libraries are suitable for both in-browser and server-side testing. Here w
 
 The full HTML page with these frameworks and `pow` spec:
 
-```html src="index.html"
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+
+  <script>
+    function pow(x, n) {
+      /* function code is to be written, empty now */
+    }
+  </script>
+
+  <!-- the script with tests (describe, it...) -->
+  <script src="test.js"></script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
 ```
 
 The page can be divided into five parts:
@@ -106,7 +145,7 @@ The page can be divided into five parts:
 
 The result:
 
-[iframe height=250 src="pow-1" border=1 edit]
+![](pow1.png)
 
 As of now, the test fails, there's an error. That's logical: we have an empty function code in `pow`, so `pow(2,3)` returns `undefined` instead of `8`.
 
@@ -124,7 +163,7 @@ function pow(x, n) {
 
 Wow, now it works!
 
-[iframe height=250 src="pow-min" border=1 edit]
+![](pow2.png)
 
 ## Improving the spec
 
@@ -180,7 +219,7 @@ So let's continue with the second variant.
 
 The result:
 
-[iframe height=250 src="pow-2" edit border="1"]
+![](pow3.png)
 
 As we could expect, the second test failed. Sure, our function always returns `8`, while the `assert` expects `27`.
 
@@ -221,7 +260,7 @@ describe("pow", function() {
 
 The result:
 
-[iframe height=250 src="pow-3" edit border="1"]
+![](pow4.png)
 
 ## Nested describe
 
@@ -232,9 +271,7 @@ Grouping is done with a nested `describe`:
 ```js
 describe("pow", function() {
 
-
   describe("raises x to power 3", function() {
-
 
     function makeTest(x) {
       let expected = x * x * x;
@@ -247,9 +284,7 @@ describe("pow", function() {
       makeTest(x);
     }
 
-
   });
-
 
   // ... more tests to follow here, both describe and it can be added
 });
@@ -257,47 +292,41 @@ describe("pow", function() {
 
 The nested `describe` defines a new "subgroup" of tests. In the output we can see the titled indentation:
 
-[iframe height=250 src="pow-4" edit border="1"]
+![](pow5.png)
 
 In the future we can add more `it` and `describe` on the top level with helper functions of their own, they won't see `makeTest`.
 
-````smart header="`before/after` and `beforeEach/afterEach`"
-We can setup `before/after` functions that execute before/after running tests, and also `beforeEach/afterEach` functions that execute before/after *every* `it`.
-
-For instance:
-
-```js
-describe("test", function() {
-
-  before(() => alert("Testing started – before all tests"));
-  after(() => alert("Testing finished – after all tests"));
-
-  beforeEach(() => alert("Before a test – enter a test"));
-  afterEach(() => alert("After a test – exit a test"));
-
-  it('test 1', () => alert(1));
-  it('test 2', () => alert(2));
-
-});
-```
-
-The running sequence will be:
-
-```
-Testing started – before all tests (before)
-Before a test – enter a test (beforeEach)
-1
-After a test – exit a test   (afterEach)
-Before a test – enter a test (beforeEach)
-2
-After a test – exit a test   (afterEach)
-Testing finished – after all tests (after)
-```
-
-[edit src="beforeafter" title="Open the example in the sandbox."]
-
-Usually, `beforeEach/afterEach` and `before/after` are used to perform initialization, zero out counters or do something else between the tests (or test groups).
-````
+> ### `before/after` and `beforeEach/afterEach`
+> We can setup `before/after` functions that execute before/after running tests, and also `beforeEach/afterEach` functions that execute before/after *every* `it`.
+> 
+> For instance:
+> ```js
+> describe("test", function() {
+> 
+>   before(() => alert("Testing started – before all tests"));
+>   after(() => alert("Testing finished – after all tests"));
+> 
+>   beforeEach(() => alert("Before a test – enter a test"));
+>   afterEach(() => alert("After a test – exit a test"));
+> 
+>   it('test 1', () => alert(1));
+>   it('test 2', () => alert(2));
+> 
+> });
+> ```
+> The running sequence will be:
+> ```
+> Testing started – before all tests (before)
+> Before a test – enter a test (beforeEach)
+> 1
+> After a test – exit a test   (afterEach)
+> Before a test – enter a test (beforeEach)
+> 2
+> After a test – exit a test   (afterEach)
+> Testing finished – after all tests (after)
+> ```
+> 
+> Usually, `beforeEach/afterEach` and `before/after` are used to perform initialization, zero out counters or do something else between the tests (or test groups).
 
 ## Extending the spec
 
@@ -315,15 +344,11 @@ describe("pow", function() {
   // ...
 
   it("for negative n the result is NaN", function() {
-
     assert.isNaN(pow(2, -1));
-
   });
 
   it("for non-integer n the result is NaN", function() {
-
     assert.isNaN(pow(2, 1.5));    
-
   });
 
 });
@@ -331,31 +356,28 @@ describe("pow", function() {
 
 The result with new tests:
 
-[iframe height=530 src="pow-nan" edit border="1"]
+![](pow6.png)
 
 The newly added tests fail, because our implementation does not support them. That's how BDD is done: first we write failing tests, and then make an implementation for them.
 
-```smart header="Other assertions"
-Please note the assertion `assert.isNaN`: it checks for `NaN`.
-
-There are other assertions in [Chai](http://chaijs.com) as well, for instance:
-
-- `assert.equal(value1, value2)` -- checks the equality  `value1 == value2`.
-- `assert.strictEqual(value1, value2)` -- checks the strict equality `value1 === value2`.
-- `assert.notEqual`, `assert.notStrictEqual` -- inverse checks to the ones above.
-- `assert.isTrue(value)` -- checks that `value === true`
-- `assert.isFalse(value)` -- checks that `value === false`
-- ...the full list is in the [docs](http://chaijs.com/api/assert/)
-```
+> ### Other assertions
+> Please note the assertion `assert.isNaN`: it checks for `NaN`.
+> 
+> There are other assertions in [Chai](http://chaijs.com) as well, for instance:
+> 
+> - `assert.equal(value1, value2)` -- checks the equality  `value1 == value2`.
+> - `assert.strictEqual(value1, value2)` -- checks the strict equality `value1 === value2`.
+> - `assert.notEqual`, `assert.notStrictEqual` -- inverse checks to the ones above.
+> - `assert.isTrue(value)` -- checks that `value === true`
+> - `assert.isFalse(value)` -- checks that `value === false`
+> - ...the full list is in the [docs](http://chaijs.com/api/assert/)
 
 So we should add a couple of lines to `pow`:
 
 ```js
 function pow(x, n) {
-
   if (n < 0) return NaN;
   if (Math.round(n) != n) return NaN;
-
 
   let result = 1;
 
@@ -369,9 +391,7 @@ function pow(x, n) {
 
 Now it works, all tests pass:
 
-[iframe height=300 src="pow-full" edit border="1"]
-
-[edit src="pow-full" title="Open the full final example in the sandbox."]
+![](pow7.png)
 
 ## Summary
 

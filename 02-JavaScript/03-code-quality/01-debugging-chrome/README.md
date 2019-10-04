@@ -120,35 +120,35 @@ Now it's time to *trace* the script.
 
 There are buttons for it at the top of the right panel. Let's engage them.
 
-<span class="devtools" style="background-position:-7px -76px"></span> -- continue the execution, hotkey `key:F8`.
+![Continue Icon](continue.png "Continue Icon") -- continue the execution, hotkey `key:F8`.
 : Resumes the execution. If there are no additional breakpoints, then the execution just continues and the debugger loses control.
 
-    Here's what we can see after a click on it:
+Here's what we can see after a click on it:
 
-    ![](chrome-sources-debugger-trace-1.svg)
+![](chrome-sources-debugger-trace-1.svg)
 
-    The execution has resumed, reached another breakpoint inside `say()` and paused there. Take a look at the "Call Stack" at the right. It has increased by one more call. We're inside `say()` now.
+The execution has resumed, reached another breakpoint inside `say()` and paused there. Take a look at the "Call Stack" at the right. It has increased by one more call. We're inside `say()` now.
 
-<span class="devtools" style="background-position:-137px -76px"></span> -- make a step (run the next command), but *don't go into the function*, hotkey `key:F10`.
+![Step Over Icon](stepover.png "Step Over Icon") -- make a step (run the next command), but *don't go into the function*, hotkey `key:F10`.
 : If we click it now, `alert` will be shown. The important thing is that `alert` can be any function, the execution "steps over it", skipping the function internals.
 
-<span class="devtools" style="background-position:-72px -76px"></span> -- make a step, hotkey `key:F11`.
+![Step Into Icon](stepin.png "Step Into Icon") -- make a step, hotkey `key:F11`.
 : The same as the previous one, but "steps into" nested functions. Clicking this will step through all script actions one by one.
 
-<span class="devtools" style="background-position:-104px -76px"></span> -- continue the execution till the end of the current function, hotkey `key:Shift+F11`.
+![Step Out Icon](stepout.png "Step Out Icon") -- continue the execution till the end of the current function, hotkey `key:Shift+F11`.
 : The execution would stop at the very last line of the current function. That's handy when we accidentally entered a nested call using <span class="devtools" style="background-position:-72px -76px"></span>, but it does not interest us, and we want to continue to its end as soon as possible.
 
-<span class="devtools" style="background-position:-7px -28px"></span> -- enable/disable all breakpoints.
+![Enable / Disable Icon](disable.png "Enable / Disable Icon") -- enable/disable all breakpoints.
 : That button does not move the execution. Just a mass on/off for breakpoints.
 
-<span class="devtools" style="background-position:-264px -4px"></span> -- enable/disable automatic pause in case of an error.
+![Automatic Pause Icon](pause.png "Automatic Pause Icon") -- enable/disable automatic pause in case of an error.
 : When enabled, and the developer tools is open, a script error automatically pauses the execution. Then we can analyze variables to see what went wrong. So if our script dies with an error, we can open debugger, enable this option and reload the page to see where it dies and what's the context at that moment.
 
-```smart header="Continue to here"
-Right click on a line of code opens the context menu with a great option called "Continue to here".
-
-That's handy when we want to move multiple steps forward to the line, but we're too lazy to set a breakpoint.
-```
+## 
+> ### Continue to here
+> Right click on a line of code opens the context menu with a great option called "Continue to here".
+> 
+> That's handy when we want to move multiple steps forward to the line, but we're too lazy to set a breakpoint.
 
 ## Logging
 

@@ -21,5 +21,6 @@ Things to note about a service worker:
 * Using the guide & any other resources, implement a service into your form website that...
     * Caches assets to appear to work offline
     * Synchronises form submissions in the background
+* Run another lighthouse audit to see that some of the PWA statistics are fixed
 
 ***Content from this document is adapted from https://developers.google.com/web/fundamentals/primers/service-workers***

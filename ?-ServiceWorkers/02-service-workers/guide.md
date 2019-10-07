@@ -224,3 +224,6 @@ cache.addAll(urlsToPrefetch.map(function(urlToPrefetch) {
   console.log('All resources have been fetched and cached.');
 });
 ```
+
+## More Resources
+* https://codelabs.developers.google.com/codelabs/pwa-offline-quickstart/index.html#3

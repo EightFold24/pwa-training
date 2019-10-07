@@ -1,5 +1,7 @@
 # Promise
 
+**Watch this video on [Intro to Promises](https://youtu.be/7unX6hn5NA8) from the Google developers for an overview.**
+
 Imagine that you're a top singer, and fans ask day and night for your upcoming single.
 
 To get some relief, you promise to send it to them when it's published. You give your fans a list. They can fill in their email addresses, so that when the song becomes available, all subscribed parties instantly receive it. And even if something goes very wrong, say, a fire in the studio, so that you can't publish the song, they will still be notified.

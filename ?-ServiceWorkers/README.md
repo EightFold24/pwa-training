@@ -1,7 +1,11 @@
 # Service Workers
 
-## More Resources 
+## Prerequisites 
+* Google Chrome
+* [Clear Cache](https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn?hl=en)
 
+
+## More Resources 
 Fundamentals of SW and how to implement in JS
 https://developers.google.com/web/fundamentals/primers/service-workers
 

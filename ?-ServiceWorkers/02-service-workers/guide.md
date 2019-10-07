@@ -227,3 +227,5 @@ cache.addAll(urlsToPrefetch.map(function(urlToPrefetch) {
 
 ## More Resources
 * https://codelabs.developers.google.com/codelabs/pwa-offline-quickstart/index.html#3
+
+***Content from this document is adapted from https://developers.google.com/web/fundamentals/primers/service-workers***

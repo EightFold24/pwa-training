@@ -16,20 +16,13 @@ There are many tricky things about cookies and their options. In this chapter we
 
 ## Reading from document.cookie
 
-```online
 Does your browser store any cookies from this site? Let's see:
-```
-
-```offline
-Assuming you're on a website, it's possible to see the cookies from it, like this:
-```
 
 ```js
 // At javascript.info, we use Google Analytics for statistics,
 // so there should be some cookies
 alert( document.cookie ); // cookie1=value1; cookie2=value2;...
 ```
-
 
 The value of `document.cookie` consists of `name=value` pairs, delimited by `; `. Each one is a separate cookie.
 
@@ -57,7 +50,7 @@ Technically, name and value can have any characters, to keep the valid formattin
 ```js
 // special characters (spaces), need encoding
 let name = "my name";
-let value = "John Smith"
+let value = "John Smith";
 
 // encodes the cookie as my%20name=John%20Smith
 document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
@@ -65,12 +58,11 @@ document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 alert(document.cookie); // ...; my%20name=John%20Smith
 ```
 
-
-```warn header="Limitations"
-There are few limitations:
-- The `name=value` pair, after `encodeURIComponent`, should not exceed 4kb. So we can't store anything huge in a cookie.
-- The total number of cookies per domain is limited to around 20+, the exact limit depends on a browser.
-```
+## 
+> ### Limitations
+> There are few limitations:
+> - The `name=value` pair, after `encodeURIComponent`, should not exceed 4kb. So we can't store anything huge in a cookie.
+> - The total number of cookies per domain is limited to around 20+, the exact limit depends on a browser.
 
 Cookies have several options, many of them are important and should be set.
 
@@ -102,7 +94,7 @@ By default, a cookie is accessible only at the domain that set it. So, if the co
 
 ```js
 // at site.com
-document.cookie = "user=John"
+document.cookie = "user=John";
 
 // at forum.site.com
 alert(document.cookie); // no user
@@ -117,7 +109,7 @@ It's a safety restriction, to allow us to store sensitive data in cookies, that 
 ```js
 // at site.com
 // make the cookie accessible on any subdomain *.site.com:
-document.cookie = "user=John; domain=site.com"
+document.cookie = "user=John; domain=site.com";
 
 // later
 
@@ -343,9 +335,9 @@ function deleteCookie(name) {
 }
 ```
 
-```warn header="Updating or deleting must use same path and domain"
-Please note: when we update or delete a cookie, we should use exactly the same path and domain options as when we set it.
-```
+## 
+> ### Updating or deleting must use same path and domain
+> Please note: when we update or delete a cookie, we should use exactly the same path and domain options as when we set it.
 
 Together: [cookie.js](cookie.js).
 
@@ -377,12 +369,11 @@ Also, some modern browsers employ special policies for such cookies:
 - Safari does not allow third-party cookies at all.
 - Firefox comes with a "black list" of third-party domains where it blocks third-party cookies.
 
-
-```smart
-If we load a script from a third-party domain, like `<script src="https://google-analytics.com/analytics.js">`, and that script uses `document.cookie` to set a cookie, then such cookie is not third-party.
-
-If a script sets a cookie, then no matter where the script came from -- the cookie belongs to the domain of the current webpage.
-```
+## 
+> ### Please note
+> If we load a script from a third-party domain, like `<script src="https://google-analytics.com/analytics.js">`, and that script uses `document.cookie` to set a cookie, then such cookie is not third-party.
+> 
+> If a script sets a cookie, then no matter where the script came from -- the cookie belongs to the domain of the current webpage.
 
 ## Appendix: GDPR
 

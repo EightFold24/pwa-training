@@ -96,13 +96,13 @@ let deleteRequest = indexedDB.deleteDatabase(name)
 // deleteRequest.onsuccess/onerror tracks the result
 ```
 
-```warn header="Can we open an old version?"
-Now what if we try to open a database with a lower version than the current one? E.g. the existing DB version is 3, and we try to `open(...2)`.
-
-That's an error, `openRequest.onerror` triggers.
-
-Such thing may happen if the visitor loaded an outdated code, e.g. from a proxy cache. We should check `db.version`, suggest him to reload the page. And also re-check our caching headers to ensure that the visitor never gets old code.
-```
+## 
+> ### Can we open an old version?
+> Now what if we try to open a database with a lower version than the current one? E.g. the existing DB version is 3, and we try to `open(...2)`.
+> 
+> That's an error, `openRequest.onerror` triggers.
+> 
+> Such thing may happen if the visitor loaded an outdated code, e.g. from a proxy cache. We should check `db.version`, suggest him to reload the page. And also re-check our caching headers to ensure that the visitor never gets old code.
 
 ### Parallel update problem
 
@@ -129,16 +129,13 @@ openRequest.onerror = ...;
 openRequest.onsuccess = function() {
   let db = openRequest.result;
 
-  
   db.onversionchange = function() {
     db.close();
     alert("Database is outdated, please reload the page.")
   };
   
-
   // ...the db is ready, use it...
 };
-
 
 openRequest.onblocked = function() {
   // there's another open connection to same database
@@ -261,11 +258,11 @@ db.transaction(store[, type]);
 
 There's also `versionchange` transaction type: such transactions can do everything, but we can't create them manually. IndexedDB automatically creates a `versionchange` transaction when opening the database, for `updateneeded` handler. That's why it's a single place where we can update the database structure, create/remove object stores.
 
-```smart header="Why there exist different types of transactions?"
-Performance is the reason why transactions need to be labeled either `readonly` and `readwrite`.
-
-Many `readonly` transactions are able to access concurrently the same store, but `readwrite` transactions can't. A `readwrite` transaction "locks" the store for writing. The next transaction must wait before the previous one finishes before accessing the same store.
-```
+## 
+> ### Why there exist different types of transactions?
+> Performance is the reason why transactions need to be labeled either `readonly` and `readwrite`.
+> 
+> Many `readonly` transactions are able to access concurrently the same store, but `readwrite` transactions can't. A `readwrite` transaction "locks" the store for writing. The next transaction must wait before the previous one finishes before accessing the same store.
 
 After the transaction is created, we can add an item to the store, like this:
 
@@ -276,16 +273,13 @@ let transaction = db.transaction("books", "readwrite"); // (1)
 
 let books = transaction.objectStore("books"); // (2)
 
-
 let book = {
   id: 'js',
   price: 10,
   created: new Date()
 };
 
-
 let request = books.add(book); // (3)
-
 
 request.onsuccess = function() { // (4)
   console.log("Book added to the store", request.result);
@@ -504,11 +498,11 @@ books.getAll()
 books.getAllKeys(IDBKeyRange.lowerBound('js', true))
 ```
 
-```smart header="Object store is always sorted"
-Object store sorts values by key internally.
-
-So requests that return many values always return them in sorted by key order.
-```
+## 
+> ### Object store is always sorted
+> Object store sorts values by key internally.
+> 
+> So requests that return many values always return them in sorted by key order.
 
 
 ## Searching by any field with an index
@@ -564,9 +558,7 @@ let transaction = db.transaction("books"); // readonly
 let books = transaction.objectStore("books");
 let priceIndex = books.index("price_idx");
 
-
 let request = priceIndex.getAll(10);
-
 
 request.onsuccess = function() {
   if (request.result !== undefined) {
@@ -812,6 +804,4 @@ The basic usage can be described with a few phrases:
     - To search by an object field, create an index.
 5. If the data does not fit in memory, use a cursor.
 
-Here's a small demo app:
-
-[codetabs src="books" current="index.html"]
+See the small demo app in books.view:

@@ -194,10 +194,6 @@ Let's elaborate.
 
 Imagine, you have two windows with the same site in each. So `localStorage` is shared between them.
 
-```online
-You might want to open this page in two browser windows to test the code below.
-```
-
 If both windows are listening for `window.onstorage`, then each one will react on updates that happened in the other one.
 
 ```js

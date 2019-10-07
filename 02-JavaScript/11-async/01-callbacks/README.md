@@ -41,9 +41,7 @@ But if we do that immediately after the `loadScript(…)` call, that wouldn't wo
 ```js
 loadScript('/my/script.js'); // the script has "function newFunction() {…}"
 
-*!*
 newFunction(); // no such function!
-*/!*
 ```
 
 Naturally, the browser probably didn't have time to load the script. As of now, the `loadScript` function doesn't provide a way to track the load completion. The script loads and eventually runs, that's all. But we'd like to know when it happens, to use new functions and variables from that script.
@@ -55,9 +53,7 @@ function loadScript(src, *!*callback*/!*) {
   let script = document.createElement('script');
   script.src = src;
 
-*!*
   script.onload = () => callback(script);
-*/!*
 
   document.head.append(script);
 }
@@ -77,7 +73,7 @@ That's the idea: the second argument is a function (usually anonymous) that runs
 
 Here's a runnable example with a real script:
 
-```js run
+```js
 function loadScript(src, callback) {
   let script = document.createElement('script');
   script.src = src;
@@ -85,12 +81,10 @@ function loadScript(src, callback) {
   document.head.append(script);
 }
 
-*!*
 loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script => {
   alert(`Cool, the ${script.src} is loaded`);
   alert( _ ); // function declared in the loaded script
 });
-*/!*
 ```
 
 That's called a "callback-based" style of asynchronous programming. A function that does something asynchronously should provide a `callback` argument where we put the function to run after it's complete.
@@ -108,11 +102,9 @@ loadScript('/my/script.js', function(script) {
 
   alert(`Cool, the ${script.src} is loaded, let's load one more`);
 
-*!*
   loadScript('/my/script2.js', function(script) {
     alert(`Cool, the second script is loaded`);
   });
-*/!*
 
 });
 ```
@@ -126,11 +118,9 @@ loadScript('/my/script.js', function(script) {
 
   loadScript('/my/script2.js', function(script) {
 
-*!*
     loadScript('/my/script3.js', function(script) {
       // ...continue after all scripts are loaded
     });
-*/!*
 
   })
 
@@ -145,15 +135,13 @@ In the above examples we didn't consider errors. What if the script loading fail
 
 Here's an improved version of `loadScript` that tracks loading errors:
 
-```js run
+```js
 function loadScript(src, callback) {
   let script = document.createElement('script');
   script.src = src;
 
-*!*
   script.onload = () => callback(null, script);
   script.onerror = () => callback(new Error(`Script load error for ${src}`));
-*/!*
 
   document.head.append(script);
 }
@@ -202,9 +190,7 @@ loadScript('1.js', function(error, script) {
           if (error) {
             handleError(error);
           } else {
-  *!*
-            // ...continue after all scripts are loaded (*)
-  */!*
+            // ...continue after all scripts are loaded (*
           }
         });
 

@@ -6,7 +6,7 @@ Such transforms are often needed in real-life, as many functions and libraries a
 
 For instance, we have `loadScript(src, callback)` from the chapter <info:callbacks>.
 
-```js run
+```js
 function loadScript(src, callback) {
   let script = document.createElement('script');
   script.src = src;
@@ -82,12 +82,12 @@ Here's a more advanced version of `promisify`: if called as `promisify(f, true)`
 function promisify(f, manyArgs = false) {
   return function (...args) {
     return new Promise((resolve, reject) => {
-      function *!*callback(err, ...results*/!*) { // our custom callback for f
+      function allback(err, ...results) { // our custom callback for f
         if (err) {
           return reject(err);
         } else {
           // resolve with all callback results if manyArgs is specified
-          *!*resolve(manyArgs ? results : results[0]);*/!*
+          resolve(manyArgs ? results : results[0]);
         }
       }
 
@@ -107,10 +107,10 @@ For more exotic callback formats, like those without `err` at all: `callback(res
 
 There are also modules with a bit more flexible promisification functions, e.g. [es6-promisify](https://github.com/digitaldesignlabs/es6-promisify). In Node.js, there's a built-in `util.promisify` function for that.
 
-```smart
-Promisification is a great approach, especially when you use `async/await` (see the next chapter), but not a total replacement for callbacks.
-
-Remember, a promise may have only one result, but a callback may technically be called many times.
-
-So promisification is only meant for functions that call the callback once. Further calls will be ignored.
-```
+## 
+> ### Please note:
+> Promisification is a great approach, especially when you use `async/await` (see the next chapter), but not a total replacement for callbacks.
+> 
+> Remember, a promise may have only one result, but a callback may technically be called many times.
+> 
+> So promisification is only meant for functions that call the callback once. Further calls will be ignored.

@@ -46,7 +46,7 @@ Later we'll see how "fans" can subscribe to these changes.
 
 Here's an example of a promise constructor and a simple executor function with  "producing code" that takes time (via `setTimeout`):
 
-```js run
+```js
 let promise = new Promise(function(resolve, reject) {
   // the function is executed automatically when the promise is constructed
 
@@ -83,49 +83,42 @@ To summarize, the executor should do a job (something that takes time usually) a
 
 A promise that is either resolved or rejected is called "settled", as opposed to a initially "pending" promise.
 
-````smart header="There can be only a single result or an error"
-The executor should call only one `resolve` or one `reject`. Any state change is final.
+## 
+> ### There can be only a single result or an error
+> The executor should call only one `resolve` or one `reject`. Any state change is final.
+> 
+> All further calls of `resolve` and `reject` are ignored:
+> ```js
+> let promise = new Promise(function(resolve, reject) {
+>   resolve("done");
+>   reject(new Error("…")); // ignored
+>   setTimeout(() => resolve("…")); // ignored
+> });
+> ```
+> The idea is that a job done by the executor may have only one result or an error.
+> 
+> Also, `resolve`/`reject` expect only one argument (or none) and will ignore additional arguments.
 
-All further calls of `resolve` and `reject` are ignored:
+## 
+> ###Reject with `Error` objects
+> In case something goes wrong, the executor should call `reject`. That can be done with any type of argument (just like `resolve`). But it is recommended to use `Error` objects (or objects that inherit from `Error`). The reasoning for that will soon become apparent.
 
-```js
-let promise = new Promise(function(resolve, reject) {
-*!*
-  resolve("done");
-*/!*
+## 
+> ### Immediately calling `resolve`/`reject`
+> In practice, an executor usually does something asynchronously and calls `resolve`/`reject` after some time, but it doesn't have to. We also can call `resolve` or `reject` immediately, like this:
+> ```js
+> let promise = new Promise(function(resolve, reject) {
+>   // not taking our time to do the job
+>   resolve(123); // immediately give the result: 123
+> });
+> ```
+> For instance, this might happen when we start to do a job but then see that everything has already been completed and cached.
+> 
+> That's fine. We immediately have a resolved promise.
 
-  reject(new Error("…")); // ignored
-  setTimeout(() => resolve("…")); // ignored
-});
-```
-
-The idea is that a job done by the executor may have only one result or an error.
-
-Also, `resolve`/`reject` expect only one argument (or none) and will ignore additional arguments.
-````
-
-```smart header="Reject with `Error` objects"
-In case something goes wrong, the executor should call `reject`. That can be done with any type of argument (just like `resolve`). But it is recommended to use `Error` objects (or objects that inherit from `Error`). The reasoning for that will soon become apparent.
-```
-
-````smart header="Immediately calling `resolve`/`reject`"
-In practice, an executor usually does something asynchronously and calls `resolve`/`reject` after some time, but it doesn't have to. We also can call `resolve` or `reject` immediately, like this:
-
-```js
-let promise = new Promise(function(resolve, reject) {
-  // not taking our time to do the job
-  resolve(123); // immediately give the result: 123
-});
-```
-
-For instance, this might happen when we start to do a job but then see that everything has already been completed and cached.
-
-That's fine. We immediately have a resolved promise.
-````
-
-```smart header="The `state` and `result` are internal"
-The properties `state` and `result` of the Promise object are internal. We can't directly access them. We can use the methods `.then`/`.catch`/`.finally` for that. They are described below.
-```
+## 
+> ### The `state` and `result` are internal
+> The properties `state` and `result` of the Promise object are internal. We can't directly access them. We can use the methods `.then`/`.catch`/`.finally` for that. They are described below.
 
 ## Consumers: then, catch, finally
 
@@ -150,16 +143,14 @@ The second argument of `.then` is a function that runs when the promise is rejec
 
 For instance, here's a reaction to a successfully resolved promise:
 
-```js run
+```js
 let promise = new Promise(function(resolve, reject) {
   setTimeout(() => resolve("done!"), 1000);
 });
 
 // resolve runs the first function in .then
 promise.then(
-*!*
   result => alert(result), // shows "done!" after 1 second
-*/!*
   error => alert(error) // doesn't run
 );
 ```
@@ -168,7 +159,7 @@ The first function was executed.
 
 And in the case of a rejection -- the second one:
 
-```js run
+```js
 let promise = new Promise(function(resolve, reject) {
   setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
@@ -176,22 +167,18 @@ let promise = new Promise(function(resolve, reject) {
 // reject runs the second function in .then
 promise.then(
   result => alert(result), // doesn't run
-*!*
   error => alert(error) // shows "Error: Whoops!" after 1 second
-*/!*
 );
 ```
 
 If we're interested only in successful completions, then we can provide only one function argument to `.then`:
 
-```js run
+```js
 let promise = new Promise(resolve => {
   setTimeout(() => resolve("done!"), 1000);
 });
 
-*!*
 promise.then(alert); // shows "done!" after 1 second
-*/!*
 ```
 
 ### catch
@@ -199,15 +186,13 @@ promise.then(alert); // shows "done!" after 1 second
 If we're interested only in errors, then we can use `null` as the first argument: `.then(null, errorHandlingFunction)`. Or we can use `.catch(errorHandlingFunction)`, which is exactly the same:
 
 
-```js run
+```js
 let promise = new Promise((resolve, reject) => {
   setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
 
-*!*
 // .catch(f) is the same as promise.then(null, f)
 promise.catch(alert); // shows "Error: Whoops!" after 1 second
-*/!*
 ```
 
 The call `.catch(f)` is a complete analog of `.then(null, f)`, it's just a shorthand.
@@ -226,10 +211,8 @@ Like this:
 new Promise((resolve, reject) => {
   /* do something that takes time, and then call resolve/reject */
 })
-*!*
   // runs when the promise is settled, doesn't matter successfully or not
   .finally(() => stop loading indicator)
-*/!*
   .then(result => show result, err => show error)
 ```
 
@@ -239,7 +222,7 @@ It's not exactly an alias of `then(f,f)` though. There are several important dif
 2. A `finally` handler passes through results and errors to the next handler.
 
     For instance, here the result is passed through `finally` to `then`:
-    ```js run
+    ```js
     new Promise((resolve, reject) => {
       setTimeout(() => resolve("result"), 2000)
     })
@@ -249,7 +232,7 @@ It's not exactly an alias of `then(f,f)` though. There are several important dif
 
     And here there's an error in the promise, passed through `finally` to `catch`:
 
-    ```js run
+    ```js
     new Promise((resolve, reject) => {
       throw new Error("error");
     })
@@ -263,20 +246,19 @@ It's not exactly an alias of `then(f,f)` though. There are several important dif
 
 3. Last, but not least, `.finally(f)` is a more convenient syntax than `.then(f, f)`: no need to duplicate the function `f`.
 
-````smart header="On settled promises handlers runs immediately"
-If a promise is pending, `.then/catch/finally` handlers wait for it. Otherwise, if a promise has already settled, they execute immediately:
-
-```js run
-// the promise becomes resolved immediately upon creation
-let promise = new Promise(resolve => resolve("done!"));
-
-promise.then(alert); // done! (shows up right now)
-```
-````
+## 
+> ### On settled promises handlers runs immediately
+> If a promise is pending, `.then/catch/finally` handlers wait for it. Otherwise, if a promise has already settled, they execute immediately:
+> ```js
+> // the promise becomes resolved immediately upon creation
+> let promise = new Promise(resolve => resolve("done!"));
+> 
+> promise.then(alert); // done! (shows up right now)
+> ```
 
 Next, let's see more practical examples of how promises can help us to write asynchronous code.
 
-## Example: loadScript [#loadscript]
+## Example: loadScript
 
 We've got the `loadScript` function for loading a script from the previous chapter.
 
@@ -298,7 +280,7 @@ Let's rewrite it using Promises.
 
 The new function `loadScript` will not require a callback. Instead, it will create and return a Promise object that resolves when the loading is complete. The outer code can add handlers (subscribing functions) to it using `.then`:
 
-```js run
+```js
 function loadScript(src) {  
   return new Promise(function(resolve, reject) {
     let script = document.createElement('script');
@@ -314,7 +296,7 @@ function loadScript(src) {
 
 Usage:
 
-```js run
+```js
 let promise = loadScript("https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js");
 
 promise.then(

@@ -15,7 +15,7 @@ Now let's discuss the rules and reasons for them in detail.
 
 ## 
 > ### There are no \"you must\" rules
-> Nothing is set in stone here. These are style preferences, not religious dogmas.
+> Nothing is set in stone here. These are style preferences.
 
 ### Curly Braces
 
@@ -33,11 +33,11 @@ A single-line construct, such as `if (condition) doSomething()`, is an important
 
 Here are the annotated variants so you can judge their readability for yourself:
 
-1. 😠 Beginners sometimes do that. Bad! Curly braces are not needed:
+1. 😠 Curly braces are not needed here:
     ```js
     if (n < 0) {alert(`Power ${n} is not supported`);}
     ```
-2. 😠 Split to a separate line without braces. Never do that, easy to make an error when adding new lines:
+2. 😠 Split to a separate line without braces. Never do this, easy to make an error and has been known to cause security vulnerabilities:
     ```js
     if (n < 0)
       alert(`Power ${n} is not supported`);
@@ -128,13 +128,13 @@ There are two types of indents:
 
 A semicolon should be present after each statement, even if it could possibly be skipped.
 
-There are languages where a semicolon is truly optional and it is rarely used. In JavaScript, though, there are cases where a line break is not interpreted as a semicolon, leaving the code vulnerable to errors. See more about that in the chapter <info:structure#semicolon>.
+There are languages where a semicolon is truly optional and it is rarely used. In JavaScript, though, there are cases where a line break is not interpreted as a semicolon, leaving the code vulnerable to errors and security risks.
 
 If you're an experienced JavaScript programmer, you may choose a no-semicolon code style like [StandardJS](https://standardjs.com/). Otherwise, it's best to use semicolons to avoid possible pitfalls. The majority of developers put semicolons.
 
 ### Nesting Levels
 
-Try to avoid nesting code too many levels deep.
+Try to avoid nesting code too many levels deep. A good rule of thumb is to keep this to no deeper than three levels of indentation.
 
 For example, in the loop, it's sometimes a good idea to use the [`continue`](info:while-for#continue) directive to avoid extra nesting.
 
@@ -269,52 +269,6 @@ Some popular choices:
 - (plus many more)
 
 If you're a novice developer, start with the cheat sheet at the beginning of this chapter. Then you can browse other style guides to pick up more ideas and decide which one you like best.
-
-## Automated Linters
-
-Linters are tools that can automatically check the style of your code and make improving suggestions.
-
-The great thing about them is that style-checking can also find some bugs, like typos in variable or function names. Because of this feature, using a linter is recommended even if you don't want to stick to one particular "code style".
-
-Here are some well-known linting tools:
-
-- [JSLint](http://www.jslint.com/) -- one of the first linters.
-- [JSHint](http://www.jshint.com/) -- more settings than JSLint.
-- [ESLint](http://eslint.org/) -- probably the newest one.
-
-All of them can do the job. The author uses [ESLint](http://eslint.org/).
-
-Most linters are integrated with many popular editors: just enable the plugin in the editor and configure the style.
-
-For instance, for ESLint you should do the following:
-
-1. Install [Node.js](https://nodejs.org/).
-2. Install ESLint with the command `npm install -g eslint` (npm is a JavaScript package installer).
-3. Create a config file named `.eslintrc` in the root of your JavaScript project (in the folder that contains all your files).
-4. Install/enable the plugin for your editor that integrates with ESLint. The majority of editors have one.
-
-Here's an example of an `.eslintrc` file:
-
-```js
-{
-  "extends": "eslint:recommended",
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
-  },
-  "rules": {
-    "no-console": 0,
-    "indent": ["warning", 2]
-  }
-}
-```
-
-Here the directive `"extends"` denotes that the configuration is based on the "eslint:recommended" set of settings. After that, we specify our own.
-
-It is also possible to download style rule sets from the web and extend them instead. See <http://eslint.org/docs/user-guide/getting-started> for more details about installation.
-
-Also certain IDEs have built-in linting, which is convenient but not as customizable as ESLint.
 
 ## Summary
 

@@ -31,12 +31,10 @@ function showPrimes(n) {
   nextPrime:
   for (let i = 2; i < n; i++) {
 
-
     // check if i is a prime number
     for (let j = 2; j < i; j++) {
       if (i % j == 0) continue nextPrime;
     }
-
 
     alert(i);
   }
@@ -48,10 +46,8 @@ The better variant, with a factored out function `isPrime`:
 
 ```js
 function showPrimes(n) {
-
   for (let i = 2; i < n; i++) {
     if (!isPrime(i)) continue;
-
     alert(i);  
   }
 }
@@ -115,38 +111,16 @@ Once again, functions themselves tell what's going on. There's nothing to commen
 
 In reality, we can't totally avoid "explanatory" comments. There are complex algorithms. And there are smart "tweaks" for purposes of optimization. But generally we should try to keep the code simple and self-descriptive.
 
-## Good comments
+## Acceptable comments
 
 So, explanatory comments are usually bad. Which comments are good?
 
-Describe the architecture
-: Provide a high-level overview of components, how they interact, what's the control flow in various situations... In short -- the bird's eye view of the code. There's a special language [UML](http://wikipedia.org/wiki/Unified_Modeling_Language) to build high-level architecture diagrams explaining the code. Definitely worth studying.
+**_In general you should only be using comments when you need to justify a particular implementation or explain a complex section of logic that cannot be made more obvious by other clean code practices._**
 
-Document function parameters and usage
-: There's a special syntax [JSDoc](http://en.wikipedia.org/wiki/JSDoc) to document a function: usage, parameters, returned value.
+It might also be acceptable to use class comments.  This is a comment that is placed at the top of a class file to describe exactly what it does and what it should be used for.
 
-For instance:
-```js
-/**
- * Returns x raised to the n-th power.
- *
- * @param {number} x The number to raise.
- * @param {number} n The power, must be a natural number.
- * @return {number} x raised to the n-th power.
- */
-function pow(x, n) {
-  ...
-}
-```
-
-Such comments allow us to understand the purpose of the function and use it the right way without looking in its code.
-
-By the way, many editors like [WebStorm](https://www.jetbrains.com/webstorm/) can understand them as well and use them to provide autocomplete and some automatic code-checking.
-
-Also, there are tools like [JSDoc 3](https://github.com/jsdoc3/jsdoc) that can generate HTML-documentation from the comments. You can read more information about JSDoc at <http://usejsdoc.org/>.
-
-Why is the task solved this way?
-: What's written is important. But what's *not* written may be even more important to understand what's going on. Why is the task solved exactly this way? The code gives no answer.
+### Why is the task solved this way?
+What's written is important. But what's *not* written may be even more important to understand what's going on. Why is the task solved exactly this way? The code gives no answer.
 
 If there are many ways to solve the task, why this one? Especially when it's not the most obvious one.
 
@@ -155,10 +129,10 @@ Without such comments the following situation is possible:
 2. You think: "How stupid I was then, and how much smarter I'm now", and rewrite using the "more obvious and correct" variant.
 3. ...The urge to rewrite was good. But in the process you see that the "more obvious" solution is actually lacking. You even dimly remember why, because you already tried it long ago. You revert to the correct variant, but the time was wasted.
 
-Comments that explain the solution are very important. They help to continue development the right way.
+Comments that explain a non-obvious solution are very important. They help to continue development the right way.
 
-Any subtle features of the code? Where they are used?
-: If the code has anything subtle and counter-intuitive, it's definitely worth commenting.
+### Any subtle features of the code? Where they are used?
+If the code has anything subtle and counter-intuitive, it's definitely worth commenting.
 
 ## Summary
 
@@ -168,13 +142,11 @@ Good comments allow us to maintain the code well, come back to it after a delay 
 
 **Comment this:**
 
-- Overall architecture, high-level view.
-- Function usage.
+- High-level class architecture.
 - Important solutions, especially when not immediately obvious.
 
 **Avoid comments:**
 
 - That tell "how code works" and "what it does".
 - Put them in only if it's impossible to make the code so simple and self-descriptive that it doesn't require them.
-
-Comments are also used for auto-documenting tools like JSDoc3: they read them and generate HTML-docs (or docs in another format).
+- Commented out code

@@ -62,11 +62,12 @@ We can always find a list of breakpoints in the right panel. That's useful when 
 - Remove the breakpoint by right-clicking and selecting Remove.
 - ...And so on.
 
-```smart header="Conditional breakpoints"
-*Right click* on the line number allows to create a *conditional* breakpoint. It only triggers when the given expression is truthy.
+## 
+> ### Conditional breakpoints
+>*Right click* on the line number allows to create a *conditional* breakpoint. It only triggers when the given expression is truthy.
+>
+>That's handy when we need to stop only for a certain variable value or for certain function parameters.
 
-That's handy when we need to stop only for a certain variable value or for certain function parameters.
-```
 
 ## Debugger command
 

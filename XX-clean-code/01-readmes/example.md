@@ -16,9 +16,6 @@ You can view more bedges [here](https://github.com/badges/shields).
 [![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-agency/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-agency)
 [![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-agency/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-agency?type=dev)
 
-## Screenshots
-Include logo/demo screenshot etc.
-
 ## Technologies
 * Bootstrap 3 or 4
 * AngularJS 1.6 / Angular 2+/4/5/6
@@ -26,35 +23,50 @@ Include logo/demo screenshot etc.
 * Python 2.7 or 3.6
 * Rails 4 or 5
 
-## Features
-What makes your project stand out?
+## Features (Optional)
+What makes your project stand out? What can it do?
+You can also include screenshots with 
+```markdown
+![Alt Text](https://src.url/img.jpg)
+```
 
-## Code Example
+![Example of a Screenshot](https://i.ytimg.com/vi/PXexLD7XLTM/maxresdefault.jpg)
+
+## Code Example / Use Cases
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+Use code blocks in markdown like so...
+````text
+```codetype
+A code block is sourrounded by three backticks (`)
+The codetype is optional but when included tells markdown what language to format the text with.
+This could be a number of things including 'js', 'html', or 'markdown'
+```
+````
 
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+Provide step by step series of examples and explanations about how to get the system installed and running.
+This might include different ways to install depending on what OS your user is running.
+This section sometimes comes before Code Example / Use Cases.
 
-## API Reference
+## Tests (As Required)
+If you have tests in your project, make sure to describe and show how to run them with code examples.
 
+## API Reference (As Required)
 Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
-## Tests
-Describe and show how to run the tests with code examples.
+## Development / Contribute
+Provide more advanced and detailed explanations about how to get a development env running.
+This might include guidance on how to build / compile your project, or how you can extend / add functionality to the system.
 
-## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
-
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
-
-## Credits
+## Credits (Optional)
 Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
 
-#### Anything else that seems useful
+## Common Errors / Debugging (As Required)
+Some software will have been designed in a way that might not appear intuitive to inexperienced users.
+If there are common issues that may arise from anything above, you can document them here with solutions to them.
 
-## License
-A short snippet describing the license (MIT, Apache etc)
+## License (Optional)
+A short snippet describing the license (MIT, GLP-2.0, Apache etc).
+You can view some licence types []here]().
 
 MIT © [Yourname]()

@@ -1,8 +1,5 @@
-importance: 2
-
----
-
 # Show the sign
+_`Importance: 2`_
 
 Using `if..else`, write the code which gets a number via `prompt` and then shows in `alert`:
 
@@ -11,5 +8,3 @@ Using `if..else`, write the code which gets a number via `prompt` and then shows
 - `0`, if equals zero.
 
 In this task we assume that the input is always a number.
-
-[demo src="if_sign"]

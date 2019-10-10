@@ -448,3 +448,9 @@ Function naming:
 - There exist many well-known function prefixes like `create…`, `show…`, `get…`, `check…` and so on. Use them to hint what a function does.
 
 Functions are the main building blocks of scripts. Now we've covered the basics, so we actually can start creating and using them. But that's only the beginning of the path. We are going to return to them many times, going more deeply into their advanced features.
+
+## TODO
+* Complete the [1-if-else-required](1-if-else-required) task
+* Complete the [2-rewrite-function-question-or](2-rewrite-function-question-or) task
+* Complete the [3-min](3-min) task
+* Complete the [4-pow](4-pow) task

@@ -235,3 +235,6 @@ The `typeof` operator allows us to see which type is stored in a variable.
 - For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
 
 In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
+
+## TODO
+* Complete the [1-string-quotes](1-string-quotes) task

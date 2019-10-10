@@ -167,3 +167,9 @@ switch (arg) {
 1. For `0`, `1`, the first `alert` runs.
 2. For `2` the second `alert` runs.
 3. But for `3`, the result of the `prompt` is a string `"3"`, which is not strictly equal `===` to the number `3`. So we've got a dead code in `case 3`! The `default` variant will execute.
+
+`break/continue` support labels before the loop. A label is the only way for `break/continue` to escape a nested loop to go to an outer one.
+
+## TODO
+* Complete the [1-rewrite-switch-if-else](1-rewrite-switch-if-else) task
+* Complete the [2-rewrite-if-switch](2-rewrite-if-switch) task

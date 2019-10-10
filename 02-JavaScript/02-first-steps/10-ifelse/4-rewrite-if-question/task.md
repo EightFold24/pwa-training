@@ -1,8 +1,5 @@
-importance: 5
-
----
-
 # Rewrite 'if' into '?'
+_`Importance: 3`_
 
 Rewrite this `if` using the conditional operator `'?'`:
 

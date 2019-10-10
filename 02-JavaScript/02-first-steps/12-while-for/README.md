@@ -369,3 +369,12 @@ To make an "infinite" loop, usually the `while(true)` construct is used. Such a 
 If we don't want to do anything in the current iteration and would like to forward to the next one, we can use the `continue` directive.
 
 `break/continue` support labels before the loop. A label is the only way for `break/continue` to escape a nested loop to go to an outer one.
+
+## TODO
+* Complete the [1-loop-last-value](1-loop-last-value) task
+* Complete the [2-which-value-while](2-which-value-while) task
+* Complete the [3-which-value-for](3-which-value-for) task
+* Complete the [4-for-even](4-for-even) task
+* Complete the [5-replace-for-while](5-replace-for-while) task
+* Complete the [6-repeat-until-correct](6-repeat-until-correct) task
+* Complete the [7-list-primes](7-list-primes) task

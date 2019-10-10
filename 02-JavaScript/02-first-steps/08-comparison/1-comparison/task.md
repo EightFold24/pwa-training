@@ -1,8 +1,5 @@
-importance: 5
-
----
-
 # Comparisons
+_`Importance: 5`_
 
 What will be the result for these expressions?
 

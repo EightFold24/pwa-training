@@ -1,8 +1,5 @@
-importance: 2
-
----
-
 # Working with variables
+_`Importance: 2`_
 
 1. Declare two variables: `admin` and `name`.
 2. Assign the value `"John"` to `name`.

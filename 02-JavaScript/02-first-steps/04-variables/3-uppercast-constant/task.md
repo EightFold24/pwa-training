@@ -1,8 +1,5 @@
-importance: 4
-
----
-
 # Uppercase const?
+_`Importance: 4`_
 
 Examine the following code:
 

@@ -123,3 +123,7 @@ To attach several scripts, use multiple tags:
 
 
 There is much more to learn about browser scripts and their interaction with the webpage. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves with browser-specific implementations of it. We'll be using the browser as a way to run JavaScript, which is very convenient for online reading, but only one of many.
+
+## TODO
+* Complete the [1-hello-alert](1-hello-alert) task
+* Complete the [2-hello-alert-ext](2-hello-alert-ext) task

@@ -301,3 +301,15 @@ alert( Boolean(null) ); // false
 ```
 
 The precedence of NOT `!` is the highest of all logical operators, so it always executes first, before `&&` or `||`.
+
+
+## TODO
+* Complete the [1-alert-null-2-undefined](1-alert-null-2-undefined) task
+* Complete the [2-alert-or](2-alert-or) task
+* Complete the [3-alert-1-null-2](3-alert-1-null-2) task
+* Complete the [4-alert-and/](4-alert-and/) task
+* Complete the [5-alert-and-or](5-alert-and-or) task
+* Complete the [6-check-if-in-range](6-check-if-in-range) task
+* Complete the [7-check-if-out-range](7-check-if-out-range) task
+* Complete the [8-if-question](8-if-question) task
+* Complete the [9-check-login](9-check-login) task

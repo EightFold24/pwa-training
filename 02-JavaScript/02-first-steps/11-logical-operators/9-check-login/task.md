@@ -1,8 +1,5 @@
-importance: 3
-
----
-
 # Check the login
+_`Importance: 3`_
 
 Write the code which asks for a login with `prompt`.
 
@@ -22,4 +19,3 @@ Please use nested `if` blocks. Mind the overall readability of the code.
 
 Hint:  passing an empty input to a prompt returns an empty string `''`. Pressing `key:ESC` during a prompt returns `null`.
 
-[demo]

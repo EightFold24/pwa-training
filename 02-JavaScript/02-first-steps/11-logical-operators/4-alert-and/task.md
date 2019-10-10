@@ -1,8 +1,5 @@
-importance: 3
-
----
-
 # What is the result of AND'ed alerts?
+_`Importance: 2`_
 
 What will this code show?
 

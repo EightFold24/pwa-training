@@ -1,8 +1,5 @@
-importance: 5
-
----
-
 # What is the result of AND?
+_`Importance: 5`_
 
 What is this code going to show?
 

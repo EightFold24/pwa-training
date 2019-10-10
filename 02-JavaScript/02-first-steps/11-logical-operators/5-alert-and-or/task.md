@@ -1,8 +1,5 @@
-importance: 5
-
----
-
 # The result of OR AND OR
+_`Importance: 5`_
 
 What will the result be?
 

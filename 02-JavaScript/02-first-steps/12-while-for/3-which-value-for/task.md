@@ -1,8 +1,5 @@
-importance: 4
-
----
-
 # Which values get shown by the "for" loop?
+_`Importance: 4`_
 
 For each loop write down which values it is going to show. Then compare with the answer.
 

@@ -1,8 +1,5 @@
-importance: 5
-
----
-
 # Rewrite 'if..else' into '?'
+_`Importance: 3`_
 
 Rewrite `if..else` using multiple ternary operators `'?'`.
 

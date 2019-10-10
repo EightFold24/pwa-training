@@ -206,3 +206,6 @@ Don't use comparisons `>= > < <=` with a variable which may be `null/undefined`,
 - When values of different types are compared, they get converted to numbers (with the exclusion of a strict equality check).
 - The values `null` and `undefined` equal `==` each other and do not equal any other value.
 - Be careful when using comparisons like `>` or `<` with variables that can occasionally be `null/undefined`. Checking for `null/undefined` separately is a good idea.
+
+## TODO
+* Complete the [1-comparison](1-comparison) task

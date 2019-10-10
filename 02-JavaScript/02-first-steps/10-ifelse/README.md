@@ -228,3 +228,10 @@ if (company == 'Netscape') {
 Our eyes scan the code vertically. Code blocks which span several lines are easier to understand than a long, horizontal instruction set.
 
 The purpose of the question mark operator `?` is to return one value or another depending on its condition. Please use it for exactly that. Use `if` when you need to execute different branches of code.
+
+## TODO
+* Complete the [1-if-zero-string](1-if-zero-string) task
+* Complete the [2-check-standard](2-check-standard) task
+* Complete the [3-sign](3-sign) task
+* Complete the [4-rewrite-if-question](4-rewrite-if-question) task
+* Complete the [5-rewrite-if-else-question](5-rewrite-if-else-question) task

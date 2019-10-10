@@ -1,8 +1,5 @@
-importance: 5
-
----
-
 # A question about "if"
+_`Importance: 5`_
 
 Which of these `alert`s are going to execute?
 

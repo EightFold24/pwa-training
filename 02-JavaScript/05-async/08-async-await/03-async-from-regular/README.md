@@ -1,8 +1,9 @@
 
-That's the case when knowing how it works inside is helpful.
+# Call async from non-async
 
-Just treat `async` call as promise and attach `.then` to it:
-```js run
+We have a "regular" function. How to call `async` from it and use its result?
+
+```js
 async function wait() {
   await new Promise(resolve => setTimeout(resolve, 1000));
 
@@ -10,11 +11,10 @@ async function wait() {
 }
 
 function f() {
-  // shows 10 after 1 second
-*!*
-  wait().then(result => alert(result));
-*/!*
+  // ...what to write here?
+  // we need to call async wait() and wait to get 10
+  // remember, we can't use "await"
 }
-
-f();
 ```
+
+P.S. The task is technically very simple, but the question is quite common for developers new to async/await.

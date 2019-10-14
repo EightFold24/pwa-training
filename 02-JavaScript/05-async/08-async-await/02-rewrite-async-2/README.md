@@ -1,5 +1,9 @@
 
-There are no tricks here. Just replace `.catch` with `try...catch` inside `demoGithubUser` and add `async/await` where needed:
+# Rewrite "rethrow" with async/await
+
+Below you can find the "rethrow" example from the chapter [promise-chaining](../../03-promise-chaining). Rewrite it using `async/await` instead of `.then/catch`.
+
+And get rid of the recursion in favour of a loop in `demoGithubUser`: with `async/await` that becomes easy to do.
 
 ```js run
 class HttpError extends Error {
@@ -10,39 +14,34 @@ class HttpError extends Error {
   }
 }
 
-async function loadJson(url) {
-  let response = await fetch(url);
-  if (response.status == 200) {
-    return response.json();
-  } else {
-    throw new HttpError(response);
-  }
+function loadJson(url) {
+  return fetch(url)
+    .then(response => {
+      if (response.status == 200) {
+        return response.json();
+      } else {
+        throw new HttpError(response);
+      }
+    })
 }
 
 // Ask for a user name until github returns a valid user
-async function demoGithubUser() {
+function demoGithubUser() {
+  let name = prompt("Enter a name?", "iliakan");
 
-  let user;
-  while(true) {
-    let name = prompt("Enter a name?", "iliakan");
-
-    try {
-      user = await loadJson(`https://api.github.com/users/${name}`);
-      break; // no error, exit loop
-    } catch(err) {
+  return loadJson(`https://api.github.com/users/${name}`)
+    .then(user => {
+      alert(`Full name: ${user.name}.`);
+      return user;
+    })
+    .catch(err => {
       if (err instanceof HttpError && err.response.status == 404) {
-        // loop continues after the alert
         alert("No such user, please reenter.");
+        return demoGithubUser();
       } else {
-        // unknown error, rethrow
         throw err;
       }
-    }      
-  }
-
-
-  alert(`Full name: ${user.name}.`);
-  return user;
+    });
 }
 
 demoGithubUser();

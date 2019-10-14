@@ -33,7 +33,7 @@ We recommend wrapping your code block with curly braces `{}` every time you use 
 
 The `if (…)` statement evaluates the expression in its parentheses and converts the result to a boolean.
 
-Let's recall the conversion rules from the chapter <info:type-conversions>:
+Let's recall the conversion rules:
 
 - A number `0`, an empty string `""`, `null`, `undefined`, and `NaN` all become `false`. Because of that they are called "falsy" values.
 - Other values become `true`, so they are called "truthy".

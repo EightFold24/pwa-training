@@ -1,7 +1,7 @@
 
 # Objects
 
-As we know from the chapter <info:types>, there are seven data types in JavaScript. Six of them are called "primitive", because their values contain only a single thing (be it a string or a number or whatever).
+As we know from the chapter [info](../../02-first-steps/05-types), there are seven data types in JavaScript. Six of them are called "primitive", because their values contain only a single thing (be it a string or a number or whatever).
 
 In contrast, objects are used to store keyed collections of various data and more complex entities. In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.
 
@@ -203,45 +203,35 @@ Square brackets are much more powerful than the dot notation. They allow any pro
 
 So most of the time, when property names are known and simple, the dot is used. And if we need something more complex, then we switch to square brackets.
 
-
-
-````smart header="Reserved words are allowed as property names"
-A variable cannot have a name equal to one of language-reserved words like "for", "let", "return" etc.
-
-But for an object property, there's no such restriction. Any name is fine:
-
-```js
-let obj = {
-  for: 1,
-  let: 2,
-  return: 3
-};
-
-alert( obj.for + obj.let + obj.return );  // 6
-```
-
-Basically, any name is allowed, but there's a special one: `"__proto__"` that gets special treatment for historical reasons. For instance, we can't set it to a non-object value:
-
-```js
-let obj = {};
-obj.__proto__ = 5;
-alert(obj.__proto__); // [object Object], didn't work as intended
-```
-
-As we see from the code, the assignment to a primitive `5` is ignored.
-
-That can become a source of bugs and even vulnerabilities if we intend to store arbitrary key-value pairs in an object, and allow a visitor to specify the keys.
-
-In that case the visitor may choose `__proto__` as the key, and the assignment logic will be ruined (as shown above).
-
-There is a way to make objects treat `__proto__` as a regular property, which we'll cover later, but first we need to know more about objects.
-
-There's also another data structure [Map](info:map-set), that we'll learn in the chapter <info:map-set>, which supports arbitrary keys.
-````
-
+## 
+> ### Reserved words are allowed as property names
+> A variable cannot have a name equal to one of language-reserved words like "for", "let", "return" etc.
+> 
+> But for an object property, there's no such restriction. Any name is fine:
+> ```js
+> let obj = {
+>   for: 1,
+>   let: 2,
+>   return: 3
+> };
+> alert( obj.for + obj.let + obj.return );  // 6
+> ```
+> Basically, any name is allowed, but there's a special one: `"__proto__"` that gets special treatment for historical reasons. For instance, we can't set it to a non-object value:
+> ```js
+> let obj = {};
+> obj.__proto__ = 5;
+> alert(obj.__proto__); // [object Object], didn't work as intended
+> ```
+> 
+> As we see from the code, the assignment to a primitive `5` is ignored.
+> 
+> That can become a source of bugs and even vulnerabilities if we intend to store arbitrary key-value pairs in an object, and allow a visitor to specify the keys.
+> 
+> In that case the visitor may choose `__proto__` as the key, and the assignment logic will be ruined (as shown above).
+> 
+> There is a way to make objects treat `__proto__` as a regular property, which we'll cover later, but first we need to know more about objects.
 
 ## Property value shorthand
-
 In real code we often use existing variables as values for property names.
 
 For instance:
@@ -580,7 +570,7 @@ user = {
 };
 ```
 
-...But what if we want to make constant object properties? So that `user.age = 25` would give an error. That's possible too. We'll cover it in the chapter <info:property-descriptors>.
+...But what if we want to make constant object properties? So that `user.age = 25` would give an error. That's possible too.
 
 ## Cloning and merging, Object.assign
 

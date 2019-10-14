@@ -423,7 +423,7 @@ They are very convenient for simple one-line actions, when we're just too lazy t
 
 ## 
 > ### More to come
-> Here we praised arrow functions for brevity. But that's not all! Arrow functions have other interesting features. We'll return to them later in the chapter <info:arrow-functions>.
+> Here we praised arrow functions for brevity. But that's not all! Arrow functions have other interesting features.
 > 
 > For now, we can already use arrow functions for one-line actions and callbacks.
 

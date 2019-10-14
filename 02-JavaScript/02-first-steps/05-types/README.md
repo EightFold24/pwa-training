@@ -59,8 +59,6 @@ Besides regular numbers, there are so-called "special numeric values" which also
 
 Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
 
-We'll see more about working with numbers in the chapter <info:number>.
-
 ## A string
 
 A string in JavaScript must be surrounded by quotes.
@@ -98,8 +96,6 @@ Please note that this can only be done in backticks. Other quotes don't have thi
 alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
-
 > ### There is no *character* type.
 > In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is `char`.
 > 
@@ -126,7 +122,7 @@ let isGreater = 4 > 1;
 alert( isGreater ); // true (the comparison result is "yes")
 ```
 
-We'll cover booleans more deeply in the chapter <info:logical-operators>.
+We'll cover booleans more deeply in the chapter [logical-operators](../11-logical-operators).
 
 ## The "null" value
 
@@ -174,7 +170,7 @@ alert(x); // "undefined"
 
 The `object` type is special.
 
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. We'll deal with them later in the chapter <info:object> after we learn more about primitives.
+All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. We'll deal with them later in the chapter [object](../../03-objects) after we learn more about primitives.
 
 The `symbol` type is used to create unique identifiers for objects. We mention it here for completeness, but we'll study it after objects.
 
@@ -211,7 +207,7 @@ typeof alert // "function"  (3)
 
 The last three lines may need additional explanation:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
+1. `Math` is a built-in object that provides mathematical operations. Here, it serves just as an example of an object.
 2. The result of `typeof null` is `"object"`. That's wrong. It is an officially recognized error in `typeof`, kept for compatibility. Of course, `null` is not an object. It is a special value with a separate type of its own. So, again, this is an error in the language.
 3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That's not quite correct, but very convenient in practice.
 

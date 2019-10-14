@@ -1,5 +1,5 @@
 # if (a string with zero)
-_`Importance: 5`_
+_`Importance: 2`_
 
 Will `alert` be shown?
 

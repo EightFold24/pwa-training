@@ -1,5 +1,5 @@
 # The name of JavaScript
-_`Importance: 2`_
+_`Importance: 5`_
 
 Using the `if..else` construct, write the code which asks: 'What is the "official" name of JavaScript?'
 

@@ -95,7 +95,7 @@ Here the second promise rejects in two seconds. That leads to immediate rejectio
 > 
 > For example, if there are multiple `fetch` calls, like in the example above, and one fails, other ones will still continue to execute, but `Promise.all` won't watch them anymore. They will probably settle, but the result will be ignored.
 > 
-> `Promise.all` does nothing to cancel them, as there's no concept of "cancellation" in promises. In [another chapter](info:fetch-abort) we'll cover `AbortController` that can help with that, but it's not a part of the Promise API.
+> `Promise.all` does nothing to cancel them, as there's no concept of "cancellation" in promises.
 
 ## 
 > ### `Promise.all(iterable)` allows non-promise \"regular\" values in `iterable`
@@ -214,7 +214,7 @@ The first promise here was fastest, so it became the result. After the first set
 
 ## Promise.resolve/reject
 
-Methods `Promise.resolve` and `Promise.reject` are rarely needed in modern code, because `async/await` syntax (we'll cover it in [a bit later](info:async-await)) makes them somewhat obsolete.
+Methods `Promise.resolve` and `Promise.reject` are rarely needed in modern code, because `async/await` syntax (we'll cover it in [a bit later](../../05-async/08-async-await)) makes them somewhat obsolete.
 
 We cover them here for completeness, and for those who can't use `async/await` for some reason.
 

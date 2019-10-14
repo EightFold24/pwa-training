@@ -189,8 +189,6 @@ alert( user.name ); // John
 alert( user.age );  // 30
 ```
 
-You can find more detailed information about JSON in the <info:json> chapter.
-
 **If `json` is malformed, `JSON.parse` generates an error, so the script "dies".**
 
 Should we be satisfied with that? Of course, not!

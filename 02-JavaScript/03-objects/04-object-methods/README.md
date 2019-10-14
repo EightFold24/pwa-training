@@ -200,7 +200,7 @@ The rule is simple: if `obj.f()` is called, then `this` is `obj` during the call
 > ```
 > In this case `this` is `undefined` in strict mode. If we try to access `this.name`, there will be an error.
 > 
-> In non-strict mode the value of `this` in such case will be the *global object* (`window` in a browser, we'll get to it later in the chapter [](info:global-object)). This is a historical behavior that `"use strict"` fixes.
+> In non-strict mode the value of `this` in such case will be the *global object* (`window` in a browser). This is a historical behavior that `"use strict"` fixes.
 > 
 > Usually such call is a programming error. If there's `this` inside a function, it expects to be called in an object context.
 
@@ -319,7 +319,7 @@ let user = {
 user.sayHi(); // Ilya
 ```
 
-That's a special feature of arrow functions, it's useful when we actually do not want to have a separate `this`, but rather to take it from the outer context. Later in the chapter <info:arrow-functions> we'll go more deeply into arrow functions.
+That's a special feature of arrow functions, it's useful when we actually do not want to have a separate `this`, but rather to take it from the outer context.
 
 
 ## Summary

@@ -1,5 +1,5 @@
 # String quotes
-_`Importance: 5`_
+_`Importance: 3`_
 
 What is the output of the script?
 

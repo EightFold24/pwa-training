@@ -1,9 +1,10 @@
 # Show an alert
 _`Importance: 5`_
 
-Create a page that shows a message "I'm JavaScript!".
+Create an HTML page that shows a message "I'm JavaScript!".
+Do it either in this directory, or somewhere else on your machine.
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+**_NOTE: Only look at the solution when you are finished / stuck!_**
 
 [Solution](solution/index.html)
 

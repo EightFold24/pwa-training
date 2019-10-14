@@ -61,7 +61,7 @@ In the examples above, the comparison `'Z' > 'A'` gets to a result at the first 
 > ### Not a real dictionary, but Unicode order
 > The comparison algorithm given above is roughly equivalent to the one used in dictionaries or phone books, but it's not exactly the same.
 > 
-> For instance, case matters. A capital letter `"A"` is not equal to the lowercase `"a"`. Which one is greater? The lowercase `"a"`. Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode). We'll get back to specific details and consequences of this in the chapter <info:string>.
+> For instance, case matters. A capital letter `"A"` is not equal to the lowercase `"a"`. Which one is greater? The lowercase `"a"`. Why? Because the lowercase character has a greater index in the internal encoding table JavaScript uses (Unicode).
 
 ## Comparison of different types
 

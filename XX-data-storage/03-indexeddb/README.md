@@ -318,7 +318,7 @@ The short answer is: we don't.
 
 In the next version 3.0 of the specification, there will probably be a manual way to finish the transaction, but right now in 2.0 there isn't.
 
-**When all transaction requests are finished, and the [microtasks queue](info:microtask-queue) is empty, it is committed automatically.**
+**When all transaction requests are finished, and the microtasks queue is empty, it is committed automatically.**
 
 Usually, we can assume that a transaction commits when all its requests are complete, and the current code finishes.
 
@@ -694,7 +694,7 @@ request.onsuccess = function() {
 
 Adding `onsuccess/onerror` to every request is quite a cumbersome task. Sometimes we can make our life easier by using event delegation, e.g. set handlers on the whole transactions, but `async/await` is much more convenient.
 
-Let's use a thin promise wrapper <https://github.com/jakearchibald/idb> further in this chapter. It creates a global `idb` object with [promisified](info:promisify) IndexedDB methods.
+Let's use a thin promise wrapper <https://github.com/jakearchibald/idb> further in this chapter. It creates a global `idb` object with promisified IndexedDB methods.
 
 Then, instead of `onsuccess/onerror` we can write like this:
 

@@ -88,7 +88,7 @@ Technically, all these variants do the same thing. So, it's a matter of personal
 
 The `var` keyword is *almost* the same as `let`. It also declares a variable, but in a slightly different, "old-school" way.
 
-There are subtle differences between `let` and `var`, but they do not matter for us yet. We'll cover them in detail in the chapter <info:var>.
+There are subtle differences between `let` and `var`, but they do not matter for us yet.
 
 ## A real-life analogy
 
@@ -319,3 +319,8 @@ We can declare variables to store data by using the `var`, `let`, or `const` key
 - `const` -- is like `let`, but the value of the variable can't be changed.
 
 Variables should be named in a way that allows us to easily understand what's inside them.
+
+## TODO
+* Complete the [1-hello-variables](1-hello-variables) task
+* Complete the [2-declare-variables](2-declare-variables) task
+* Complete the [3-uppercast-constant](3-uppercast-constant) task

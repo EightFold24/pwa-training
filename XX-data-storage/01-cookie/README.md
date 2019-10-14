@@ -270,7 +270,7 @@ There exist many cookie libraries for that, so these are for demo purposes. Full
 
 ### getCookie(name)
 
-The shortest way to access cookie is to use a [regular expression](info:regular-expressions).
+The shortest way to access cookie is to use a regular expression.
 
 The function `getCookie(name)` returns the cookie with the given `name`:
 

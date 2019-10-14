@@ -4,7 +4,7 @@ Promisification -- is a long word for a simple transform. It's conversion of a f
 
 Such transforms are often needed in real-life, as many functions and libraries are callback-based. But promises are more convenient. So it makes sense to promisify those.
 
-For instance, we have `loadScript(src, callback)` from the chapter <info:callbacks>.
+For instance, we have `loadScript(src, callback)` from the chapter [callbacks](../01-callbacks).
 
 ```js
 function loadScript(src, callback) {

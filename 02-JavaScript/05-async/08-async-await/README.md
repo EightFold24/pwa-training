@@ -80,7 +80,7 @@ It's just a more elegant syntax of getting the promise result than `promise.then
 > ```
 > We will get this error if we do not put `async` before a function. As said, `await` only works inside an `async function`.
 
-Let's take the `showAvatar()` example from the chapter <info:promise-chaining> and rewrite it using `async/await`:
+Let's take the `showAvatar()` example from the chapter [promise-chaining](../03-promise-chaining) and rewrite it using `async/await`:
 
 1. We'll need to replace `.then` calls with `await`.
 2. Also we should make the function `async` for them to work.
@@ -241,7 +241,7 @@ async function f() {
 f().catch(alert); // TypeError: failed to fetch // (*)
 ```
 
-If we forget to add `.catch` there, then we get an unhandled promise error (viewable in the console). We can catch such errors using a global event handler as described in the chapter <info:promise-error-handling>.
+If we forget to add `.catch` there, then we get an unhandled promise error (viewable in the console). We can catch such errors using a global event handler as described in the chapter [promise-error-handling](../04-promise-error-handling).
 
 
 ## 

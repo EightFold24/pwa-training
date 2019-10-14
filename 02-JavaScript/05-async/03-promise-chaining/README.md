@@ -1,6 +1,6 @@
 # Promises chaining
 
-Let's return to the problem mentioned in the chapter <info:callbacks>: we have a sequence of asynchronous tasks to be done one after another. For instance, loading scripts. How can we code it well?
+Let's return to the problem mentioned in the chapter [callbacks](../01-callbacks) we have a sequence of asynchronous tasks to be done one after another. For instance, loading scripts. How can we code it well?
 
 Promises provide a couple of recipes to do that.
 
@@ -125,7 +125,7 @@ Returning promises allows us to build chains of asynchronous actions.
 
 ## Example: loadScript
 
-Let's use this feature with the promisified `loadScript`, defined in the [previous chapter](info:promise-basics#loadscript), to load scripts one by one, in sequence:
+Let's use this feature with the promisified `loadScript`, defined in the [previous chapter](../02-promise-basics), to load scripts one by one, in sequence:
 
 ```js
 loadScript("/article/promise-chaining/one.js")
@@ -219,7 +219,7 @@ Sometimes it's ok to write `.then` directly, because the nested function has acc
 
 In frontend programming promises are often used for network requests. So let's see an extended example of that.
 
-We'll use the [fetch](info:fetch) method to load the information about the user from the remote server. It has a lot of optional parameters covered in [separate chapters](info:fetch), but the basic syntax is quite simple:
+We'll use the fetch method to load the information about the user from the remote server. It has a lot of optional parameters, but the basic syntax is quite simple:
 
 ```js
 let promise = fetch(url);

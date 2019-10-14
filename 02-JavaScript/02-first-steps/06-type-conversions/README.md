@@ -6,8 +6,9 @@ For example, `alert` automatically converts any value to a string to show it. Ma
 
 There are also cases when we need to explicitly convert a value to the expected type.
 
+## 
 > ### Not talking about objects yet
-> In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects, we'll see how object conversion works in the chapter <info:object-toprimitive>.
+> In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects in chapter [Objects](../../03-objects).
 
 ## String Conversion
 
@@ -78,6 +79,7 @@ alert( Number(false) );       // 0
 
 Please note that `null` and `undefined` behave differently here: `null` becomes zero while `undefined` becomes `NaN`.
 
+## 
 > ### Addition '+' concatenates strings
 > Almost all mathematical operations convert values to numbers. A notable exception is addition `+`. If one of the added values is a string, the other one is also converted to a string.
 > 
@@ -149,9 +151,6 @@ Most of these rules are easy to understand and memorize. The notable exceptions 
 
 - `undefined` is `NaN` as a number, not `0`.
 - `"0"` and space-only strings like `"   "` are true as a boolean.
-
-Objects aren't covered here. We'll return to them later in the chapter <info:object-toprimitive> that is devoted exclusively to objects after we learn more basic things about JavaScript.
-
 
 ## TODO
 * Complete the [1-primitive-conversion](1-primitive-conversion) task

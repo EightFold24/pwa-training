@@ -1,8 +1,3 @@
-libs:
-  - 'https://cdn.jsdelivr.net/npm/idb@3.0.2/build/idb.min.js'
-
----
-
 # IndexedDB
 
 IndexedDB is a built-in database, much more powerful than `localStorage`.

@@ -11,6 +11,7 @@
 Try to build something with the following spec:
 
 - Uses [Materialize](http://materializecss.com/) for style/theme
+- If [Bootstrap](https://getbootstrap.com) isn't included, you could consider using it for further styling
 - Is responsive (use [ngrok](https://ngrok.com) to tunnel your app to a URL that you can use on your phone)
 - Single web page with the following components (look at the components section on the Materialize website):
   - Header with title

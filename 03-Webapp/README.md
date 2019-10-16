@@ -1,6 +1,8 @@
 # Build a Webapp
 
 ## Starter Guide
+Build a website which we will build upon throughout this training.
+
 **_NOTE: This works best on Chrome (but does work on other browsers). Compatibility for any technologies used in this training can be seen on http://caniuse.com/_**
 
 ## Prerequisits

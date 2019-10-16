@@ -15,3 +15,8 @@ NOTE: This is a WIP copy of the training and will be added to / changed.
 - Add your website to an S3 bucket with objects set to public read only access
 - Create a DynamoDB and lambda function for storing the input to your website form
 - Create the API Gateway to access your website
+
+## Spot a Mistake / Have Improvements to Make?
+This content is brand new and will inevitably have mistakes EVERYWHERE!
+If you spot anything from spelling mistakes, things that don't make sense or are out-of-date, please make your team lead aware.
+Or better still, make a pull request with a fix! :)

@@ -8,10 +8,10 @@ Watch this [API introduction video](https://www.youtube.com/watch?v=s7wmiS2mSXY)
 Modern browsers have built in web APIs that allow programmers to do useful tasks such as modify content, play audio, fetch data from servers.
 
 ## TODO
-* Watch this [API introduction video](https://www.youtube.com/watch?v=s7wmiS2mSXY)
-* Read Web API Intro section
+* Watch the [API introduction video](https://www.youtube.com/watch?v=s7wmiS2mSXY)
+* Read the Web API Introduction section
 * Read Manipulating documents section
-* Implement a javascript function which adds a success message when the submit button is pressed using the DOM API
+* Implement a button which when pressed changes something on the page using the DOM API
 * Have a look at other available Web APIs [here](https://developer.mozilla.org/en-US/docs/Web/API)
 
 ## Stretch Challenge

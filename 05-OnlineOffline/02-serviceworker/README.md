@@ -12,15 +12,16 @@ Things to note about a service worker:
 * It's terminated when not in use, and restarted when it's next needed, so you cannot rely on global state within a service worker's onfetch and onmessage handlers. If there is information that you need to persist and reuse across restarts, service workers do have access to the IndexedDB API.
 * Service workers make extensive use of promises, so if you're new to promises, then you should stop reading this and check out Promises, an introduction.
 
-## TODO
+## Research
 * Check out this [Jake Archibald introduction video](https://www.youtube.com/watch?v=4uQMl7mFB6g)
 * Have a flick through the code of [this tutorial](https://github.com/jakearchibald/simple-serviceworker-tutorial) to get an idea for how ServiceWorker is used
-* [MDN Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker)
+* Refer to the [MDN Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker)
 * Watch this [video](https://youtu.be/dXuvT4oollQ) from the Google Developers
 * Have a quick look at this [implementation](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/prefetch)
-* Using the guide & any other resources, implement a service into your form website that...
-    * Caches assets to appear to work offline
-    * Synchronises form submissions in the background
+* See the included [service worker tutorial](guide.md)
+
+## TODO
+* Using the guide & any other resources above, implement a service into your form website that caches assets to appear to work offline
 * Run another lighthouse audit to see that some of the PWA statistics are fixed
 
 ***Content from this document is adapted from https://developers.google.com/web/fundamentals/primers/service-workers***

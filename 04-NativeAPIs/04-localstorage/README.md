@@ -243,3 +243,8 @@ Storage event:
 - Triggers on `setItem`, `removeItem`, `clear` calls.
 - Contains all the data about the operation (`key/oldValue/newValue`), the document `url` and the storage object `storageArea`.
 - Triggers on all `window` objects that have access to the storage except the one that generated it (within a tab for `sessionStorage`, globally for `localStorage`).
+
+## TODO
+* Implement a queue in LocalStorage for form data to be added to when the submit button is pressed.
+This is the offline-first principle.
+We will learn more about that in the [Service Worker Section](../../05-OnlineOffline/02-serviceworker)

@@ -9,11 +9,11 @@ Modern browsers have built in web APIs that allow programmers to do useful tasks
 
 ## TODO
 * Watch the [API introduction video](https://www.youtube.com/watch?v=s7wmiS2mSXY)
-* Read the [Web API Introduction](01-web-apis) section
-* Work through the [Manipulating documents](02-dom) section
-* Read the [Cookie](03-cookie) section
-* Work through the [Local Storage](04-localstorage) section
-* Read the [Indexed DB](05-indexeddb) section
+* [Web API Introduction](01-web-apis)
+* [Manipulating documents](02-dom)
+* [Cookie](03-cookie) (optional)
+* [Local Storage](04-localstorage)
+* [Indexed DB](05-indexeddb) (optional)
 * Have a look at other available Web APIs [here](https://developer.mozilla.org/en-US/docs/Web/API)
 
 ## Stretch Challenge

@@ -1,4 +1,4 @@
-# Online/Offline
+# Navigator.online
 Now that we have cached our app assets, we should be able to view it even when our connection goes down.
 In this section we're going to use the [navigator](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) interface to let our cached app know if the user is connected to the internet, and git it the ability to perform an action if this connectivity status changes (both _**online -> offline**_ and _**offline -> online**_).
 

@@ -31,7 +31,7 @@ The exact look of developer tools depends on your version of Chrome. It changes 
 
 Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them (`key:Shift+Enter` to input multi-line commands).
 
-Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter [debugging-chrome](../../06-code-quality).
+Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter [debugging-chrome](../../06-CodeQuality).
 
 
 ## Firefox, Edge, and others

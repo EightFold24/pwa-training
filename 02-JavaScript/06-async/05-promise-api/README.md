@@ -214,7 +214,7 @@ The first promise here was fastest, so it became the result. After the first set
 
 ## Promise.resolve/reject
 
-Methods `Promise.resolve` and `Promise.reject` are rarely needed in modern code, because `async/await` syntax (we'll cover it in [a bit later](../../05-async/08-async-await)) makes them somewhat obsolete.
+Methods `Promise.resolve` and `Promise.reject` are rarely needed in modern code, because `async/await` syntax (we'll cover it in [a bit later](../08-async-await)) makes them somewhat obsolete.
 
 We cover them here for completeness, and for those who can't use `async/await` for some reason.
 

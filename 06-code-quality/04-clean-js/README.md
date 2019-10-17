@@ -136,7 +136,7 @@ If you're an experienced JavaScript programmer, you may choose a no-semicolon co
 
 Try to avoid nesting code too many levels deep. A good rule of thumb is to keep this to no deeper than three levels of indentation.
 
-For example, in the loop, it's sometimes a good idea to use the [`continue`](../../02-JavaScript/02-first-steps/12-while-for) directive to avoid extra nesting.
+For example, in the loop, it's sometimes a good idea to use the [`continue`](../../02-JavaScript/03-first-steps/12-while-for) directive to avoid extra nesting.
 
 For example, instead of adding a nested `if` conditional like this:
 

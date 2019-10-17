@@ -8,7 +8,7 @@ There are also cases when we need to explicitly convert a value to the expected 
 
 ## 
 > ### Not talking about objects yet
-> In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects in chapter [Objects](../../03-objects).
+> In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects in chapter [Objects](../../04-objects).
 
 ## String Conversion
 

@@ -1,6 +1,6 @@
 # Comments
 
-As we know from the chapter [Code structure](), comments can be single-line: starting with `//` and multiline: `/* ... */`.
+Comments can be single-line: starting with `//` and multiline: `/* ... */`.
 
 We normally use them to describe how and why the code works.
 
@@ -20,7 +20,8 @@ code;
 
 But in good code, the amount of such "explanatory" comments should be minimal. Seriously, the code should be easy to understand without them.
 
-There's a great rule about that: "if the code is so unclear that it requires a comment, then maybe it should be rewritten instead".
+There's a great rule about that: 
+> ### "if the code is so unclear that it requires a comment, then maybe it should be rewritten instead".
 
 ### Recipe: factor out functions
 

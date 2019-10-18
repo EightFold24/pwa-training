@@ -22,14 +22,13 @@ Your code should be as efficient, readable, and maintainable as possible, and in
 8. Clean code saves time, and therefore money $$$
 
 ## Sections
-1. Debugging in Chrome
-2. READMEs
-3. Clean Code
-4. Clean JS Code
-5. Comments
-6. Linters
-7. Testing
-8. Code Reviews
+1. [READMEs](01-readmes)
+2. [Clean Code](02-clean-code)
+3. [Clean JS Code](03-clean-js)
+4. [Comments](04-comments)
+5. [Linters](05-linter)
+6. [Testing](06-testing-mocha)
+7. [Code Reviews](07-code-reviews)
 
 ## More Resources
 * https://dzone.com/articles/clean-code-explanation-benefits-amp-examples

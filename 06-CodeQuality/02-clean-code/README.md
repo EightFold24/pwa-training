@@ -31,7 +31,6 @@ Who knows how much of this guidance you will actually take on board, but hopeful
 **_NOTE: Test Driven Development is becoming a fundamental discipline in industry_**
 
 ## How do I Write Clean Code?
-***Content from this section is adapted from https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29***
 
 ## General rules
 1. Follow standard conventions.
@@ -118,3 +117,5 @@ Who knows how much of this guidance you will actually take on board, but hopeful
 4. Needless Complexity.
 5. Needless Repetition.
 6. Opacity. The code is hard to understand.
+
+***Content from this section is adapted from https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29***

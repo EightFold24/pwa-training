@@ -8,3 +8,5 @@ The two languages—HTML and CSS—are independent of one another and should rem
 * Read the [CSS](02-CSS) section and look at the example index file
 
 ***Content from this document is adapted from https://learn.shayhowe.com/html-css/building-your-first-web-page/***
+
+## [Next Chapter >>>](../02-JavaScript)

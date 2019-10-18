@@ -23,3 +23,5 @@ Some sections may contain subsections which are tasks / challenges to complete.
 _**NOTE:** Don't skip this entire part of the training. There are some advanced techniques used here that even experienced users of JavaScript may not know!_
 
 ***Content from this document is adapted from [https://javascript.info](https://javascript.info)***
+
+## [Next Chapter >>>](../03-Webapp)

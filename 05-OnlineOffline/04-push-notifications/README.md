@@ -11,3 +11,5 @@ Note: This section is still WIP
 
 https://developers.google.com/web/fundamentals/push-notifications/
 https://developer.mozilla.org/en-US/docs/Web/API/PushEvent
+
+### [Finish Section >>>](../)

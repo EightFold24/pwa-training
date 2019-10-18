@@ -19,3 +19,5 @@ In this section we're going to use the [navigator](https://developer.mozilla.org
     * Don't forget to remove queue items as they're uploaded!
 - Register to the "online" event to upload the entries when a connection is re-established.
 - **Note:** `navigator.onLine` depends on your internet connection, not necessarily your connection to the server (which will likely be locally hosted).
+
+### [Next Section >>>](../04-push-notifications)

@@ -237,3 +237,5 @@ The Web Audio and [`HTMLMediaElement`](https://developer.mozilla.org/en-US/docs
 ## Summary
 
 At this point, you should have a good idea of what APIs are, how they work, and what you can do with them in your JavaScript code. You are probably excited to start actually doing some fun things with specific APIs, so let's go! Next up, we'll look at manipulating documents with the Document Object Model (DOM).
+
+### [Next Section >>>](../02-dom)

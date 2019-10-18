@@ -62,3 +62,5 @@ Now `key:Cmd+Opt+C` can toggle the console. Also, note that the new top menu ite
 - They can be opened with `key:F12` for most browsers on Windows. Chrome for Mac needs `key:Cmd+Opt+J`, Safari: `key:Cmd+Opt+C` (need to enable first).
 
 Now we have the environment ready. In the next section, we'll get down to JavaScript.
+
+### [Next Section >>>](../02-debugging-chrome)

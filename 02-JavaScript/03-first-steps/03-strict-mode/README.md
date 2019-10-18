@@ -81,3 +81,5 @@ For now, it's enough to know about it in general:
 2. Strict mode is enabled by placing `"use strict"` at the top of a script or function. Several language features, like "classes" and "modules", enable strict mode automatically.
 3. Strict mode is supported by all modern browsers.
 4. We recommended always starting scripts with `"use strict"`. All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+
+### [Next Section >>>](../04-variables)

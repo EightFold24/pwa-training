@@ -31,3 +31,5 @@ Lighthouse now powers the Audits panel of Chrome DevTools. To run a report:
 * https://codelabs.developers.google.com/codelabs/pwa-offline-quickstart/index.html#2
 
 ***Content from this document is adapted from https://developers.google.com/web/tools/lighthouse#devtools***
+
+### [Next Section >>>](../02-serviceworker)

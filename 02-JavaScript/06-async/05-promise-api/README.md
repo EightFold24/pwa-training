@@ -274,3 +274,5 @@ There are 5 static methods of `Promise` class:
 5. `Promise.reject(error)` -- makes a rejected promise with the given error.
 
 Of these five, `Promise.all` is probably the most common in practice.
+
+### [Next Section >>>](../06-promisify)

@@ -127,3 +127,5 @@ There is much more to learn about browser scripts and their interaction with the
 ## TODO
 * Complete the [1-hello-alert](1-hello-alert) task
 * Complete the [2-hello-alert-ext](2-hello-alert-ext) task
+
+### [Next Section >>>](../02-structure)

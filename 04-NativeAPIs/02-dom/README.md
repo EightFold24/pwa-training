@@ -237,3 +237,5 @@ Attempt the [shopping list](01-shoppinglist) task.
 ### Summary
 
 We have reached the end of our study of document and DOM manipulation. At this point you should understand what the important parts of a web browser are with respect to controlling documents and other aspects of the user's web experience. Most importantly, you should understand what the Document Object Model is, and how to manipulate it to create useful functionality.
+
+### [Next Section >>>](../03-cookie)

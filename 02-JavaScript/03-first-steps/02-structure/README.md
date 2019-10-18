@@ -140,15 +140,17 @@ alert('World');
 
 ## 
 > ### Nested comments are not supported!
-There may not be `/*...*/` inside another `/*...*/`.
-
+> There may not be `/*...*/` inside another `/*...*/`.
+>
 > Such code will die with an error:
-
->```js
-/*
-  /* nested comment ?!? */
-*/
-alert( 'World' );
-```
+>
+> ```js
+> /*
+>   /* nested comment ?!? */
+> */
+> alert( 'World' );
+> ```
 
 Try only to use comments when necessary. Variable and function names should be named in a way in which comments are rarely needed.
+
+### [Next Section >>>](../03-strict-mode)

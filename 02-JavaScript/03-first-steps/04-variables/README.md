@@ -324,3 +324,5 @@ Variables should be named in a way that allows us to easily understand what's in
 * Complete the [1-hello-variables](1-hello-variables) task
 * Complete the [2-declare-variables](2-declare-variables) task
 * Complete the [3-uppercast-constant](3-uppercast-constant) task
+
+### [Next Section >>>](../05-types)

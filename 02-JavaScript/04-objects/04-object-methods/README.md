@@ -334,3 +334,5 @@ The value of `this` is defined at run-time.
 - When a function is called in the "method" syntax: `object.method()`, the value of `this` during the call is `object`.
 
 Please note that arrow functions are special: they have no `this`. When `this` is accessed inside an arrow function, it is taken from outside.
+
+### [Next Section >>>](../../05-error-handling/01-try-catch)

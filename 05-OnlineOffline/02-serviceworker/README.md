@@ -25,3 +25,5 @@ Things to note about a service worker:
 * Run another lighthouse audit to see that some of the PWA statistics are fixed
 
 ***Content from this document is adapted from https://developers.google.com/web/fundamentals/primers/service-workers***
+
+### [Next Section >>>](../03-online)

@@ -418,3 +418,5 @@ Cookie options:
 Additionally:
 - Third-party cookies may be forbidden by the browser, e.g. Safari does that by default.
 - When setting a tracking cookie for EU citizens, GDPR requires to ask for permission.
+
+### [Next Section >>>](../04-localstorage)

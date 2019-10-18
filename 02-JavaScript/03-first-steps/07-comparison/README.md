@@ -209,3 +209,5 @@ Don't use comparisons `>= > < <=` with a variable which may be `null/undefined`,
 
 ## TODO
 * Complete the [1-comparison](1-comparison) task
+
+### [Next Section >>>](../08-ifelse)

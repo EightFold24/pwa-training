@@ -378,3 +378,5 @@ If we don't want to do anything in the current iteration and would like to forwa
 * Complete the [5-replace-for-while](5-replace-for-while) task
 * Complete the [6-repeat-until-correct](6-repeat-until-correct) task
 * Complete the [7-list-primes](7-list-primes) task
+
+### [Next Section >>>](../11-switch)

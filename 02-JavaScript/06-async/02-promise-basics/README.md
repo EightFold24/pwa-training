@@ -318,3 +318,5 @@ We can immediately see a few benefits over the callback-based pattern:
 | We can call `.then` on a Promise as many times as we want. Each time, we're adding a new "fan", a new subscribing function, to the "subscription list". More about this in the [next chapter](../03-promise-chaining). | There can be only one callback. |
 
 So promises give us better code flow and flexibility. But there's more. We'll see that in the next chapters.
+
+### [Next Section >>>](../03-promise-chaining)

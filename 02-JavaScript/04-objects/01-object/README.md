@@ -726,3 +726,5 @@ There are many other kinds of objects in JavaScript:
 They have their special features that we'll study later. Sometimes people say something like "Array type" or "Date type", but formally they are not types of their own, but belong to a single "object" data type. And they extend it in various ways.
 
 Objects in JavaScript are very powerful. Here we've just scratched the surface of a topic that is really huge. We'll be closely working with objects and learning more about them in further parts of the tutorial.
+
+### [Next Section >>>](../04-object-methods)

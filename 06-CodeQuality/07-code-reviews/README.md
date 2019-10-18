@@ -54,3 +54,5 @@ When developers know their code will be reviewed by a teammate, they make an ext
 * Once completed, you can approve the pull request
 
 ***Content from this document is adapted from https://www.atlassian.com/agile/software-development/code-reviews***
+
+### [Finish Section >>>](../)

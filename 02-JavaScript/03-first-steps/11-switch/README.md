@@ -173,3 +173,5 @@ switch (arg) {
 ## TODO
 * Complete the [1-rewrite-switch-if-else](1-rewrite-switch-if-else) task
 * Complete the [2-rewrite-if-switch](2-rewrite-if-switch) task
+
+### [Next Section >>>](../12-function-basics)

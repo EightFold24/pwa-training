@@ -454,3 +454,5 @@ Functions are the main building blocks of scripts. Now we've covered the basics,
 * Complete the [2-rewrite-function-question-or](2-rewrite-function-question-or) task
 * Complete the [3-min](3-min) task
 * Complete the [4-pow](4-pow) task
+
+### [Next Section >>>](../13-function-expressions-arrows)

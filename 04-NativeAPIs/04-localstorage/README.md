@@ -249,3 +249,5 @@ Storage event:
 * In your webapp, implement a queue in LocalStorage for form data to be added to when the submit button is pressed.
 This is the offline-first principle.
 We will learn more about that in the [Service Worker Section](../../05-OnlineOffline/02-serviceworker)
+
+### [Next Section >>>](../05-indexeddb)

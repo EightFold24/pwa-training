@@ -154,3 +154,5 @@ Most of these rules are easy to understand and memorize. The notable exceptions 
 
 ## TODO
 * Complete the [1-primitive-conversion](1-primitive-conversion) task
+
+### [Next Section >>>](../07-comparison)

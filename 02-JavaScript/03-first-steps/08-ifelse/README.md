@@ -235,3 +235,5 @@ The purpose of the question mark operator `?` is to return one value or another 
 * Complete the [3-sign](3-sign) task
 * Complete the [4-rewrite-if-question](4-rewrite-if-question) task
 * Complete the [5-rewrite-if-else-question](5-rewrite-if-else-question) task
+
+### [Next Section >>>](../09-logical-operators)

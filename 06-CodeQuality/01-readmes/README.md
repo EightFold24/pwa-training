@@ -65,3 +65,5 @@ Keep in mind that you must always aim to write a README with as much detail and 
 
 ## TODO
 * Add a `README.md` file to your project
+
+### [Next Section >>>](../02-clean-code)

@@ -122,7 +122,7 @@ let isGreater = 4 > 1;
 alert( isGreater ); // true (the comparison result is "yes")
 ```
 
-We'll cover booleans more deeply in the chapter [logical-operators](../11-logical-operators).
+We'll cover booleans more deeply in the chapter [logical-operators](../09-logical-operators).
 
 ## The "null" value
 
@@ -234,3 +234,5 @@ In the next chapters, we'll concentrate on primitive values and once we're famil
 
 ## TODO
 * Complete the [1-string-quotes](1-string-quotes) task
+
+### [Next Section >>>](../06-type-conversions)

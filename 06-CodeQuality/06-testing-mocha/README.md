@@ -427,3 +427,5 @@ In real life that's sometimes not that easy. Sometimes it's difficult to write a
 Later in the tutorial you will meet many tasks with tests baked-in. So you'll see more practical examples.
 
 Writing tests requires good JavaScript knowledge. But we're just starting to learn it. So, to settle down everything, as of now you're not required to write tests, but you should already be able to read them even if they are a little bit more complex than in this chapter.
+
+### [Next Section >>>](../07-code-reviews)

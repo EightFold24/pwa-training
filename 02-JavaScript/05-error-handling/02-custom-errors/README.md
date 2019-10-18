@@ -284,3 +284,5 @@ The approach is called "wrapping exceptions", because we take "low level excepti
 - We can inherit from `Error` and other built-in error classes normally, just need to take care of `name` property and don't forget to call `super`.
 - We can use `instanceof` to check for particular errors. It also works with inheritance. But sometimes we have an error object coming from the 3rd-party library and there's no easy way to get the class. Then `name` property can be used for such checks.
 - Wrapping exceptions is a widespread technique: a function handles low-level exceptions and creates higher-level errors instead of various low-level ones. Low-level exceptions sometimes become properties of that object like `err.cause` in the examples above, but that's not strictly required.
+
+### [Next Section >>>](../../06-async/01-callbacks)

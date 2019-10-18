@@ -311,3 +311,5 @@ The precedence of NOT `!` is the highest of all logical operators, so it always 
 * Complete the [7-check-if-out-range](7-check-if-out-range) task
 * Complete the [8-if-question](8-if-question) task
 * Complete the [9-check-login](9-check-login) task
+
+### [Next Section >>>](../10-while-for)

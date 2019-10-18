@@ -114,3 +114,5 @@ There are also modules with a bit more flexible promisification functions, e.g. 
 > Remember, a promise may have only one result, but a callback may technically be called many times.
 > 
 > So promisification is only meant for functions that call the callback once. Further calls will be ignored.
+
+### [Next Section >>>](../08-async-await)

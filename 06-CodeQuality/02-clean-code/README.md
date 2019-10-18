@@ -119,3 +119,5 @@ Who knows how much of this guidance you will actually take on board, but hopeful
 6. Opacity. The code is hard to understand.
 
 ***Content from this section is adapted from https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29***
+
+### [Next Section >>>](../03-clean-js)

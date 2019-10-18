@@ -45,3 +45,5 @@ Here the directive `"extends"` denotes that the configuration is based on the "e
 It is also possible to download style rule sets from the web and extend them instead. See <http://eslint.org/docs/user-guide/getting-started> for more details about installation.
 
 Also certain IDEs have built-in linting, which is convenient but not as customizable as ESLint.
+
+### [Next Section >>>](../06-testing-mocha)

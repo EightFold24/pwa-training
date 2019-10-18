@@ -358,3 +358,5 @@ If a `.then` (or `catch/finally`, doesn't matter) handler returns a promise, the
 Here's a full picture:
 
 ![](promise-handler-variants.svg)
+
+### [Next Section >>>](../04-promise-error-handling)

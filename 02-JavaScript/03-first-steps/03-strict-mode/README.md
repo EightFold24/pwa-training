@@ -49,7 +49,7 @@ For the future, when you use a browser console to test features, please note tha
 
 Sometimes, when `use strict` makes a difference, you'll get incorrect results.
 
-You can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+You can try to press `Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
 
 ```js
 'use strict'; <Shift+Enter for a newline>

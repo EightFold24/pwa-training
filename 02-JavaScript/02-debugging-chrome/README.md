@@ -11,7 +11,7 @@ We'll be using Chrome here, because it has enough features, most other browsers 
 Your Chrome version may look a little bit different, but it still should be obvious what's there.
 
 - Open the [example page](debugging/index.html) in Chrome.
-- Turn on developer tools with `key:F12` (Mac: `key:Cmd+Opt+I`).
+- Turn on developer tools with `F12` (Mac: `Cmd+Opt+I`).
 - Select the `Sources` panel.
 
 Here's what you should see if you are doing it for the first time:
@@ -34,7 +34,7 @@ Now you could click the same toggler <span class="devtools" style="background-po
 
 ## Console
 
-If we press `key:Esc`, then a console opens below. We can type commands there and press `key:Enter` to execute.
+If we press `Esc`, then a console opens below. We can type commands there and press `Enter` to execute.
 
 After a statement is executed, its result is shown below.
 
@@ -90,7 +90,7 @@ That's very convenient when we are in a code editor and don't want to switch to 
 
 ## Pause and look around
 
-In our example, `hello()` is called during the page load, so the easiest way to activate the debugger (after we've set the breakpoints) is to reload the page. So let's press `key:F5` (Windows, Linux) or `key:Cmd+R` (Mac).
+In our example, `hello()` is called during the page load, so the easiest way to activate the debugger (after we've set the breakpoints) is to reload the page. So let's press `F5` (Windows, Linux) or `Cmd+R` (Mac).
 
 As the breakpoint is set, the execution pauses at the 4th line:
 
@@ -121,7 +121,7 @@ Now it's time to *trace* the script.
 
 There are buttons for it at the top of the right panel. Let's engage them.
 
-![Continue Icon](continue.png "Continue Icon") -- continue the execution, hotkey `key:F8`.
+![Continue Icon](continue.png "Continue Icon") -- continue the execution, hotkey `F8`.
 : Resumes the execution. If there are no additional breakpoints, then the execution just continues and the debugger loses control.
 
 Here's what we can see after a click on it:
@@ -130,13 +130,13 @@ Here's what we can see after a click on it:
 
 The execution has resumed, reached another breakpoint inside `say()` and paused there. Take a look at the "Call Stack" at the right. It has increased by one more call. We're inside `say()` now.
 
-![Step Over Icon](stepover.png "Step Over Icon") -- make a step (run the next command), but *don't go into the function*, hotkey `key:F10`.
+![Step Over Icon](stepover.png "Step Over Icon") -- make a step (run the next command), but *don't go into the function*, hotkey `F10`.
 : If we click it now, `alert` will be shown. The important thing is that `alert` can be any function, the execution "steps over it", skipping the function internals.
 
-![Step Into Icon](stepin.png "Step Into Icon") -- make a step, hotkey `key:F11`.
+![Step Into Icon](stepin.png "Step Into Icon") -- make a step, hotkey `F11`.
 : The same as the previous one, but "steps into" nested functions. Clicking this will step through all script actions one by one.
 
-![Step Out Icon](stepout.png "Step Out Icon") -- continue the execution till the end of the current function, hotkey `key:Shift+F11`.
+![Step Out Icon](stepout.png "Step Out Icon") -- continue the execution till the end of the current function, hotkey `Shift+F11`.
 : The execution would stop at the very last line of the current function. That's handy when we accidentally entered a nested call using <span class="devtools" style="background-position:-72px -76px"></span>, but it does not interest us, and we want to continue to its end as soon as possible.
 
 ![Enable / Disable Icon](disable.png "Enable / Disable Icon") -- enable/disable all breakpoints.
@@ -164,7 +164,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-Regular users don't see that output, it is in the console. To see it, either open the Console panel of developer tools or press `key:Esc` while in another panel: that opens the console at the bottom.
+Regular users don't see that output, it is in the console. To see it, either open the Console panel of developer tools or press `Esc` while in another panel: that opens the console at the bottom.
 
 If we have enough logging in our code, then we can see what's going on from the records, without the debugger.
 

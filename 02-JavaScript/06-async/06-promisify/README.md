@@ -115,4 +115,4 @@ There are also modules with a bit more flexible promisification functions, e.g. 
 > 
 > So promisification is only meant for functions that call the callback once. Further calls will be ignored.
 
-### [Next Section >>>](../08-async-await)
+### [Next Section >>>](../07-async-await)

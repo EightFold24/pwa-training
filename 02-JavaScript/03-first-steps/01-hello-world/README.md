@@ -2,8 +2,6 @@
 
 This part of the tutorial is about core JavaScript, the language itself.
 
-But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We'll keep the amount of browser-specific commands (like `alert`) to a minimum so that you don't spend time on them if you plan to concentrate on another environment (like Node.js). We'll focus on JavaScript in the browser in the [next part](/ui) of the tutorial.
-
 So first, let's see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like `"node my.js"`.
 
 
@@ -39,11 +37,17 @@ The `<script>` tag contains JavaScript code which is automatically executed when
 
 The `<script>` tag has a few attributes that are rarely used nowadays but can still be found in old code:
 
-**The `type` attribute: `&lt;script <u>type</u>=...&gt;`**
-The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic; we'll talk about modules in another part of the tutorial.
+**The `type` attribute: `<script type= ... >`**
+The old HTML standard, HTML4, required a script to have a `type`.
+Usually it was `type="text/javascript"`.
+It's not required anymore.
+Also, the modern HTML standard totally changed the meaning of this attribute.
+Now, it can be used for JavaScript modules.
 
-**The `language` attribute: `&lt;script <u>language</u>=...&gt;`**
-This attribute was meant to show the language of the script. This attribute no longer makes sense because JavaScript is the default language. There is no need to use it.
+**The `language` attribute: `<script language= ... >`**
+This attribute was meant to show the language of the script.
+This attribute no longer makes sense because JavaScript is the default language.
+There is no need to use it.
 
 **Comments before and after scripts.**
 In really ancient books and guides, you may find comments inside `<script>` tags, like this:
@@ -54,7 +58,9 @@ In really ancient books and guides, you may find comments inside `<script>` tags
 //--></script>
 ```
 
-This trick isn't used in modern JavaScript. These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+This trick isn't used in modern JavaScript.
+These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag.
+Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
 
 
 ## External scripts
@@ -67,7 +73,9 @@ Script files are attached to HTML with the `src` attribute:
 <script src="/path/to/script.js"></script>
 ```
 
-Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"` would mean a file `"script.js"` in the current folder.
+Here, `/path/to/script.js` is an absolute path to the script from the site root.
+One can also provide a relative path from the current page.
+For instance, `src="script.js"` would mean a file `"script.js"` in the current folder.
 
 We can give a full URL as well. For instance:
 
@@ -83,7 +91,7 @@ To attach several scripts, use multiple tags:
 …
 ```
 
-##
+###
 > ### Please note:
 > As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
 > 
@@ -93,7 +101,7 @@ To attach several scripts, use multiple tags:
 > 
 > That reduces traffic and makes pages faster.
 
-##
+###
 > ### If `src` is set, the script content is ignored.
 > A single `<script>` tag can't have both the `src` attribute and code inside.
 > 
@@ -125,7 +133,7 @@ To attach several scripts, use multiple tags:
 There is much more to learn about browser scripts and their interaction with the webpage. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves with browser-specific implementations of it. We'll be using the browser as a way to run JavaScript, which is very convenient for online reading, but only one of many.
 
 ## TODO
-* Complete the [1-hello-alert](1-hello-alert) task
-* Complete the [2-hello-alert-ext](2-hello-alert-ext) task
+* Complete the [01-hello-alert](01-hello-alert) task
+* Complete the [02-hello-alert-ext](02-hello-alert-ext) task
 
 ### [Next Section >>>](../02-structure)

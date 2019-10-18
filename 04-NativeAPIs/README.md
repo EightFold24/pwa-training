@@ -21,4 +21,4 @@ Modern browsers have built in web APIs that allow programmers to do useful tasks
 
 ***Content from this section is adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction***
 
-## [Next Chapter >>>](../05-OnlineOffline)
+### [Next Chapter >>>](../05-OnlineOffline)

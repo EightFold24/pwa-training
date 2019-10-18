@@ -9,4 +9,4 @@ The two languages—HTML and CSS—are independent of one another and should rem
 
 ***Content from this document is adapted from https://learn.shayhowe.com/html-css/building-your-first-web-page/***
 
-## [Next Chapter >>>](../02-JavaScript)
+### [Next Chapter >>>](../02-JavaScript)

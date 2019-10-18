@@ -24,4 +24,4 @@ _**NOTE:** Don't skip this entire part of the training. There are some advanced 
 
 ***Content from this document is adapted from [https://javascript.info](https://javascript.info)***
 
-## [Next Chapter >>>](../03-Webapp)
+### [Next Chapter >>>](../03-Webapp)

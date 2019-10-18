@@ -34,4 +34,4 @@ Your code should be as efficient, readable, and maintainable as possible, and in
 * https://dzone.com/articles/clean-code-explanation-benefits-amp-examples
 * https://www.pluralsight.com/blog/software-development/7-reasons-clean-code-matters
 
-## [Next Chapter >>>](../07-AWS-Serverless)
+### [Next Chapter >>>](../07-AWS-Serverless)

@@ -32,4 +32,7 @@ p {
 }
 ```
 
+## TODO
+* Have a look at the `styles.css` file
+
 ### [Finish Chapter >>>](../)

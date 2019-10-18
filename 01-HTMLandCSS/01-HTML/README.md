@@ -34,4 +34,7 @@ Attributes are defined within the opening tag, after an element’s name. Genera
 <a href="http://shayhowe.com/">Shay Howe</a>
 ```
 
+## TODO
+* Have a look at the `index.html` file
+
 ### [Next Section >>>](../02-CSS)

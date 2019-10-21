@@ -298,7 +298,7 @@ Some good-to-follow rules are:
 
 Sounds simple? Indeed it is, but creating descriptive and concise variable names in practice is not. Go for it.
 
-## 
+###
 > ### Reuse or create?
 > And the last note. There are some lazy programmers who, instead of declaring new variables, tend to reuse existing ones.
 > 

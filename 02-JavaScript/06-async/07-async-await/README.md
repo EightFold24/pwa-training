@@ -69,7 +69,7 @@ Let's emphasize: `await` literally makes JavaScript wait until the promise settl
 
 It's just a more elegant syntax of getting the promise result than `promise.then`, easier to read and write.
 
-## 
+###
 > ### Can't use `await` in regular functions
 > If we try to use `await` in non-async function, there would be a syntax error:
 > ```js
@@ -115,7 +115,7 @@ showAvatar();
 
 Pretty clean and easy to read, right? Much better than before.
 
-## 
+###
 > ###`await` won't work in the top-level code
 > People who are just starting to use `await` tend to forget the fact that we can't use `await` in top-level code. For example, this will not work:
 > ```js
@@ -132,7 +132,7 @@ Pretty clean and easy to read, right? Much better than before.
 > })();
 > ```
 
-## 
+###
 > ### `await` accepts \"thenables\"
 > Like `promise.then`, `await` allows to use thenable objects (those with a callable `then` method). The idea is that a 3rd-party object may not be a promise, but promise-compatible: if it supports `.then`, that's enough to use with `await`.
 > 
@@ -160,7 +160,7 @@ Pretty clean and easy to read, right? Much better than before.
 > If `await` gets a non-promise object with `.then`, it calls that method providing native functions `resolve`, `reject` as arguments. Then `await` waits until one of them is called (in the example above it happens in the line `(*)`) and then proceeds with the result.
 
 
-## 
+###
 > ### Async class methods
 > To declare an async class method, just prepend it with `async`:
 > ```js
@@ -244,7 +244,7 @@ f().catch(alert); // TypeError: failed to fetch // (*)
 If we forget to add `.catch` there, then we get an unhandled promise error (viewable in the console). We can catch such errors using a global event handler as described in the chapter [promise-error-handling](../04-promise-error-handling).
 
 
-## 
+###
 > ###`async/await` and `promise.then/catch`
 > When we use `async/await`, we rarely need `.then`, because `await` handles the waiting for us. And we can use a regular `try..catch` instead of `.catch`. That's usually (not always) more convenient.
 > 
@@ -253,7 +253,7 @@ If we forget to add `.catch` there, then we get an unhandled promise error (view
 > Like in the line `(*)` of the example above.
 > ```
 
-## 
+###
 > ###`async/await` works well with `Promise.all`
 > When we need to wait for multiple promises, we can wrap them in `Promise.all` and then `await`:
 > ```js

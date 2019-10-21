@@ -47,7 +47,7 @@ while (i) { // when i becomes 0, the condition becomes falsy, and the loop stops
 }
 ```
 
-## 
+###
 > ### Curly braces are not required for a single-line body
 > If the loop body has a single statement, we can omit the curly braces `{…}`:
 > ```js
@@ -139,7 +139,7 @@ if (i < 3) { alert(i); i++ }
 // ...finish, because now i == 3
 ```
 
-## 
+###
 > ### Inline variable declaration
 > Here, the "counter" variable `i` is declared right in the loop. This is called an "inline" variable declaration. Such variables are visible only inside the loop.
 > ```js
@@ -246,7 +246,7 @@ for (let i = 0; i < 10; i++) {
 
 For even values of `i`, the `continue` directive stops executing the body and passes control to the next iteration of `for` (with the next number). So the `alert` is only called for odd values.
 
-## 
+###
 > ### The `continue` directive helps decrease nesting
 > A loop that shows odd values could look like this:
 > ```js
@@ -262,7 +262,7 @@ For even values of `i`, the `continue` directive stops executing the body and pa
 > 
 > But as a side-effect, this created one more level of nesting (the `alert` call inside the curly braces). If the code inside of`if` is longer than a few lines, that may decrease the overall readability.
 
-## 
+###
 > ### No `break/continue` to the right side of '?'
 > Please note that syntax constructs that are not expressions cannot be used with the ternary operator `?`. In particular, directives such as `break/continue` aren't allowed there.
 > 
@@ -344,7 +344,7 @@ for (let i = 0; i < 3; i++) { ... }
 
 The `continue` directive can also be used with a label. In this case, code execution jumps to the next iteration of the labeled loop.
 
-## 
+###
 > ### Labels do not allow to \"jump\" anywhere
 > Labels do not allow us to jump into an arbitrary place in the code.
 > 

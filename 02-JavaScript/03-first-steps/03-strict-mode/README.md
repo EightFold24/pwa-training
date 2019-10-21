@@ -21,7 +21,7 @@ For example:
 
 We will learn functions (a way to group commands) soon. Looking ahead, let's note that `"use strict"` can be put at the beginning of the function body instead of the whole script. Doing that enables strict mode in that function only. But usually, people use it for the whole script.
 
-##
+###
 > ### Ensure that "use strict" is at the top
 > Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
 > 
@@ -36,7 +36,7 @@ We will learn functions (a way to group commands) soon. Looking ahead, let's not
 > 
 > Only comments may appear above `"use strict"`.
 
-##
+###
 > ### There's no way to cancel `use strict`
 > There is no directive like `"no use strict"` that reverts the engine to old behavior.
 > 

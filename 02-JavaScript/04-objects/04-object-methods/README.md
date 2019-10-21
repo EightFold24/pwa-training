@@ -56,7 +56,7 @@ user.sayHi = sayHi;
 user.sayHi(); // Hello!
 ```
 
-## 
+###
 > ### Object-oriented programming
 > When we write our code using objects to represent entities, that's called [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), in short: "OOP".
 >
@@ -188,7 +188,7 @@ admin['f'](); // Admin (dot or square brackets access the method – doesn't mat
 
 The rule is simple: if `obj.f()` is called, then `this` is `obj` during the call of `f`. So it's either `user` or `admin` in the example above.
 
-## 
+###
 > ### Calling without an object: `this == undefined`
 > We can even call the function without an object at all:
 > ```js
@@ -204,7 +204,7 @@ The rule is simple: if `obj.f()` is called, then `this` is `obj` during the call
 > 
 > Usually such call is a programming error. If there's `this` inside a function, it expects to be called in an object context.
 
-## 
+###
 > ### The consequences of unbound `this`
 > If you come from another programming language, then you are probably used to the idea of a "bound `this`", where methods defined in an object always have `this` referencing that object.
 > 

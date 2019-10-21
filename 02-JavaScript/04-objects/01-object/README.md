@@ -203,7 +203,7 @@ Square brackets are much more powerful than the dot notation. They allow any pro
 
 So most of the time, when property names are known and simple, the dot is used. And if we need something more complex, then we switch to square brackets.
 
-## 
+###
 > ### Reserved words are allowed as property names
 > A variable cannot have a name equal to one of language-reserved words like "for", "let", "return" etc.
 > 

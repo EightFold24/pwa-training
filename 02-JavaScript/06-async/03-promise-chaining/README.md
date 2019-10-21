@@ -185,7 +185,7 @@ People who start to use promises sometimes don't know about chaining, so they wr
 Sometimes it's ok to write `.then` directly, because the nested function has access to the outer scope. In the example above the most nested callback has access to all variables `script1`, `script2`, `script3`. But that's an exception rather than a rule.
 
 
-## 
+###
 > ### Thenables
 > To be precise, a handler may return not exactly a promise, but a so-called "thenable" object - an arbitrary object that has method `.then`, and it will be treated the same way as a promise.
 > 

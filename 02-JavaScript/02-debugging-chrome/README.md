@@ -62,7 +62,7 @@ We can always find a list of breakpoints in the right panel. That's useful when 
 - Remove the breakpoint by right-clicking and selecting Remove.
 - ...And so on.
 
-## 
+###
 > ### Conditional breakpoints
 >*Right click* on the line number allows to create a *conditional* breakpoint. It only triggers when the given expression is truthy.
 >
@@ -145,7 +145,7 @@ The execution has resumed, reached another breakpoint inside `say()` and paused 
 ![Automatic Pause Icon](pause.png "Automatic Pause Icon") -- enable/disable automatic pause in case of an error.
 : When enabled, and the developer tools is open, a script error automatically pauses the execution. Then we can analyze variables to see what went wrong. So if our script dies with an error, we can open debugger, enable this option and reload the page to see where it dies and what's the context at that moment.
 
-## 
+###
 > ### Continue to here
 > Right click on a line of code opens the context menu with a great option called "Continue to here".
 > 

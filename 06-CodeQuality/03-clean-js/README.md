@@ -13,7 +13,7 @@ Here is a cheat sheet with some suggested rules (see below for more details):
 
 Now let's discuss the rules and reasons for them in detail.
 
-## 
+###
 > ### There are no \"you must\" rules
 > Nothing is set in stone here. These are style preferences.
 

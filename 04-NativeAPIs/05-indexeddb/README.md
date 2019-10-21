@@ -91,7 +91,7 @@ let deleteRequest = indexedDB.deleteDatabase(name)
 // deleteRequest.onsuccess/onerror tracks the result
 ```
 
-## 
+###
 > ### Can we open an old version?
 > Now what if we try to open a database with a lower version than the current one? E.g. the existing DB version is 3, and we try to `open(...2)`.
 > 
@@ -253,7 +253,7 @@ db.transaction(store[, type]);
 
 There's also `versionchange` transaction type: such transactions can do everything, but we can't create them manually. IndexedDB automatically creates a `versionchange` transaction when opening the database, for `updateneeded` handler. That's why it's a single place where we can update the database structure, create/remove object stores.
 
-## 
+###
 > ### Why there exist different types of transactions?
 > Performance is the reason why transactions need to be labeled either `readonly` and `readwrite`.
 > 
@@ -493,7 +493,7 @@ books.getAll()
 books.getAllKeys(IDBKeyRange.lowerBound('js', true))
 ```
 
-## 
+###
 > ### Object store is always sorted
 > Object store sorts values by key internally.
 > 

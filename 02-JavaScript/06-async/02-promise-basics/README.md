@@ -85,7 +85,7 @@ To summarize, the executor should do a job (something that takes time usually) a
 
 A promise that is either resolved or rejected is called "settled", as opposed to a initially "pending" promise.
 
-## 
+###
 > ### There can be only a single result or an error
 > The executor should call only one `resolve` or one `reject`. Any state change is final.
 > 
@@ -101,11 +101,11 @@ A promise that is either resolved or rejected is called "settled", as opposed to
 > 
 > Also, `resolve`/`reject` expect only one argument (or none) and will ignore additional arguments.
 
-## 
+###
 > ###Reject with `Error` objects
 > In case something goes wrong, the executor should call `reject`. That can be done with any type of argument (just like `resolve`). But it is recommended to use `Error` objects (or objects that inherit from `Error`). The reasoning for that will soon become apparent.
 
-## 
+###
 > ### Immediately calling `resolve`/`reject`
 > In practice, an executor usually does something asynchronously and calls `resolve`/`reject` after some time, but it doesn't have to. We also can call `resolve` or `reject` immediately, like this:
 > ```js
@@ -118,7 +118,7 @@ A promise that is either resolved or rejected is called "settled", as opposed to
 > 
 > That's fine. We immediately have a resolved promise.
 
-## 
+###
 > ### The `state` and `result` are internal
 > The properties `state` and `result` of the Promise object are internal. We can't directly access them. We can use the methods `.then`/`.catch`/`.finally` for that. They are described below.
 
@@ -248,7 +248,7 @@ It's not exactly an alias of `then(f,f)` though. There are several important dif
 
 3. Last, but not least, `.finally(f)` is a more convenient syntax than `.then(f, f)`: no need to duplicate the function `f`.
 
-## 
+###
 > ### On settled promises handlers runs immediately
 > If a promise is pending, `.then/catch/finally` handlers wait for it. Otherwise, if a promise has already settled, they execute immediately:
 > ```js

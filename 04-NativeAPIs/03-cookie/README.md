@@ -58,7 +58,7 @@ document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
 alert(document.cookie); // ...; my%20name=John%20Smith
 ```
 
-## 
+###
 > ### Limitations
 > There are few limitations:
 > - The `name=value` pair, after `encodeURIComponent`, should not exceed 4kb. So we can't store anything huge in a cookie.
@@ -335,7 +335,7 @@ function deleteCookie(name) {
 }
 ```
 
-## 
+###
 > ### Updating or deleting must use same path and domain
 > Please note: when we update or delete a cookie, we should use exactly the same path and domain options as when we set it.
 
@@ -369,7 +369,7 @@ Also, some modern browsers employ special policies for such cookies:
 - Safari does not allow third-party cookies at all.
 - Firefox comes with a "black list" of third-party domains where it blocks third-party cookies.
 
-## 
+###
 > ### Please note
 > If we load a script from a third-party domain, like `<script src="https://google-analytics.com/analytics.js">`, and that script uses `document.cookie` to set a cookie, then such cookie is not third-party.
 > 

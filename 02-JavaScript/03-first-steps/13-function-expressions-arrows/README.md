@@ -76,7 +76,7 @@ let func = sayHi;
 
 Everything would work the same.
 
-## 
+###
 > ### Why is there a semicolon at the end?
 > You might wonder, why does Function Expression have a semicolon `;` at the end, but Function Declaration does not:
 > ```js
@@ -152,7 +152,7 @@ Here, functions are declared right inside the `ask(...)` call. They have no name
 
 Such code appears in our scripts very naturally, it's in the spirit of JavaScript.
 
-## 
+###
 > ### A function is a value representing an \"action\"
 > Regular values like strings or numbers represent the *data*.
 > 
@@ -322,7 +322,7 @@ let welcome = (age < 18) ?
 welcome(); // ok now
 ```
 
-## 
+###
 > ### When to choose Function Declaration versus Function Expression?
 > As a rule of thumb, when we need to declare a function, the first to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
 > 
@@ -405,7 +405,7 @@ Arrow functions may appear unfamiliar and not very readable at first, but that q
 
 They are very convenient for simple one-line actions, when we're just too lazy to write many words.
 
-## 
+###
 > ### Multiline arrow functions
 > The examples above took arguments from the left of `=>` and evaluated the right-side expression with them.
 > 
@@ -421,7 +421,7 @@ They are very convenient for simple one-line actions, when we're just too lazy t
 > alert( sum(1, 2) ); // 3
 > ```
 
-## 
+###
 > ### More to come
 > Here we praised arrow functions for brevity. But that's not all! Arrow functions have other interesting features.
 > 

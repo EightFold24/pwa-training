@@ -122,7 +122,7 @@ showMessage();
 alert( userName ); // John, unchanged, the function did not access the outer variable
 ```
 
-## 
+###
 > ### Global variables
 > Variables declared outside of any function, such as the outer `userName` in the code above, are called *global*.
 > 
@@ -197,13 +197,13 @@ function showMessage(from, text = anotherFunction()) {
 }
 ```
 
-## 
+###
 > ### Evaluation of default parameters
 > In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
 > 
 > In the example above, `anotherFunction()` is called every time `showMessage()` is called without the `text` parameter.
 
-## 
+###
 > ### Default parameters old-style
 > Old editions of JavaScript did not support default parameters. So there are alternative ways to support them, that you can find mostly in the old scripts.
 > 
@@ -303,7 +303,7 @@ function doNothing() {
 alert( doNothing() === undefined ); // true
 ```
 
-## 
+###
 > ### Never add a newline between `return` and the value
 > For a long expression in `return`, it might be tempting to put it on a separate line, like this:
 > ```js 
@@ -354,7 +354,7 @@ checkPermission(..) // checks a permission, returns true/false
 
 With prefixes in place, a glance at a function name gives an understanding what kind of work it does and what kind of value it returns.
 
-## 
+###
 > ### One function -- one action
 > A function should do exactly what is suggested by its name, no more.
 > 
@@ -368,7 +368,7 @@ With prefixes in place, a glance at a function name gives an understanding what 
 > 
 > These examples assume common meanings of prefixes. You and your team are free to agree on other meanings, but usually they're not much different. In any case, you should have a firm understanding of what a prefix means, what a prefixed function can and cannot do. All same-prefixed functions should obey the rules. And the team should share the knowledge.
 
-## 
+###
 > ###Ultrashort function names
 > Functions that are used *very often* sometimes have ultrashort names.
 > 

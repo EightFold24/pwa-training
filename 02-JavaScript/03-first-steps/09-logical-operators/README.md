@@ -228,7 +228,7 @@ When all values are truthy, the last value is returned:
 alert( 1 && 2 && 3 ); // 3, the last one
 ```
 
-## 
+###
 > ### Precedence of AND `&&` is higher than OR `||`
 > The precedence of AND `&&` operator is higher than OR `||`.
 > 

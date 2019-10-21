@@ -72,7 +72,7 @@ Let's see examples.
     ```
 
 
-## 
+###
 > ### `try..catch` only works for runtime errors
 > For `try..catch` to work, the code must be runnable. In other words, it should be valid JavaScript.
 > 
@@ -89,7 +89,7 @@ Let's see examples.
 > 
 > So, `try..catch` can only handle errors that occur in the valid code. Such errors are called "runtime errors" or, sometimes, "exceptions".
 
-## 
+###
 > ### `try..catch` works synchronously
 > If an exception happens in "scheduled" code, like in `setTimeout`, then `try..catch` won't catch it:
 > ```js
@@ -493,13 +493,13 @@ You can check by running the code with entering `35` into `prompt` -- it execute
 
 In other words, the function may finish with `return` or `throw`, that doesn't matter. The `finally` clause executes in both cases.
 
-## 
+###
 > ### Variables are local inside `try..catch..finally`
 > Please note that `result` and `diff` variables in the code above are declared *before* `try..catch`.
 > 
 > Otherwise, if we declared `let` in `try` block, it would only be visible inside of it.
 
-## 
+###
 > ### `finally` and `return`
 > The `finally` clause works for *any* exit from `try..catch`. That includes an explicit `return`.
 > 
@@ -519,7 +519,7 @@ In other words, the function may finish with `return` or `throw`, that doesn't m
 > alert( func() ); // first works alert from finally, and then this one
 > ```
 
-## 
+###
 > ### `try..finally`
 > 
 > The `try..finally` construct, without `catch` clause, is also useful. We apply it when we don't want to handle errors here (let them fall through), but want to be sure that processes that we started are finalized.

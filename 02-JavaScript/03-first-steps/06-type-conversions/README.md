@@ -6,7 +6,7 @@ For example, `alert` automatically converts any value to a string to show it. Ma
 
 There are also cases when we need to explicitly convert a value to the expected type.
 
-## 
+###
 > ### Not talking about objects yet
 > In this chapter, we won't cover objects. Instead, we'll study primitives first. Later, after we learn about objects in chapter [Objects](../../04-objects).
 
@@ -79,7 +79,7 @@ alert( Number(false) );       // 0
 
 Please note that `null` and `undefined` behave differently here: `null` becomes zero while `undefined` becomes `NaN`.
 
-## 
+###
 > ### Addition '+' concatenates strings
 > Almost all mathematical operations convert values to numbers. A notable exception is addition `+`. If one of the added values is a string, the other one is also converted to a string.
 > 
@@ -112,7 +112,7 @@ alert( Boolean("hello") ); // true
 alert( Boolean("") ); // false
 ```
 
-## 
+###
 > ### Please note: the string with zero `\"0\"` is `true`
 > Some languages (namely PHP) treat `"0"` as `false`. But in JavaScript, a non-empty string is always `true`.
 > ```js

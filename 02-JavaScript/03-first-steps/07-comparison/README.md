@@ -57,7 +57,7 @@ In the examples above, the comparison `'Z' > 'A'` gets to a result at the first 
 2. `l` is the same as `l`.
 3. `o` is greater than `e`. Stop here. The first string is greater.
 
-## 
+###
 > ### Not a real dictionary, but Unicode order
 > The comparison algorithm given above is roughly equivalent to the one used in dictionaries or phone books, but it's not exactly the same.
 > 
@@ -83,7 +83,7 @@ alert( true == 1 ); // true
 alert( false == 0 ); // true
 ```
 
-## 
+###
 > ### A funny consequence
 > It is possible that at the same time:
 > 

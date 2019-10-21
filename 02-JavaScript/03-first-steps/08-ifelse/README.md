@@ -149,7 +149,7 @@ let accessAllowed = age > 18 ? true : false;
 
 But parentheses make the code more readable, so we recommend using them.
 
-## 
+###
 > ### Please note:
 > In the example above, you can avoid using the question mark operator because the comparison itself returns `true/false`:
 > ```js

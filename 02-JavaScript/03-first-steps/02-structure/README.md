@@ -1,7 +1,5 @@
 # Code structure
 
-The first thing we'll study is the building blocks of code.
-
 ## Statements
 
 Statements are syntax constructs and commands that perform actions.
@@ -95,9 +93,9 @@ We recommend putting semicolons between statements even if they are separated by
 
 ## Comments
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
-
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+Comments can be put into any place of a script.
+They don't affect its execution because the engine simply ignores them.
+Their purpose it to justify / explain complex code to human readers.
 
 **One-line comments start with two forward slash characters `//`.**
 
@@ -134,11 +132,11 @@ alert('Hello');
 alert('World');
 ```
 
-##
+###
 > ### Use hotkeys!
 > In most editors, a line of code can be commented out by pressing the `Ctrl+/` hotkey for a single-line comment and something like `Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `Cmd` instead of `Ctrl`.
 
-## 
+###
 > ### Nested comments are not supported!
 > There may not be `/*...*/` inside another `/*...*/`.
 >

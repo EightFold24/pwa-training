@@ -28,7 +28,7 @@ There are a number of ways to host a web server locally
     python -m SimpleHTTPServer
     
     //Python 3.x
-    python -m http.server
+    python3 -m http.server
     ```
 2. Use [Node.js](https://nodejs.org/en/)'s HTTP server package
     ```

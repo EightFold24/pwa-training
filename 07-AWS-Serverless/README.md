@@ -12,3 +12,5 @@ Throughout this tutorial we will explore some of the commonly used serverless fu
 * API Gateways
 * Lambdas
 * DynamoDB
+
+***Content from this document is adapted from https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/***

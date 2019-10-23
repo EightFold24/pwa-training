@@ -1,4 +1,4 @@
-# Module 1. Static Web Hosting
+# Module 4. Static Web Hosting
 
 In this module you'll configure Amazon Simple Storage Service (S3) to host the static resources for your web application.
 

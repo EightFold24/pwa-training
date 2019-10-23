@@ -1,4 +1,4 @@
-# Module 4. RESTful APIs
+# Module 3. RESTful APIs
 
 In this module you'll use Amazon API Gateway to expose the Lambda function you built in the previous module as a RESTful API. This API will be accessible on the public Internet. Using this configuration you will then turn your static website into a dynamic web application by adding client-side JavaScript that makes calls to the exposed APIs.  
 

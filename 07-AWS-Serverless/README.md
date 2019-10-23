@@ -3,6 +3,7 @@
 Serverless is the native architecture of the cloud that allows you to build and run applications and services without thinking about servers. It eliminates infrastructure management tasks such as server or cluster provisioning, patching, operating system maintenance, and capacity provisioning.
 
 There are a number of different providers of serverless capabilities such as...
+
 * Azure Functions
 * Google Cloud
 * IBM Cloud Functions

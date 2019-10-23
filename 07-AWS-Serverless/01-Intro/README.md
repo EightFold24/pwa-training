@@ -40,4 +40,25 @@ The application architecture uses [AWS Lambda](https://aws.amazon.com/lambda/),
 4. **RESTful API**
     
     JavaScript executed in the browser sends and receives data from a public backend API built using Lambda and API Gateway.  
+    
+## First Steps
 
+### Select a Region
+The system we are going to launch can be deployed in any AWS region that supports all the services used in this application, which include AWS Lambda, Amazon API Gateway, Amazon S3 and Amazon DynamoDB.
+
+You can refer to the [region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/) to see which regions have the supported services. Among the supported regions you can choose are:
+
+- US East (N. Virginia)
+- US East (Ohio)
+- US West (Oregon)
+- EU (Frankfurt)
+- EU (Ireland)
+- EU (London)
+- Asia Pacific (Tokyo)
+- Asia Pacific (Seoul)
+- Asia Pacific (Sydney)
+- Asia Pacific (Mumbai)
+ 
+Select your region from the dropdown in the upper right corner of the AWS Management Console.
+
+![](https://d1.awsstatic.com/Getting%20Started/learning-paths/serverless%20web%20application/region.69a7598862b05a8d166ac34108eb6f25f5a90844.png)

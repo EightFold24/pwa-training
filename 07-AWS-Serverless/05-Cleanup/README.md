@@ -1,8 +1,8 @@
 # Module 5. Resource Cleanup
 
-In this module, you will go through the steps to terminate all the resources you created throughout this tutorial. You will terminate an Amazon S3 bucket, an Amazon Cognito User Pool, an AWS Lambda function, an IAM role, a DynamoDB table, a REST API, and a CloudWatch Log. It is a best practice to delete resources you are no longer using to avoid unwanted charges.
+In this module, you will go through the steps to terminate all the resources you created throughout this tutorial. You will terminate an Amazon S3 bucket, an AWS Lambda function, an IAM role, a DynamoDB table, a REST API, and a CloudWatch Log. It is a best practice to delete resources you are no longer using to avoid unwanted charges.
 
-**Services to Delete**: AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, Amazon Cognito, AWS CloudWatch 
+**Services to Delete**: AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS CloudWatch 
 
 ## Instructions
 

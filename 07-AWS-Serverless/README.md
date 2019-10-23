@@ -13,10 +13,10 @@ But in this tutorial we are going to use Amazon's AWS to give our website a back
 
 This tutorial is broken up into five modules. You must complete each module before proceeding to the next. However, modules 1 and 2 have AWS CloudFormation templates available that you can use to launch the necessary resources without manually creating them yourself. The templates let you skip those modules.  
 
-1. [Static Web Hosting]()
-2. [User Management]()
-3. [Serverless Backend]()
-4. [RESTful APIs]()
-5. [Resource Termination and Next Steps]()
+1. [AWS Introduction](01-Intro)
+2. [Creating a Serverless Backend](02-Serverless-Backend)
+3. [Exposing our RESTful API](03-RESTfulAPI)
+4. [Hosting a Static Website](04-Static-Website)
+5. [Cleaning Up](05-Cleanup)
 
 ***Content from this document is adapted from https://aws.amazon.com/getting-started/projects/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/***

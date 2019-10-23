@@ -7,14 +7,9 @@ In this module you'll use Amazon API Gateway to expose the Lambda function you b
 ![](https://d1.awsstatic.com/Test%20Images/Kate%20Test%20Images/Serverless_Web_App_LP_assets-05.90540a6a2447e51cebdbb654c5c44d9344358b51.png)
 
 The diagram above shows how the API Gateway component you will build in this module integrates with the existing components you built previously.
-The grayed out items are pieces you have already implemented in previous steps.
+The grayed out items are pieces you have already implemented in other steps.
 
-The static website you deployed in the first module already has a page configured to interact with the API you'll build in this module.
-The page at /ride.html has a simple map-based interface for requesting a unicorn ride.
-After authenticating using the /signin.html page, your users will be able to select their pickup location by clicking a point on the map and then requesting a ride by choosing the "Request Unicorn" button in the upper right corner.
-
-This module will focus on the steps required to build the cloud components of the API, but if you're interested in how the browser code works that calls this API, you can inspect the [ride.js](https://github.com/awslabs/aws-serverless-workshops/blob/master/WebApplication/1_StaticWebHosting/website/js/ride.js) file of the website.
-In this case the application uses jQuery's [ajax()](https://api.jquery.com/jQuery.ajax/) method to make the remote request.  
+This module will focus on the steps required to build the cloud components of the API.
 
 ## Implementation Instructions
 
@@ -122,3 +117,5 @@ Note: You should ensure that you clear your browser cache before executing the 
 
 1. Run your website locally. 
 2. Submit your form and see that an alert has shown with the contents of the response.
+
+### [Next Section >>>](../04-Static-Website)

@@ -11,7 +11,7 @@ But in this tutorial we are going to use Amazon's AWS to give our website a back
 
 ## TODO
 
-This tutorial is broken up into five modules. You must complete each module before proceeding to the next. However, modules 1 and 2 have AWS CloudFormation templates available that you can use to launch the necessary resources without manually creating them yourself. The templates let you skip those modules.  
+This tutorial is broken up into five modules. You must complete each module before proceeding to the next.  
 
 1. [AWS Introduction](01-Intro)
 2. [Creating a Serverless Backend](02-Serverless-Backend)

@@ -86,3 +86,5 @@ After completing these implementation steps you should be able to access your st
 Visit your website's base URL (this is the URL you noted in the prior section) in the browser of your choice. You should see the Wild Rydes home page displayed. If you need to lookup the base URL, visit the S3 console, select your bucket and then click the Static Web Hosting on the Properties tab.
 
 If the page renders correctly (see below for an example screenshot), you can move on to the next module User Management.
+
+### [Next Section >>>](../05-Cleanup)

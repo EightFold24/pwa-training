@@ -62,3 +62,5 @@ You can refer to the [region table](https://aws.amazon.com/about-aws/global-infr
 Select your region from the dropdown in the upper right corner of the AWS Management Console.
 
 ![](https://d1.awsstatic.com/Getting%20Started/learning-paths/serverless%20web%20application/region.69a7598862b05a8d166ac34108eb6f25f5a90844.png)
+
+### [Next Section >>>](../02-Serverless-Backend)

@@ -1,31 +1,11 @@
 const randomBytes = require('crypto').randomBytes;
-
 const AWS = require('aws-sdk');
-
 const ddb = new AWS.DynamoDB.DocumentClient();
-
-const fleet = [
-    {
-        Name: 'Bucephalus',
-        Color: 'Golden',
-        Gender: 'Male',
-    },
-    {
-        Name: 'Shadowfax',
-        Color: 'White',
-        Gender: 'Male',
-    },
-    {
-        Name: 'Rocinante',
-        Color: 'Yellow',
-        Gender: 'Female',
-    },
-];
 
 exports.handler = (event, context, callback) => {
 
-    const rideId = toUrlString(randomBytes(16));
-    console.log('Received event (', rideId, '): ', event);
+    const pwaUserId = toUrlString(randomBytes(16));
+    console.log('Received event (', pwaUserId, '): ', event);
 
     // The body field of the event in a proxy integration is a raw string.
     // In order to extract meaningful values, we need to first parse this string
@@ -37,9 +17,7 @@ exports.handler = (event, context, callback) => {
     const lname = requestBody.lname;
     console.log('Received fname (', fname, ') and lname (', lname, ')');
 
-    const unicorn = findUnicorn();
-
-    recordRide(rideId, unicorn).then(() => {
+    recordUser(pwaUserId, requestBody).then(() => {
         // You can use the callback function to provide a return value from your Node.js
         // Lambda functions. The first parameter is used for failed invocations. The
         // second parameter specifies the result data of the invocation.
@@ -49,10 +27,10 @@ exports.handler = (event, context, callback) => {
         callback(null, {
             statusCode: 201,
             body: JSON.stringify({
-                RideId: rideId,
-                Unicorn: unicorn,
-                UnicornName: unicorn.Name,
-                Eta: '30 seconds',
+                PwaUserId: pwaUserId,
+                Firstname: fname,
+                Lastname: lname,
+                Message: 'Successfully added user!',
             }),
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -69,18 +47,11 @@ exports.handler = (event, context, callback) => {
     });
 };
 
-// This is where you would implement logic to find the optimal unicorn for
-// this ride (possibly invoking another Lambda function as a microservice.)
-// For simplicity, we'll just pick a unicorn at random.
-function findUnicorn() {
-    return fleet[Math.floor(Math.random() * fleet.length)];
-}
-
-function recordRide(rideId, username, unicorn) {
+function recordUser(userId, username) {
     return ddb.put({
         TableName: 'Users',
         Item: {
-            UserId: rideId,
+            UserId: userId,
             User: username,
             RequestTime: new Date().toISOString(),
         },

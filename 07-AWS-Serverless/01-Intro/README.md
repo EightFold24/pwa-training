@@ -1,10 +1,15 @@
+## Overview
+
+In this tutorial, you'll create a simple serverless web application that posts the form information to a datastore and returns some response with data.
+
 **AWS Experience:** Beginner
 
 **Time to complete:** 2 hours
 
 **Cost to complete:**  Each service used in this architecture is eligible for the [AWS Free Tier](https://aws.amazon.com/free/). If you are outside the usage limits of the Free Tier, completing this tutorial will cost you less than $0.25*.
 
-**Prerequisites:** To complete this tutorial, you will need:
+## Prerequisites
+For this part of the tutorial we assumes you have a website with a form that is ready to submit some data to a datastore.  You will also need access to the following.
 
 - An AWS account**
 - A text editor
@@ -13,10 +18,6 @@
 *_This estimate assumes you follow the recommended configurations throughout the tutorial and terminate all resources within 24 hours._
 
 _**Accounts that have been created within the last 24 hours might not yet have access to the resources required for this tutorial._
-
-## Overview
-
-In this tutorial, you'll create a simple serverless web application that enables users to request unicorn rides from the [Wild Rydes](http://www.wildrydes.com/) fleet. The application will present users with an HTML based user interface for indicating the location where they would like to be picked up and will interface on the backend with a RESTful web service to submit the request and dispatch a nearby unicorn. The application will also provide facilities for users to register with the service and log in before requesting rides.
 
 ## Application Architecture
 
@@ -40,14 +41,3 @@ The application architecture uses [AWS Lambda](https://aws.amazon.com/lambda/),
     
     JavaScript executed in the browser sends and receives data from a public backend API built using Lambda and API Gateway.  
 
-### Modules
-
-This tutorial is broken up into five modules. You must complete each module before proceeding to the next. However, modules 1 and 2 have AWS CloudFormation templates available that you can use to launch the necessary resources without manually creating them yourself. The templates let you skip those modules.  
-
- 
-
-1. [Static Web Hosting]()
-2. [User Management]()
-3. [Serverless Backend]()
-4. [RESTful APIs]()
-5. [Resource Termination and Next Steps]()

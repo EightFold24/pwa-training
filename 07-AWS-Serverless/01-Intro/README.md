@@ -2,23 +2,6 @@
 
 In this tutorial, you'll create a simple serverless web application that posts the form information to a datastore and returns some response with data.
 
-**AWS Experience:** Beginner
-
-**Time to complete:** 2 hours
-
-**Cost to complete:**  Each service used in this architecture is eligible for the [AWS Free Tier](https://aws.amazon.com/free/). If you are outside the usage limits of the Free Tier, completing this tutorial will cost you less than $0.25*.
-
-## Prerequisites
-For this part of the tutorial we assumes you have a website with a form that is ready to submit some data to a datastore.  You will also need access to the following.
-
-- An AWS account**
-- A text editor
-- Recommended browser: The latest version of Chrome
-
-*_This estimate assumes you follow the recommended configurations throughout the tutorial and terminate all resources within 24 hours._
-
-_**Accounts that have been created within the last 24 hours might not yet have access to the resources required for this tutorial._
-
 ## Application Architecture
 
 The application architecture uses [AWS Lambda](https://aws.amazon.com/lambda/), [Amazon API Gateway](https://aws.amazon.com/apigateway/), [Amazon S3](https://aws.amazon.com/s3/), [Amazon DynamoDB](https://aws.amazon.com/dynamodb/), and [Amazon Cognito](https://aws.amazon.com/cognito/) as pictured below:
@@ -31,7 +14,7 @@ The application architecture uses [AWS Lambda](https://aws.amazon.com/lambda/),
 
 2. **User Management**
     
-    Amazon Cognito provides user management and authentication functions to secure the backend API.  
+    Amazon Cognito provides user management and authentication functions to secure the backend API. Note that this tutorial does not make use of this section.
 
 3. **Serverless Backend**
     

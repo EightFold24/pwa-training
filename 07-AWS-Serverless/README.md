@@ -9,6 +9,15 @@ There are a number of different providers of serverless capabilities such as...
 
 But in this tutorial we are going to use Amazon's AWS to give our website a backend datastore.
 
+## Prerequisites
+For this part of the tutorial we assumes you have a website with a form that is ready to submit some data to a datastore.  You will also need access to the following.
+
+- An AWS account*
+- A text editor
+- Recommended browser: The latest version of Chrome
+
+_*There are login credentials stored in the private Applied Innovation Sharepoint page, under [accounts](https://kainossoftwareltd.sharepoint.com/sites/appliedinnovation/Lists/Accounts/AllItems.aspx). Use the "AWS - User Access" account._
+
 ## TODO
 
 This tutorial is broken up into five modules. You must complete each module before proceeding to the next.  

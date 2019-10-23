@@ -12,7 +12,7 @@ For the purposes of this module you'll use the Amazon S3 website endpoint URL th
 
 Amazon S3 can be used to host static websites without having to configure or manage any web servers. In this step you'll create a new S3 bucket that will be used to host all of the static assets (e.g. HTML, CSS, JavaScript, and image files) for your web application. 
 
-Keep in mind that your bucket's name must be globally unique. We recommend using a name like `pwa-training-webapp-firstname`. Add you name onto the end of the bucket name to keep the bucket name unique.
+Keep in mind that your bucket's name must be globally unique. We recommend using a name like `pwa-training-webapp-firstname`. Add your name onto the end of the bucket name to keep it unique. In future projects you do not need to add your name to buckets.
 
 1. In the AWS Management Console choose Services then select S3 under Storage.
 2. Choose Create Bucket
@@ -83,7 +83,7 @@ In this step, you will use the console to enable static website hosting. You can
 
 After completing these implementation steps you should be able to access your static website by visiting the the website endpoint URL for your S3 bucket.
 
-Visit your website's base URL (this is the URL you noted in the prior section) in the browser of your choice. You should see the Wild Rydes home page displayed. If you need to lookup the base URL, visit the S3 console, select your bucket and then click the Static Web Hosting on the Properties tab.
+Visit your website's base URL (this is the URL you noted in the prior section) in the browser of your choice. You should see your webapp's home page. If you need to lookup the base URL, visit the S3 console, select your bucket and then click the Static Web Hosting on the Properties tab.
 
 If the page renders correctly (see below for an example screenshot), you can move on to the next module User Management.
 

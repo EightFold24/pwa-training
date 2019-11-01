@@ -84,7 +84,8 @@ Make sure to configure your function to use the IAM role you created in the pre
 For this module you will test the function that you built using the AWS Lambda console.
 In the next module you will add a REST API with API Gateway so you can invoke your function from the browser-based application that you deployed in the first module.
 
-1. From the main edit screen for your function, select Configure test event from the the Select a test event... dropdown. 
+1. From the main edit screen for your function, select Configure test event from the the Select a test event... dropdown.  
+![Locatiion of test button](https://i.ibb.co/ZTjrDfw/Screenshot-2019-11-01-at-14-43-24.png)
 2. Keep Create new test event selected. 
 3. Enter a name in the Event name field (e.g. `AddPwaUserEvent`) 
 4. Modify, copy, and paste the following test event into the editor: 

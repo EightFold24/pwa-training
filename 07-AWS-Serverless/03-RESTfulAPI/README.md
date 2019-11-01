@@ -64,6 +64,10 @@ Before we try to update our website to interact with the deployed API, lets firs
 Postman is a great UI tool that aids in the development of APIs by allowing us to interact with them easily.
 
 1. Download [Postman](https://www.getpostman.com/downloads)
+    Alternatively postman can be installed through homebrew by using the following command in terminal:
+    ```text
+    brew cask install postman
+    ```
 2. Create a POST request using your URL endpoint.
 3. Under the body tab, add the data that your webapp will be sending (e.g. `{"fname":"Mickey","lname":"Mouse"}`).
 4. Under the Headers tab, add the Content-Type as application/json for good measure.
